@@ -87,12 +87,11 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/butano/include/bn_regular_bg_map_item.h \
  G:/devkitPro/butano/butano/include/bn_regular_bg_map_cell.h \
  G:/devkitPro/butano/butano/include/bn_regular_bg_tiles_item.h \
- G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_font01.h \
- G:/devkitPro/butano/butano/include/bn_sprite_item.h \
  G:/devkitPro/butano/cpiaengine/include/common_variable_8x16_sprite_font.h \
  G:/devkitPro/butano/butano/include/bn_sprite_font.h \
  G:/devkitPro/butano/butano/include/bn_utf8_characters_map.h \
  G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_common_variable_8x16_font.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_item.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp02.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_bg01.h \
@@ -185,12 +184,11 @@ G:/devkitPro/butano/butano/include/bn_bg_palette_item.h:
 G:/devkitPro/butano/butano/include/bn_regular_bg_map_item.h:
 G:/devkitPro/butano/butano/include/bn_regular_bg_map_cell.h:
 G:/devkitPro/butano/butano/include/bn_regular_bg_tiles_item.h:
-G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_font01.h:
-G:/devkitPro/butano/butano/include/bn_sprite_item.h:
 G:/devkitPro/butano/cpiaengine/include/common_variable_8x16_sprite_font.h:
 G:/devkitPro/butano/butano/include/bn_sprite_font.h:
 G:/devkitPro/butano/butano/include/bn_utf8_characters_map.h:
 G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_common_variable_8x16_font.h:
+G:/devkitPro/butano/butano/include/bn_sprite_item.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp02.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_bg01.h:

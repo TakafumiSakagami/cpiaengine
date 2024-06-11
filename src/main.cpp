@@ -27,7 +27,7 @@
 //Generics
 #include <bn_regular_bg_items_kuro.h>
 //Fonts
-#include <bn_sprite_items_font01.h>
+//#include <bn_sprite_items_font01.h>
 #include "common_variable_8x16_sprite_font.h"
 //Sprites
 #include <bn_regular_bg_items_sp01.h>
@@ -143,6 +143,10 @@ int main()
               "B: hide/show BG",
               "SELECT: hide/show text",
               "A: go to next scene",
+              "",
+              "",
+              "",
+              "",
           };
           common::info info(info_text_lines, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);
@@ -162,26 +166,89 @@ int main()
               "A: go to next scene",
               "SELECT: hide/show text",
               "B: hide/show BG",
+              "",
+              "",
+              "",
+              "",
           };
           common::info info(info_text_lines, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
-        bgpos = 2;
+        bgpos = 1;
         presets(bgpos, internal_window);
-        spimg.set_position(60, -20);
+        bgimg.set_item(bn::regular_bg_items::bg01);
+        spimg.set_item(bn::regular_bg_items::sp01);
+        bgimg.set_position(-8, -90);
+        spimg.set_position(50, 40);
         if(true)
         {
           bn::string_view info_text_lines[] = {
-            "SELECT: hide/show text",
-            "",
-            "B: hide/show BG",
-            "A: go to next scene",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
           };
           common::info info(info_text_lines, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
+        bgpos = 1;
+        presets(bgpos, internal_window);
+        bgimg.set_item(bn::regular_bg_items::bg01);
+        spimg.set_item(bn::regular_bg_items::sp01);
+        bgimg.set_position(-8, -90);
+        spimg.set_position(50, 40);
+        if(true)
+        {
+          bn::string_view info_text_lines[] = {
+              "Here is some text.",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+          };
+          common::info info(info_text_lines, text_generator);
+          full_text_scene(bgimg, kuro, internal_window, external_window);
+          bn::core::update();
+        }
+        if(true)                                                                 //Text input begins
+        {
+          bn::string_view info_text_lines[] = {
+              "Here is some text.",
+              "It can be progressed by",
+              "pressing A.",
+              "",
+              "",
+              "",
+              "",
+          };
+          common::info info(info_text_lines, text_generator);
+          full_text_scene(bgimg, kuro, internal_window, external_window);
+          bn::core::update();
+        }
+        if(true)                                                                 //Text input begins
+        {
+          bn::string_view info_text_lines[] = {
+              "Here is some text.",
+              "It can be progressed by",
+              "pressing A.",
+              "",
+              "It's tall, huh?",
+              "",
+              "",
+          };
+          common::info info(info_text_lines, text_generator);
+          full_text_scene(bgimg, kuro, internal_window, external_window);
+          bn::core::update();
+        }
+        //01 End;
+        //
 
     }
 }

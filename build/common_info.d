@@ -32,6 +32,8 @@ common_info.o: G:/devkitPro/butano/cpiaengine/src/common_info.cpp \
  G:/devkitPro/butano/butano/include/bn_fixed_point_fwd.h \
  G:/devkitPro/butano/butano/include/bn_string_view.h \
  G:/devkitPro/butano/butano/include/bn_keypad.h \
+ G:/devkitPro/butano/butano/include/bn_colors.h \
+ G:/devkitPro/butano/butano/include/bn_color.h \
  G:/devkitPro/butano/butano/include/bn_display.h \
  G:/devkitPro/butano/butano/include/bn_size.h \
  G:/devkitPro/butano/butano/hw/include/bn_hw_display_constants.h \
@@ -47,11 +49,11 @@ common_info.o: G:/devkitPro/butano/cpiaengine/src/common_info.cpp \
  G:/devkitPro/butano/butano/include/bn_tile.h \
  G:/devkitPro/butano/butano/include/bn_compression_type.h \
  G:/devkitPro/butano/butano/include/bn_sprite_palette_item.h \
- G:/devkitPro/butano/butano/include/bn_color.h \
  G:/devkitPro/butano/butano/include/bn_utf8_characters_map_ref.h \
  G:/devkitPro/butano/butano/include/bn_power_of_two.h \
  G:/devkitPro/butano/butano/include/bn_utf8_character.h \
- G:/devkitPro/butano/butano/include/bn_string_view.h
+ G:/devkitPro/butano/butano/include/bn_string_view.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_palette_ptr.h
 G:/devkitPro/butano/cpiaengine/include/common_info.h:
 G:/devkitPro/butano/butano/include/bn_span.h:
 G:/devkitPro/butano/butano/include/bn_array.h:
@@ -85,6 +87,8 @@ G:/devkitPro/butano/butano/include/bn_point.h:
 G:/devkitPro/butano/butano/include/bn_fixed_point_fwd.h:
 G:/devkitPro/butano/butano/include/bn_string_view.h:
 G:/devkitPro/butano/butano/include/bn_keypad.h:
+G:/devkitPro/butano/butano/include/bn_colors.h:
+G:/devkitPro/butano/butano/include/bn_color.h:
 G:/devkitPro/butano/butano/include/bn_display.h:
 G:/devkitPro/butano/butano/include/bn_size.h:
 G:/devkitPro/butano/butano/hw/include/bn_hw_display_constants.h:
@@ -100,8 +104,8 @@ G:/devkitPro/butano/butano/include/bn_span.h:
 G:/devkitPro/butano/butano/include/bn_tile.h:
 G:/devkitPro/butano/butano/include/bn_compression_type.h:
 G:/devkitPro/butano/butano/include/bn_sprite_palette_item.h:
-G:/devkitPro/butano/butano/include/bn_color.h:
 G:/devkitPro/butano/butano/include/bn_utf8_characters_map_ref.h:
 G:/devkitPro/butano/butano/include/bn_power_of_two.h:
 G:/devkitPro/butano/butano/include/bn_utf8_character.h:
 G:/devkitPro/butano/butano/include/bn_string_view.h:
+G:/devkitPro/butano/butano/include/bn_sprite_palette_ptr.h:
