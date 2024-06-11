@@ -7,7 +7,11 @@
 
 namespace bn::music_items_info
 {
-    constexpr inline span<const pair<music_item, string_view>> span;
+    constexpr inline pair<music_item, string_view> array[] = {
+        make_pair(music_item(0), string_view("dearcustomer")),
+    };
+
+    constexpr inline span<const pair<music_item, string_view>> span(array);
 }
 
 #endif

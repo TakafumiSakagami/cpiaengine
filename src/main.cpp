@@ -1,6 +1,7 @@
 //Core
 #include "bn_core.h"
 #include "bn_math.h"
+#include "bn_music.h"
 #include "bn_keypad.h"
 #include "bn_display.h"
 #include "bn_blending.h"
@@ -13,17 +14,19 @@
 #include "bn_rect_window_actions.h"
 #include "bn_rect_window_boundaries_hbe_ptr.h"
 #include "bn_sprite_text_generator.h"
-//#include "bn_affine_bg_ptr.h"
-//#include "bn_affine_bg_builder.h"
-//#include "bn_affine_bg_actions.h"
-//#include "bn_affine_bg_attributes.h"
-//#include "bn_affine_bg_mat_attributes.h"
-//#include "bn_affine_bg_animate_actions.h"
-//#include "bn_affine_bg_attributes_hbe_ptr.h"
-//#include "bn_affine_bg_pivot_position_hbe_ptr.h"
-//#include "bn_affine_bg_mat_attributes_hbe_ptr.h"
+#include "bn_music_actions.h"
+#include "bn_sound_actions.h"
+#include "bn_music_item.h"
+#include "bn_music_items.h"
+#include "bn_sound_item.h"
 #include "common_info.h"
 
+///////////////////////////////////////////
+//////////////Note for editors:////////////
+//Images are defined here.
+//The script is down by "main()"
+//Maybe ignore everything else for now.
+///////////////////////////////////////////
 //Generics
 #include <bn_regular_bg_items_kuro.h>
 //Fonts
@@ -32,7 +35,7 @@
 //Sprites
 #include <bn_regular_bg_items_sp01.h>
 #include <bn_regular_bg_items_sp02.h>
-//Scenes
+//Backgrounds
 #include <bn_regular_bg_items_bg01.h>
 #include <bn_regular_bg_items_bg02.h>
 
@@ -86,6 +89,7 @@ namespace
 
 int main()
 {
+    //game script begins at "while"
     bn::core::init();
     bn::rect_window internal_window = bn::rect_window::internal();
     bn::rect_window external_window = bn::rect_window::external();
@@ -127,6 +131,9 @@ int main()
     //init text
     bn::sprite_text_generator text_generator(common::variable_8x16_sprite_font);
 
+    //Play music
+    bn::music_items::dearcustomer.play(1);
+    
     //scene loop
     while(true)
     {

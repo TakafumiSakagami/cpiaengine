@@ -1,3 +1,10 @@
-Make text engine -
+Presentation - 
+Dialogue box mode
+
+Text engine -
 Character by character rendering
-Input strings from main loop.
+
+Fancy stuff - 
+Fade transitions
+Splash screens
+Intro MV

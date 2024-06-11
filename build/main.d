@@ -30,6 +30,7 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/butano/include/bn_sin_lut.h \
  G:/devkitPro/butano/butano/include/bn_reciprocal_lut.h \
  G:/devkitPro/butano/butano/include/bn_rule_of_three_approximation.h \
+ G:/devkitPro/butano/butano/include/bn_music.h \
  G:/devkitPro/butano/butano/include/bn_keypad.h \
  G:/devkitPro/butano/butano/include/bn_display.h \
  G:/devkitPro/butano/butano/include/bn_size.h \
@@ -76,6 +77,15 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/butano/include/bn_utf8_characters_map_ref.h \
  G:/devkitPro/butano/butano/include/bn_power_of_two.h \
  G:/devkitPro/butano/butano/include/bn_utf8_character.h \
+ G:/devkitPro/butano/butano/include/bn_music_actions.h \
+ G:/devkitPro/butano/butano/include/bn_music.h \
+ G:/devkitPro/butano/butano/include/bn_template_actions.h \
+ G:/devkitPro/butano/butano/include/bn_sound_actions.h \
+ G:/devkitPro/butano/butano/include/bn_sound.h \
+ G:/devkitPro/butano/butano/include/bn_sound_handle.h \
+ G:/devkitPro/butano/butano/include/bn_music_item.h \
+ G:/devkitPro/butano/cpiaengine/build/bn_music_items.h \
+ G:/devkitPro/butano/butano/include/bn_sound_item.h \
  G:/devkitPro/butano/cpiaengine/include/common_info.h \
  G:/devkitPro/butano/butano/include/bn_span.h \
  G:/devkitPro/butano/butano/include/bn_vector.h \
@@ -127,6 +137,7 @@ G:/devkitPro/butano/butano/include/bn_math.h:
 G:/devkitPro/butano/butano/include/bn_sin_lut.h:
 G:/devkitPro/butano/butano/include/bn_reciprocal_lut.h:
 G:/devkitPro/butano/butano/include/bn_rule_of_three_approximation.h:
+G:/devkitPro/butano/butano/include/bn_music.h:
 G:/devkitPro/butano/butano/include/bn_keypad.h:
 G:/devkitPro/butano/butano/include/bn_display.h:
 G:/devkitPro/butano/butano/include/bn_size.h:
@@ -173,6 +184,15 @@ G:/devkitPro/butano/butano/include/bn_color.h:
 G:/devkitPro/butano/butano/include/bn_utf8_characters_map_ref.h:
 G:/devkitPro/butano/butano/include/bn_power_of_two.h:
 G:/devkitPro/butano/butano/include/bn_utf8_character.h:
+G:/devkitPro/butano/butano/include/bn_music_actions.h:
+G:/devkitPro/butano/butano/include/bn_music.h:
+G:/devkitPro/butano/butano/include/bn_template_actions.h:
+G:/devkitPro/butano/butano/include/bn_sound_actions.h:
+G:/devkitPro/butano/butano/include/bn_sound.h:
+G:/devkitPro/butano/butano/include/bn_sound_handle.h:
+G:/devkitPro/butano/butano/include/bn_music_item.h:
+G:/devkitPro/butano/cpiaengine/build/bn_music_items.h:
+G:/devkitPro/butano/butano/include/bn_sound_item.h:
 G:/devkitPro/butano/cpiaengine/include/common_info.h:
 G:/devkitPro/butano/butano/include/bn_span.h:
 G:/devkitPro/butano/butano/include/bn_vector.h:
