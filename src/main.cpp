@@ -23,6 +23,7 @@
 //#include "bn_affine_bg_pivot_position_hbe_ptr.h"
 //#include "bn_affine_bg_mat_attributes_hbe_ptr.h"
 #include "common_info.h"
+
 //Generics
 #include <bn_regular_bg_items_kuro.h>
 //Fonts
@@ -37,44 +38,29 @@
 
 namespace
 {
-    constexpr bn::fixed lb = 16;
-    constexpr bn::fixed text_x_limit = 208;
+    //constexpr bn::fixed lb = 16;
+    //constexpr bn::fixed text_x_limit = 208;
 
     void presets(int bgpos, bn::rect_window& internal_window)
     {
-      if (bgpos = 1)
+      if(bgpos == 1)
       {
-        internal_window.set_boundaries(-70, -120, 24, 120);
+          internal_window.set_boundaries(-70, -120, 24, 120);
       }
-      if (bgpos = 2)
+      if(bgpos == 2)
       {
-        internal_window.set_boundaries(-40, -120, 34, 120);
+          internal_window.set_boundaries(-40, -120, 34, 120);
       }
-      if (bgpos = 3)
+      if(bgpos == 3)
       {
-        internal_window.set_boundaries(-120, 0, 120, 92);
+          internal_window.set_boundaries(-120, 0, 120, 92);
       }
       bn::core::update();
     }
 
     //scenes
-    void full_text_scene(bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& kuro, bn::sprite_text_generator& text_generator, bn::rect_window& internal_window, bn::rect_window& external_window)
+    void full_text_scene(bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& kuro, bn::rect_window& internal_window, bn::rect_window& external_window)
     {
-
-
-
-        bn::vector<bn::sprite_ptr, 32> text_sprites;
-
-        //set Text
-        text_generator.set_left_alignment();
-        text_generator.set_one_sprite_per_character(false);
-        text_generator.generate(-94, -lb * 3, "This is an example line of", text_sprites);
-        text_generator.generate(-94, -lb * 2, "text. Well, technically two!", text_sprites);
-        //text_generator.generate(-94, -lb, "", text_sprites);
-        text_generator.generate(-94, 0, "The textbox is kinda small, so", text_sprites);
-        text_generator.generate(-94, lb * 1, "it's hard to fit everything in.", text_sprites);
-        //text_generator.generate(-94, lb * 2, "Good verticality though.", text_sprites);
-        text_generator.generate(-94, lb * 3, "Good verticality though.", text_sprites);
 
         while(! bn::keypad::a_pressed())
         {
@@ -93,44 +79,7 @@ namespace
             }
             bn::core::update();
         }
-        text_sprites.clear();
-    }
-    //text2
-    void full_text_scene2(bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& kuro, bn::sprite_text_generator& text_generator, bn::rect_window& internal_window, bn::rect_window& external_window)
-    {
-
-        bn::vector<bn::sprite_ptr, 32> text_sprites;
-
-        //set Text
-        text_generator.set_left_alignment();
-        text_generator.set_one_sprite_per_character(false);
-        text_generator.generate(-94, -lb * 3, "On the second page we have...", text_sprites);
-        text_generator.generate(-94, -lb * 2, "text! Again!", text_sprites);
-        text_generator.generate(-94, -lb, "That, and a BG shift.", text_sprites);
-        //text_generator.generate(-94, 0, "As you can", text_sprites);
-        text_generator.generate(-94, lb * 1, "As you can see, the BG can", text_sprites);
-        text_generator.generate(-94, lb * 2, "be moved and cropped.", text_sprites);
-        //text_generator.generate(-94, lb * 3, "Good verticality though.", text_sprites);
-
-
-        while(! bn::keypad::a_pressed())
-        {
-            if(bn::keypad::b_pressed())
-            {
-                internal_window.set_visible(! internal_window.visible());
-                bgimg.set_visible(! bgimg.visible());
-            }
-            if(bn::keypad::select_pressed())
-            {
-                external_window.set_visible(! external_window.visible());
-                kuro.set_visible(! kuro.visible());
-                internal_window.set_show_sprites(! internal_window.show_sprites());
-                external_window.set_show_sprites(! external_window.show_sprites());
-
-            }
-            bn::core::update();
-        }
-        text_sprites.clear();
+        //text_sprites.clear();
     }
 
 }
@@ -181,25 +130,58 @@ int main()
     //scene loop
     while(true)
     {
-        //01;
-        int bgpos = 1;
-        presets(bgpos, internal_window);
-        bgimg.set_item(bn::regular_bg_items::bg01);
-        spimg.set_item(bn::regular_bg_items::sp01);
-        bgimg.set_position(-8, -90);
-        spimg.set_position(0, 40);
-        full_text_scene(bgimg, spimg, kuro, text_generator, internal_window, external_window);
-        bn::core::update();
-        //02;
+        //01; full screen text
+        int bgpos = 1;                                                           //Back panel settings
+        presets(bgpos, internal_window);                                         //Code to trigger settings
+        bgimg.set_item(bn::regular_bg_items::bg01);                              //Set background to bg01
+        spimg.set_item(bn::regular_bg_items::sp01);                              //Set sprite to sp01
+        bgimg.set_position(-8, -90);                                             //Set background position
+        spimg.set_position(50, 40);                                              //Set sprite position
+        if(true)                                                                 //Text input begins
+        {
+          bn::string_view info_text_lines[] = {
+              "B: hide/show BG",
+              "SELECT: hide/show text",
+              "A: go to next scene",
+          };
+          common::info info(info_text_lines, text_generator);
+          full_text_scene(bgimg, kuro, internal_window, external_window);
+          bn::core::update();
+        }
+        //01 End;
+        //
         bgpos = 3;
+        presets(bgpos, internal_window);
         bgimg.set_item(bn::regular_bg_items::bg02);
         spimg.set_item(bn::regular_bg_items::sp02);
         bgimg.set_position(0, 0);
         spimg.set_position(0, 40);
+        if(true)
+        {
+          bn::string_view info_text_lines[] = {
+              "A: go to next scene",
+              "SELECT: hide/show text",
+              "B: hide/show BG",
+          };
+          common::info info(info_text_lines, text_generator);
+          full_text_scene(bgimg, kuro, internal_window, external_window);
+          bn::core::update();
+        }
+        bgpos = 2;
         presets(bgpos, internal_window);
-        full_text_scene2(bgimg, spimg, kuro, text_generator, internal_window, external_window);
-        bn::core::update();
-
+        spimg.set_position(60, -20);
+        if(true)
+        {
+          bn::string_view info_text_lines[] = {
+            "SELECT: hide/show text",
+            "",
+            "B: hide/show BG",
+            "A: go to next scene",
+          };
+          common::info info(info_text_lines, text_generator);
+          full_text_scene(bgimg, kuro, internal_window, external_window);
+          bn::core::update();
+        }
 
     }
 }

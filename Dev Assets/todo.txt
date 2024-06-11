@@ -1,2 +1,3 @@
-Replace hard-coded text with variables.
-Replace hard-coded bg1 with variable.
+Make text engine -
+Character by character rendering
+Input strings from main loop.
