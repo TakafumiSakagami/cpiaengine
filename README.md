@@ -49,7 +49,8 @@ Sets the text for the upcoming frame.
 By default, there are seven lines to contain text. Lines will only update if they are specified.
 e.g., if the fourth line reads "test", it'll remain that way until the fourth line is modified. For that reason, you'll need to write "" on line four whenever you want to clear "test" from the screen.
 A fully cleared textbox would look like...
-`          bn::string_view info_text_lines[] = {
+
+          bn::string_view info_text_lines[] = {
               "",
               "",
               "",
@@ -57,7 +58,7 @@ A fully cleared textbox would look like...
               "",
               "",
               "",
-          };`
+          };
 
 Only needs to be specified if changed/updated.
 
