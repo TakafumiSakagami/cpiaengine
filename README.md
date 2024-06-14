@@ -93,6 +93,24 @@ This code is used to display, update and clear text. Most importantly, it stores
 
 Must be specified every time.
 
+### fade::in_fast();
+
+Fades the scene in from black. 
+
+Should be placed before `common::info info` to fade in before text displays, or you can place it before a `_text_scene` to fade into a scene where text is already present.
+
+There is also `fade::in_med();` and `fade::in_slow();`.
+
+_fast = 10 frames = 1/6 of a second.
+
+_med = 30 frames = 1/2 of a second.
+
+_slow = 60 frames = 1 second.
+
+`fade::in` has a 1-second pause before triggering. You can remove this, if you wish, in `transitions.h` by ommitting the first 4 lines of any given `in_` void and making `frames = 2;` into `int frames = 2;`.
+
+Only needs to be specified when transitioning from black.
+
 ###  dialogue_text_scene(bgimg, textbox, internal_window, external_window);
   
 Presents the scene you've configured, with textbox formatting.
@@ -110,6 +128,30 @@ It's alternative is the `dialogue_text_scene`. One of them must be specified eve
 Progresses the frame. Think of it as finalizing everything above.
 
 Must be specified every time.
+
+### fade::out_fast();
+
+Fades the scene out to black.
+
+There is also `fade::out_med();` and `fade::out_slow();`.
+
+_fast = 10 frames = 1/6 of a second.
+
+_med = 30 frames = 1/2 of a second.
+
+_slow = 60 frames = 1 second.
+
+Only needs to be specified when transitioning to black.
+
+### frames = 20;
+
+Sets the amount of frames that `waiter` will wait for.
+
+In the above example, he'll wait for 20 frames, or 1/3 of a second.
+
+### waiter(frames); 
+
+Gives the waiter a job. He will wait for the amount of frames specified in the `frames` flag.     
 
 
 ## Finding coordinates for images/text:

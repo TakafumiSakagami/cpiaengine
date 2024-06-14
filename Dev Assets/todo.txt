@@ -1,7 +1,10 @@
+Presentation - 
+Sprite transitions
+
 Text engine -
 Character by character rendering
+or mosaic transition.
 
 Fancy stuff - 
-Fade transitions
 Splash screens
 Intro MV

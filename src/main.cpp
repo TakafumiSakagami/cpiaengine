@@ -1,6 +1,7 @@
 //Core
 #include "bn_core.h"
 #include "bn_math.h"
+#include "bn_colors.h"
 #include "bn_music.h"
 #include "bn_keypad.h"
 #include "bn_display.h"
@@ -14,12 +15,14 @@
 #include "bn_rect_window_actions.h"
 #include "bn_rect_window_boundaries_hbe_ptr.h"
 #include "bn_sprite_text_generator.h"
+#include "bn_sprite_palettes.h"
 #include "bn_music_actions.h"
 #include "bn_sound_actions.h"
 #include "bn_music_item.h"
 #include "bn_music_items.h"
 #include "bn_sound_item.h"
 #include "common_info.h"
+#include "transitions.h"
 
 ///////////////////////////////////////////
 //////////////Note for editors:////////////
@@ -40,8 +43,16 @@
 #include <bn_regular_bg_items_bg01.h>
 #include <bn_regular_bg_items_bg02.h>
 
+
 namespace
 {
+
+    void waiter(int frames)
+    {
+      for(int i = 0; i < frames; ++i) {
+          bn::core::update();
+      }
+    }
     //constexpr bn::fixed lb = 16;
     //constexpr bn::fixed text_x_limit = 208;
 
@@ -129,6 +140,7 @@ int main()
     bn::core::init();
     int bgpos = 1;
     int dialogue_layout = 1;
+    int frames = 60;
     bn::rect_window internal_window = bn::rect_window::internal();
     bn::rect_window external_window = bn::rect_window::external();
     bn::window outside_window = bn::window::outside();
@@ -170,6 +182,10 @@ int main()
     textbox.set_visible_in_window(true, internal_window);
     bgimg.set_visible_in_window(false, external_window);
 
+    //fade color
+    bn::bg_palettes::set_fade(bn::colors::black, 1);
+    bn::sprite_palettes::set_fade(bn::colors::black, 1);
+
     //init text
     bn::sprite_text_generator text_generator(common::variable_8x16_sprite_font);
 
@@ -179,6 +195,9 @@ int main()
     //scene loop
     while(true)
     {
+        //frames = 20;                                                                            //These two lines of code can be used to
+        //waiter(frames);                                                                         //wait 20 frames. The game runs at 60fps!
+
         //01; textbox
         bgpos = 1;                                                                                //Back panel settings
         dialogue_layout = 1;                                                                      //Set layout. 1 = full screen, 2 = textbox
@@ -198,11 +217,13 @@ int main()
               "",
               "",
           };
+          fade::in_slow();                                                                        //This is where fade in/out is triggered. Before the text scene.
           common::info info(info_text_lines, dialogue_layout, text_generator);
           dialogue_text_scene(bgimg, textbox, internal_window, external_window);                  //Textbox layout
           bn::core::update();
         }
         //01 End;
+        fade::out_fast();
         //02; full screen text
         bgpos = 3;
         dialogue_layout = 2;
@@ -222,10 +243,14 @@ int main()
               "",
               "",
           };
+          fade::in_fast();
           common::info info(info_text_lines, dialogue_layout, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);                         //Full-screen text layout
           bn::core::update();
         }
+        //
+        fade::out_med();
+        //
         bgpos = 1;
         presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);
         bgimg.set_item(bn::regular_bg_items::bg01);
@@ -243,10 +268,12 @@ int main()
               "",
               "",
           };
+          fade::in_med();
           common::info info(info_text_lines, dialogue_layout, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
+        //
         if(true)
         {
           bn::string_view info_text_lines[] = {
@@ -262,6 +289,7 @@ int main()
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
+        //
         if(true)
         {
           bn::string_view info_text_lines[] = {
@@ -277,6 +305,7 @@ int main()
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
+        //
         if(true)
         {
           bn::string_view info_text_lines[] = {
@@ -292,8 +321,8 @@ int main()
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
-        //01 End;
         //
+        fade::out_slow();
 
     }
 }

@@ -30,6 +30,8 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/butano/include/bn_sin_lut.h \
  G:/devkitPro/butano/butano/include/bn_reciprocal_lut.h \
  G:/devkitPro/butano/butano/include/bn_rule_of_three_approximation.h \
+ G:/devkitPro/butano/butano/include/bn_colors.h \
+ G:/devkitPro/butano/butano/include/bn_color.h \
  G:/devkitPro/butano/butano/include/bn_music.h \
  G:/devkitPro/butano/butano/include/bn_keypad.h \
  G:/devkitPro/butano/butano/include/bn_display.h \
@@ -73,10 +75,10 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/butano/include/bn_tile.h \
  G:/devkitPro/butano/butano/include/bn_compression_type.h \
  G:/devkitPro/butano/butano/include/bn_sprite_palette_item.h \
- G:/devkitPro/butano/butano/include/bn_color.h \
  G:/devkitPro/butano/butano/include/bn_utf8_characters_map_ref.h \
  G:/devkitPro/butano/butano/include/bn_power_of_two.h \
  G:/devkitPro/butano/butano/include/bn_utf8_character.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_palettes.h \
  G:/devkitPro/butano/butano/include/bn_music_actions.h \
  G:/devkitPro/butano/butano/include/bn_music.h \
  G:/devkitPro/butano/butano/include/bn_template_actions.h \
@@ -91,6 +93,8 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/butano/include/bn_vector.h \
  G:/devkitPro/butano/butano/include/bn_sprite_ptr.h \
  G:/devkitPro/butano/butano/include/bn_string_view.h \
+ G:/devkitPro/butano/cpiaengine/include/transitions.h \
+ G:/devkitPro/butano/cpiaengine/include/common_info.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_kuro.h \
  G:/devkitPro/butano/butano/include/bn_regular_bg_item.h \
  G:/devkitPro/butano/butano/include/bn_bg_palette_item.h \
@@ -138,6 +142,8 @@ G:/devkitPro/butano/butano/include/bn_math.h:
 G:/devkitPro/butano/butano/include/bn_sin_lut.h:
 G:/devkitPro/butano/butano/include/bn_reciprocal_lut.h:
 G:/devkitPro/butano/butano/include/bn_rule_of_three_approximation.h:
+G:/devkitPro/butano/butano/include/bn_colors.h:
+G:/devkitPro/butano/butano/include/bn_color.h:
 G:/devkitPro/butano/butano/include/bn_music.h:
 G:/devkitPro/butano/butano/include/bn_keypad.h:
 G:/devkitPro/butano/butano/include/bn_display.h:
@@ -181,10 +187,10 @@ G:/devkitPro/butano/butano/include/bn_sprite_tiles_item.h:
 G:/devkitPro/butano/butano/include/bn_tile.h:
 G:/devkitPro/butano/butano/include/bn_compression_type.h:
 G:/devkitPro/butano/butano/include/bn_sprite_palette_item.h:
-G:/devkitPro/butano/butano/include/bn_color.h:
 G:/devkitPro/butano/butano/include/bn_utf8_characters_map_ref.h:
 G:/devkitPro/butano/butano/include/bn_power_of_two.h:
 G:/devkitPro/butano/butano/include/bn_utf8_character.h:
+G:/devkitPro/butano/butano/include/bn_sprite_palettes.h:
 G:/devkitPro/butano/butano/include/bn_music_actions.h:
 G:/devkitPro/butano/butano/include/bn_music.h:
 G:/devkitPro/butano/butano/include/bn_template_actions.h:
@@ -199,6 +205,8 @@ G:/devkitPro/butano/butano/include/bn_span.h:
 G:/devkitPro/butano/butano/include/bn_vector.h:
 G:/devkitPro/butano/butano/include/bn_sprite_ptr.h:
 G:/devkitPro/butano/butano/include/bn_string_view.h:
+G:/devkitPro/butano/cpiaengine/include/transitions.h:
+G:/devkitPro/butano/cpiaengine/include/common_info.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_kuro.h:
 G:/devkitPro/butano/butano/include/bn_regular_bg_item.h:
 G:/devkitPro/butano/butano/include/bn_bg_palette_item.h:

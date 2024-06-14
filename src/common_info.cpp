@@ -27,7 +27,7 @@ info::info(const bn::span<const bn::string_view>& text_lines, int dialogue_layou
       constexpr bn::fixed lb = 16;
       constexpr bn::fixed start_x = -116;
       constexpr bn::fixed start_y = -lb * 3 + 81;
-      constexpr bn::fixed text_x_limit = 208;
+      //constexpr bn::fixed text_x_limit = 208;
       bn::vector<bn::sprite_ptr, 32> text_sprites;
       bn::fixed y = start_y;
 
@@ -59,7 +59,7 @@ info::info(const bn::span<const bn::string_view>& text_lines, int dialogue_layou
       constexpr bn::fixed lb = 16;
       constexpr bn::fixed start_x = -94;
       constexpr bn::fixed start_y = -lb * 3;
-      constexpr bn::fixed text_x_limit = 208;
+      //constexpr bn::fixed text_x_limit = 208;
       bn::vector<bn::sprite_ptr, 32> text_sprites;
       bn::fixed y = start_y;
 
