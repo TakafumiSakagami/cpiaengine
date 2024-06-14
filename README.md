@@ -7,8 +7,7 @@ Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
 ## Core loop:
 
 The main gameplay loop is at
-    `//scene loop
-    while(true)`
+    `//scene loop`
 
 * bgpos = 1;
 Adjusts the cropping and positioning of the window that contains the background image.
