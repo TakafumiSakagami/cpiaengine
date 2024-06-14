@@ -199,7 +199,7 @@ int main()
               "",
           };
           common::info info(info_text_lines, dialogue_layout, text_generator);
-          dialogue_text_scene(bgimg, textbox, internal_window, external_window);
+          dialogue_text_scene(bgimg, textbox, internal_window, external_window);                  //Textbox layout
           bn::core::update();
         }
         //01 End;
@@ -223,7 +223,7 @@ int main()
               "",
           };
           common::info info(info_text_lines, dialogue_layout, text_generator);
-          full_text_scene(bgimg, kuro, internal_window, external_window);
+          full_text_scene(bgimg, kuro, internal_window, external_window);                         //Full-screen text layout
           bn::core::update();
         }
         bgpos = 1;

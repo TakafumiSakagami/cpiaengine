@@ -1,6 +1,3 @@
-Presentation - 
-Dialogue box mode
-
 Text engine -
 Character by character rendering
 
