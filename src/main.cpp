@@ -43,7 +43,7 @@
 #include <bn_regular_bg_items_bg01.h>
 #include <bn_regular_bg_items_bg02.h>
 
-
+//You can hide this Namescape if you just want to get to writing scenes
 namespace
 {
 
@@ -134,9 +134,11 @@ namespace
 
 }
 
+
 int main()
 {
     //game script begins at "while"
+    //These are just default settings being established
     bn::core::init();
     int bgpos = 1;
     int dialogue_layout = 1;
@@ -189,8 +191,16 @@ int main()
     //init text
     bn::sprite_text_generator text_generator(common::variable_8x16_sprite_font);
 
-    //Play music
+    //Play example music
     bn::music_items::dearcustomer.play(1);
+
+    /////////////////////////////////
+    ///////  Begin the game  ////////
+    //  //                     //  //
+    /////////////////////////////////
+    //        Sepia Engine         //
+    ///////     /////////     ///////
+    /////////////////////////////////
 
     //scene loop
     while(true)
