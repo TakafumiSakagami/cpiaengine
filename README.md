@@ -9,7 +9,7 @@ Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
 The main gameplay loop is at
     `//scene loop`
 
-* bgpos = 1;
+### bgpos = 1;
  
 Adjusts the cropping and positioning of the window that contains the background image.
 
@@ -20,7 +20,7 @@ You can change these, or add more.
 Only needs to be specified if changed/updated.
 
 
-* dialogue_layout = 1;
+###  dialogue_layout = 1;
  
 Adjusts the cropping and positioning of the window that contains the textbox image.
 
@@ -32,38 +32,38 @@ These values are also checked by `info::info` in `common_info.cpp`, which contro
 
 Only needs to be specified if changed/updated.
 
-* presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);
+###  presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);
 
 This simply triggers the code in `void presets`, enabling the settings made by changing bgpos and dialogue_layout.
 
 Only needs to be specified if changed/updated.
 
 
-* bgimg.set_item(bn::regular_bg_items::bg01);
+###  bgimg.set_item(bn::regular_bg_items::bg01);
   
 Sets the background image to a `regular_bg_items` object. This is an image file, such as `bg01.bmp`.
 
 Only needs to be specified if changed/updated.
 
-* spimg.set_item(bn::regular_bg_items::sp01);
+###  spimg.set_item(bn::regular_bg_items::sp01);
   
 Sets the character sprite to a `regular_bg_items` object. This is an image file, such as `sp01.bmp`.
 
 Only needs to be specified if changed/updated.
 
-* bgimg.set_position(0, 0);
+###  bgimg.set_position(0, 0);
   
 Sets the X and Y coordinates of the background image.
 
 Only needs to be specified if changed/updated.
 
-* spimg.set_position(0, 0);
+###  spimg.set_position(0, 0);
   
 Sets the X and Y coordinates of the character sprite.
 
 Only needs to be specified if changed/updated.
 
-* bn::string_view info_text_lines[] = {
+###  bn::string_view info_text_lines[] = {
   
 Sets the text for the upcoming frame.
 
@@ -85,7 +85,7 @@ A fully cleared textbox would look like...
 
 Only needs to be specified if changed/updated.
 
-* common::info info(info_text_lines, dialogue_layout, text_generator);
+###  common::info info(info_text_lines, dialogue_layout, text_generator);
   
 Triggers the code in `info::info`, from `common_info.cpp`. This is linked to `common_info.h` in the `include` folder.
 
@@ -93,19 +93,19 @@ This code is used to display, update and clear text. Most importantly, it stores
 
 Must be specified every time.
 
-* dialogue_text_scene(bgimg, textbox, internal_window, external_window);
+###  dialogue_text_scene(bgimg, textbox, internal_window, external_window);
   
 Presents the scene you've configured, with textbox formatting.
 
 It's alternative is the `full_text_scene`. One of them must be specified every time.
 
-* full_text_scene(bgimg, kuro, internal_window, external_window);
+###  full_text_scene(bgimg, kuro, internal_window, external_window);
   
 Presents the scene you've configured, with full-screen text formatting.
 
 It's alternative is the `dialogue_text_scene`. One of them must be specified every time.
 
-* bn::core::update();
+###  bn::core::update();
   
 Progresses the frame. Think of it as finalizing everything above.
 
