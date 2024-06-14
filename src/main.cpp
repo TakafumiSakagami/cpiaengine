@@ -29,6 +29,7 @@
 ///////////////////////////////////////////
 //Generics
 #include <bn_regular_bg_items_kuro.h>
+#include <bn_regular_bg_items_textbox.h>
 //Fonts
 //#include <bn_sprite_items_font01.h>
 #include "common_variable_8x16_sprite_font.h"
@@ -44,27 +45,40 @@ namespace
     //constexpr bn::fixed lb = 16;
     //constexpr bn::fixed text_x_limit = 208;
 
-    void presets(int bgpos, bn::rect_window& internal_window)
+    void presets(int bgpos, int dialogue_layout, bn::regular_bg_ptr& kuro, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
     {
       if(bgpos == 1)
       {
-          internal_window.set_boundaries(-70, -120, 24, 120);
+          internal_window.set_boundaries(-70, -120, 24, 120); //horizontal top
       }
       if(bgpos == 2)
       {
-          internal_window.set_boundaries(-40, -120, 34, 120);
+          internal_window.set_boundaries(-40, -120, 34, 120); //horizontal mid
       }
       if(bgpos == 3)
       {
-          internal_window.set_boundaries(-120, 0, 120, 92);
+          internal_window.set_boundaries(-120, 0, 120, 92); //vertical
+      }
+
+      if(dialogue_layout == 1)
+      {
+        kuro.set_visible(false);
+        external_window.set_boundaries(25, -119, 80, 119);
+        textbox.set_visible(true);
+      }
+      if(dialogue_layout == 2)
+      {
+        textbox.set_visible(false);
+        external_window.set_boundaries(-70, -110, 70, 110);
+        kuro.set_visible(true);
       }
       bn::core::update();
     }
 
-    //scenes
+    //scene configurations
+    //full screen
     void full_text_scene(bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& kuro, bn::rect_window& internal_window, bn::rect_window& external_window)
     {
-
         while(! bn::keypad::a_pressed())
         {
             if(bn::keypad::b_pressed())
@@ -84,6 +98,28 @@ namespace
         }
         //text_sprites.clear();
     }
+    //dialogue
+    void dialogue_text_scene(bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
+    {
+        while(! bn::keypad::a_pressed())
+        {
+            if(bn::keypad::b_pressed())
+            {
+                internal_window.set_visible(! internal_window.visible());
+                bgimg.set_visible(! bgimg.visible());
+            }
+            if(bn::keypad::select_pressed())
+            {
+                external_window.set_visible(! external_window.visible());
+                textbox.set_visible(! textbox.visible());
+                internal_window.set_show_sprites(! internal_window.show_sprites());
+                external_window.set_show_sprites(! external_window.show_sprites());
+
+            }
+            bn::core::update();
+        }
+        //text_sprites.clear();
+    }
 
 }
 
@@ -91,6 +127,8 @@ int main()
 {
     //game script begins at "while"
     bn::core::init();
+    int bgpos = 1;
+    int dialogue_layout = 1;
     bn::rect_window internal_window = bn::rect_window::internal();
     bn::rect_window external_window = bn::rect_window::external();
     bn::window outside_window = bn::window::outside();
@@ -110,10 +148,12 @@ int main()
     bn::regular_bg_ptr spimg = bn::regular_bg_items::sp01.create_bg(0, 40);
     //Textbox asset
     bn::regular_bg_ptr kuro = bn::regular_bg_items::kuro.create_bg(0, 0);
+    bn::regular_bg_ptr textbox = bn::regular_bg_items::textbox.create_bg(0, 0);
     kuro.set_blending_top_enabled(true);
+    textbox.set_blending_top_enabled(false);
 
     //textbox window
-    external_window.set_boundaries(-70, -110, 70, 110);
+    external_window.set_boundaries(-70, -110, 70, 110); // full screen text by default
     external_window.set_visible(true);
     external_window.set_show_blending(true);
     //bg window
@@ -124,8 +164,10 @@ int main()
     //constrain everything to windows
     outside_window.set_show_bg(bgimg, false);
     outside_window.set_show_bg(kuro, false);
+    outside_window.set_show_bg(textbox, false);
     outside_window.set_show_sprites(false);
     kuro.set_visible_in_window(true, internal_window);
+    textbox.set_visible_in_window(true, internal_window);
     bgimg.set_visible_in_window(false, external_window);
 
     //init text
@@ -133,36 +175,38 @@ int main()
 
     //Play music
     bn::music_items::dearcustomer.play(1);
-    
+
     //scene loop
     while(true)
     {
-        //01; full screen text
-        int bgpos = 1;                                                           //Back panel settings
-        presets(bgpos, internal_window);                                         //Code to trigger settings
-        bgimg.set_item(bn::regular_bg_items::bg01);                              //Set background to bg01
-        spimg.set_item(bn::regular_bg_items::sp01);                              //Set sprite to sp01
-        bgimg.set_position(-8, -90);                                             //Set background position
-        spimg.set_position(50, 40);                                              //Set sprite position
-        if(true)                                                                 //Text input begins
+        //01; textbox
+        bgpos = 1;                                                                                //Back panel settings
+        dialogue_layout = 1;                                                                      //Set layout. 1 = full screen, 2 = textbox
+        presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);         //Code to trigger settings
+        bgimg.set_item(bn::regular_bg_items::bg01);                                               //Set background to bg01
+        spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
+        bgimg.set_position(-8, -90);                                                              //Set background position
+        spimg.set_position(50, 40);                                                               //Set sprite position
+        if(true)                                                                                  //Text input begins
         {
           bn::string_view info_text_lines[] = {
-              "B: hide/show BG",
-              "SELECT: hide/show text",
+              "Sepia-tan",
+              "Press B/SELECT to hide BG/text!",
               "A: go to next scene",
               "",
               "",
               "",
               "",
           };
-          common::info info(info_text_lines, text_generator);
-          full_text_scene(bgimg, kuro, internal_window, external_window);
+          common::info info(info_text_lines, dialogue_layout, text_generator);
+          dialogue_text_scene(bgimg, textbox, internal_window, external_window);
           bn::core::update();
         }
         //01 End;
-        //
+        //02; full screen text
         bgpos = 3;
-        presets(bgpos, internal_window);
+        dialogue_layout = 2;
+        presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);
         bgimg.set_item(bn::regular_bg_items::bg02);
         spimg.set_item(bn::regular_bg_items::sp02);
         bgimg.set_position(0, 0);
@@ -178,12 +222,12 @@ int main()
               "",
               "",
           };
-          common::info info(info_text_lines, text_generator);
+          common::info info(info_text_lines, dialogue_layout, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
         bgpos = 1;
-        presets(bgpos, internal_window);
+        presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);
         bgimg.set_item(bn::regular_bg_items::bg01);
         spimg.set_item(bn::regular_bg_items::sp01);
         bgimg.set_position(-8, -90);
@@ -199,16 +243,10 @@ int main()
               "",
               "",
           };
-          common::info info(info_text_lines, text_generator);
+          common::info info(info_text_lines, dialogue_layout, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
-        bgpos = 1;
-        presets(bgpos, internal_window);
-        bgimg.set_item(bn::regular_bg_items::bg01);
-        spimg.set_item(bn::regular_bg_items::sp01);
-        bgimg.set_position(-8, -90);
-        spimg.set_position(50, 40);
         if(true)
         {
           bn::string_view info_text_lines[] = {
@@ -220,11 +258,11 @@ int main()
               "",
               "",
           };
-          common::info info(info_text_lines, text_generator);
+          common::info info(info_text_lines, dialogue_layout, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
-        if(true)                                                                 //Text input begins
+        if(true)
         {
           bn::string_view info_text_lines[] = {
               "Here is some text.",
@@ -235,11 +273,11 @@ int main()
               "",
               "",
           };
-          common::info info(info_text_lines, text_generator);
+          common::info info(info_text_lines, dialogue_layout, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
-        if(true)                                                                 //Text input begins
+        if(true)
         {
           bn::string_view info_text_lines[] = {
               "Here is some text.",
@@ -250,7 +288,7 @@ int main()
               "",
               "",
           };
-          common::info info(info_text_lines, text_generator);
+          common::info info(info_text_lines, dialogue_layout, text_generator);
           full_text_scene(bgimg, kuro, internal_window, external_window);
           bn::core::update();
         }
