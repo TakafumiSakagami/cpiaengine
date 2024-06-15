@@ -1,0 +1,38 @@
+namespace menu
+{
+
+
+bn::optional<scene_type> menu::title()
+{
+
+  //a press handling
+  if(bn::keypad::a_pressed())
+  {
+      if(_menu_index == 0)
+      {
+
+          //bn::sound_items::start.play();
+          //goto start;
+      }
+      else
+      {
+
+          if(_menu_index == 1)
+          {
+              //Load
+          }
+          else if(_menu_index == 2)
+          {
+              //Settings
+      }
+}
+
+
+
+
+
+
+
+
+
+}

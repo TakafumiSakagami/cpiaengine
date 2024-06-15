@@ -69,7 +69,7 @@ Sets the text for the upcoming frame.
 
 By default, there are seven lines to contain text. Lines will only update if they are specified.
 
-e.g., if the fourth line reads "test", it'll remain that way until the fourth line is modified. For that reason, you'll need to write "" on line four whenever you want to clear "test" from the screen.
+e.g., if the fourth line reads "test", it'll remain that way until the fourth line is modified. For that reason, you'll need to write "" on line four whenever you want to prevent "test" from appearing on the screen.
 
 A fully cleared textbox would look like...
 
@@ -84,14 +84,6 @@ A fully cleared textbox would look like...
           };
 
 Only needs to be specified if changed/updated.
-
-###  common::info info(info_text_lines, dialogue_layout, text_generator);
-  
-Triggers the code in `info::info`, from `common_info.cpp`. This is linked to `common_info.h` in the `include` folder.
-
-This code is used to display, update and clear text. Most importantly, it stores the default positioning data of on-screen text, which may need changing to suit your UI.
-
-Must be specified every time.
 
 ### fade::in_fast();
 
@@ -111,17 +103,16 @@ _slow = 60 frames = 1 second.
 
 Only needs to be specified when transitioning from black.
 
-###  dialogue_text_scene(bgimg, textbox, internal_window, external_window);
+###  texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
   
-Presents the scene you've configured, with textbox formatting.
+Triggers the dialogue creator in `texter.h`.
 
-It's alternative is the `full_text_scene`. One of them must be specified every time.
+This code is used to display, update and clear the scene.
+It presents the text, the sprites, the backgrounds, and handles pausing and input-checking. From an A-press to progress text, to an R-hold to skip, it all gets handled here!
 
-###  full_text_scene(bgimg, kuro, internal_window, external_window);
-  
-Presents the scene you've configured, with full-screen text formatting.
+Most importantly, it stores the default positioning data of on-screen text, as well as the key config, both of which may need changing to suit your needs.
 
-It's alternative is the `dialogue_text_scene`. One of them must be specified every time.
+Must be specified every time.
 
 ###  bn::core::update();
   

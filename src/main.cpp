@@ -23,6 +23,8 @@
 #include "bn_sound_item.h"
 #include "common_info.h"
 #include "transitions.h"
+#include "texter.h"
+//#include "menu.cpp"
 
 ///////////////////////////////////////////
 //////////////Note for editors:////////////
@@ -33,9 +35,10 @@
 //Generics
 #include <bn_regular_bg_items_kuro.h>
 #include <bn_regular_bg_items_textbox.h>
+#include <bn_regular_bg_items_textbox2.h>
 //Fonts
 //#include <bn_sprite_items_font01.h>
-#include "common_variable_8x16_sprite_font.h"
+#include "common_fixed_8x16_sprite_font.h"
 //Sprites
 #include <bn_regular_bg_items_sp01.h>
 #include <bn_regular_bg_items_sp02.h>
@@ -85,56 +88,10 @@ namespace
       }
       bn::core::update();
     }
-
-    //scene configurations
-    //full screen
-    void full_text_scene(bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& kuro, bn::rect_window& internal_window, bn::rect_window& external_window)
-    {
-        while(! bn::keypad::a_pressed())
-        {
-            if(bn::keypad::b_pressed())
-            {
-                internal_window.set_visible(! internal_window.visible());
-                bgimg.set_visible(! bgimg.visible());
-            }
-            if(bn::keypad::select_pressed())
-            {
-                external_window.set_visible(! external_window.visible());
-                kuro.set_visible(! kuro.visible());
-                internal_window.set_show_sprites(! internal_window.show_sprites());
-                external_window.set_show_sprites(! external_window.show_sprites());
-
-            }
-            bn::core::update();
-        }
-        //text_sprites.clear();
-    }
-    //dialogue
-    void dialogue_text_scene(bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
-    {
-        while(! bn::keypad::a_pressed())
-        {
-            if(bn::keypad::b_pressed())
-            {
-                internal_window.set_visible(! internal_window.visible());
-                bgimg.set_visible(! bgimg.visible());
-            }
-            if(bn::keypad::select_pressed())
-            {
-                external_window.set_visible(! external_window.visible());
-                textbox.set_visible(! textbox.visible());
-                internal_window.set_show_sprites(! internal_window.show_sprites());
-                external_window.set_show_sprites(! external_window.show_sprites());
-
-            }
-            bn::core::update();
-        }
-        //text_sprites.clear();
-    }
-
 }
 
 
+//start:
 int main()
 {
     //game script begins at "while"
@@ -189,7 +146,7 @@ int main()
     bn::sprite_palettes::set_fade(bn::colors::black, 1);
 
     //init text
-    bn::sprite_text_generator text_generator(common::variable_8x16_sprite_font);
+    bn::sprite_text_generator text_generator(common::fixed_8x16_sprite_font);
 
     //Play example music
     bn::music_items::dearcustomer.play(1);
@@ -201,7 +158,6 @@ int main()
     //        Sepia Engine         //
     ///////     /////////     ///////
     /////////////////////////////////
-
     //scene loop
     while(true)
     {
@@ -210,7 +166,7 @@ int main()
 
         //01; textbox
         bgpos = 1;                                                                                //Back panel settings
-        dialogue_layout = 1;                                                                      //Set layout. 1 = full screen, 2 = textbox
+        dialogue_layout = 1;                                                                      //Set layout. 1 = textbox, 2 = fullscreen
         presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);         //Code to trigger settings
         bgimg.set_item(bn::regular_bg_items::bg01);                                               //Set background to bg01
         spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
@@ -218,18 +174,17 @@ int main()
         spimg.set_position(50, 40);                                                               //Set sprite position
         if(true)                                                                                  //Text input begins
         {
-          bn::string_view info_text_lines[] = {
+          bn::string_view dialogue_text_lines[] = {
               "Sepia-tan",
-              "Press B/SELECT to hide BG/text!",
-              "A: go to next scene",
+              "Select/B: Toggle BG/text",
+              "A: Go to next scene",
               "",
               "",
               "",
               "",
-          };
+              };
           fade::in_slow();                                                                        //This is where fade in/out is triggered. Before the text scene.
-          common::info info(info_text_lines, dialogue_layout, text_generator);
-          dialogue_text_scene(bgimg, textbox, internal_window, external_window);                  //Textbox layout
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
         //01 End;
@@ -244,18 +199,17 @@ int main()
         spimg.set_position(0, 40);
         if(true)
         {
-          bn::string_view info_text_lines[] = {
-              "A: go to next scene",
-              "SELECT: hide/show text",
-              "B: hide/show BG",
+          bn::string_view dialogue_text_lines[] = {
+              "A: Go to next scene",
+              "B: Hide/Show text",
+              "SELECT: Hide/Show BG",
               "",
               "",
               "",
               "",
-          };
+              };
           fade::in_fast();
-          common::info info(info_text_lines, dialogue_layout, text_generator);
-          full_text_scene(bgimg, kuro, internal_window, external_window);                         //Full-screen text layout
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
         //
@@ -269,66 +223,17 @@ int main()
         spimg.set_position(50, 40);
         if(true)
         {
-          bn::string_view info_text_lines[] = {
+          bn::string_view dialogue_text_lines[] = {
+              "Here is some text.",
+              "Hold R to skip any and",
+              "all pauses.",
+              "",
+              "It's handy, huh?",
               "",
               "",
-              "",
-              "",
-              "",
-              "",
-              "",
-          };
+              };
           fade::in_med();
-          common::info info(info_text_lines, dialogue_layout, text_generator);
-          full_text_scene(bgimg, kuro, internal_window, external_window);
-          bn::core::update();
-        }
-        //
-        if(true)
-        {
-          bn::string_view info_text_lines[] = {
-              "Here is some text.",
-              "",
-              "",
-              "",
-              "",
-              "",
-              "",
-          };
-          common::info info(info_text_lines, dialogue_layout, text_generator);
-          full_text_scene(bgimg, kuro, internal_window, external_window);
-          bn::core::update();
-        }
-        //
-        if(true)
-        {
-          bn::string_view info_text_lines[] = {
-              "Here is some text.",
-              "It can be progressed by",
-              "pressing A.",
-              "",
-              "",
-              "",
-              "",
-          };
-          common::info info(info_text_lines, dialogue_layout, text_generator);
-          full_text_scene(bgimg, kuro, internal_window, external_window);
-          bn::core::update();
-        }
-        //
-        if(true)
-        {
-          bn::string_view info_text_lines[] = {
-              "Here is some text.",
-              "It can be progressed by",
-              "pressing A.",
-              "",
-              "It's tall, huh?",
-              "",
-              "",
-          };
-          common::info info(info_text_lines, dialogue_layout, text_generator);
-          full_text_scene(bgimg, kuro, internal_window, external_window);
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
         //

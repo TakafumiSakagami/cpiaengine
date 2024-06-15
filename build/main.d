@@ -95,6 +95,12 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/butano/include/bn_string_view.h \
  G:/devkitPro/butano/cpiaengine/include/transitions.h \
  G:/devkitPro/butano/cpiaengine/include/common_info.h \
+ G:/devkitPro/butano/cpiaengine/include/texter.h \
+ G:/devkitPro/butano/cpiaengine/include/common_fixed_8x16_sprite_font.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_font.h \
+ G:/devkitPro/butano/butano/include/bn_utf8_characters_map.h \
+ G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_common_fixed_8x16_font.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_item.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_kuro.h \
  G:/devkitPro/butano/butano/include/bn_regular_bg_item.h \
  G:/devkitPro/butano/butano/include/bn_bg_palette_item.h \
@@ -102,11 +108,8 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/butano/include/bn_regular_bg_map_cell.h \
  G:/devkitPro/butano/butano/include/bn_regular_bg_tiles_item.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_textbox.h \
- G:/devkitPro/butano/cpiaengine/include/common_variable_8x16_sprite_font.h \
- G:/devkitPro/butano/butano/include/bn_sprite_font.h \
- G:/devkitPro/butano/butano/include/bn_utf8_characters_map.h \
- G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_common_variable_8x16_font.h \
- G:/devkitPro/butano/butano/include/bn_sprite_item.h \
+ G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_textbox2.h \
+ G:/devkitPro/butano/cpiaengine/include/common_fixed_8x16_sprite_font.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp02.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_bg01.h \
@@ -207,6 +210,12 @@ G:/devkitPro/butano/butano/include/bn_sprite_ptr.h:
 G:/devkitPro/butano/butano/include/bn_string_view.h:
 G:/devkitPro/butano/cpiaengine/include/transitions.h:
 G:/devkitPro/butano/cpiaengine/include/common_info.h:
+G:/devkitPro/butano/cpiaengine/include/texter.h:
+G:/devkitPro/butano/cpiaengine/include/common_fixed_8x16_sprite_font.h:
+G:/devkitPro/butano/butano/include/bn_sprite_font.h:
+G:/devkitPro/butano/butano/include/bn_utf8_characters_map.h:
+G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_common_fixed_8x16_font.h:
+G:/devkitPro/butano/butano/include/bn_sprite_item.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_kuro.h:
 G:/devkitPro/butano/butano/include/bn_regular_bg_item.h:
 G:/devkitPro/butano/butano/include/bn_bg_palette_item.h:
@@ -214,11 +223,8 @@ G:/devkitPro/butano/butano/include/bn_regular_bg_map_item.h:
 G:/devkitPro/butano/butano/include/bn_regular_bg_map_cell.h:
 G:/devkitPro/butano/butano/include/bn_regular_bg_tiles_item.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_textbox.h:
-G:/devkitPro/butano/cpiaengine/include/common_variable_8x16_sprite_font.h:
-G:/devkitPro/butano/butano/include/bn_sprite_font.h:
-G:/devkitPro/butano/butano/include/bn_utf8_characters_map.h:
-G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_common_variable_8x16_font.h:
-G:/devkitPro/butano/butano/include/bn_sprite_item.h:
+G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_textbox2.h:
+G:/devkitPro/butano/cpiaengine/include/common_fixed_8x16_sprite_font.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp02.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_bg01.h:

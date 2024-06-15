@@ -2,8 +2,10 @@ Presentation -
 Sprite transitions
 
 Text engine -
-Character by character rendering
-or mosaic transition.
+Name handling.
+Namebox decoupled from textbox.
+CtC icon.
+R being held skip icon.
 
 Fancy stuff - 
 Splash screens
