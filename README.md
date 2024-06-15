@@ -28,7 +28,7 @@ There are two presets by default stored within the `void presets` area of code i
 
 1 sets it to a conventional dialogue box, while 2 takes up a large amount of the screen.
 
-These values are also checked by `info::info` in `common_info.cpp`, which controls the text positioning.
+These values are also checked by `dialogue` in `texter.h`.
 
 Only needs to be specified if changed/updated.
 
@@ -63,7 +63,7 @@ Sets the X and Y coordinates of the character sprite.
 
 Only needs to be specified if changed/updated.
 
-###  bn::string_view info_text_lines[] = {
+###  bn::string_view dialogue_text_lines[] = {}
   
 Sets the text for the upcoming frame.
 
@@ -73,7 +73,7 @@ e.g., if the fourth line reads "test", it'll remain that way until the fourth li
 
 A fully cleared textbox would look like...
 
-          bn::string_view info_text_lines[] = {
+          bn::string_view dialogue_text_lines[] = {
               "",
               "",
               "",
