@@ -96,11 +96,17 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/cpiaengine/include/transitions.h \
  G:/devkitPro/butano/cpiaengine/include/common_info.h \
  G:/devkitPro/butano/cpiaengine/include/texter.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_animate_actions.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_ptr.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_tiles_ptr.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_animate_actions_fwd.h \
+ G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_ctc.h \
+ G:/devkitPro/butano/butano/include/bn_sprite_item.h \
+ G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_fastforward.h \
  G:/devkitPro/butano/cpiaengine/include/common_fixed_8x16_sprite_font.h \
  G:/devkitPro/butano/butano/include/bn_sprite_font.h \
  G:/devkitPro/butano/butano/include/bn_utf8_characters_map.h \
  G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_common_fixed_8x16_font.h \
- G:/devkitPro/butano/butano/include/bn_sprite_item.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_kuro.h \
  G:/devkitPro/butano/butano/include/bn_regular_bg_item.h \
  G:/devkitPro/butano/butano/include/bn_bg_palette_item.h \
@@ -211,11 +217,17 @@ G:/devkitPro/butano/butano/include/bn_string_view.h:
 G:/devkitPro/butano/cpiaengine/include/transitions.h:
 G:/devkitPro/butano/cpiaengine/include/common_info.h:
 G:/devkitPro/butano/cpiaengine/include/texter.h:
+G:/devkitPro/butano/butano/include/bn_sprite_animate_actions.h:
+G:/devkitPro/butano/butano/include/bn_sprite_ptr.h:
+G:/devkitPro/butano/butano/include/bn_sprite_tiles_ptr.h:
+G:/devkitPro/butano/butano/include/bn_sprite_animate_actions_fwd.h:
+G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_ctc.h:
+G:/devkitPro/butano/butano/include/bn_sprite_item.h:
+G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_fastforward.h:
 G:/devkitPro/butano/cpiaengine/include/common_fixed_8x16_sprite_font.h:
 G:/devkitPro/butano/butano/include/bn_sprite_font.h:
 G:/devkitPro/butano/butano/include/bn_utf8_characters_map.h:
 G:/devkitPro/butano/cpiaengine/build/bn_sprite_items_common_fixed_8x16_font.h:
-G:/devkitPro/butano/butano/include/bn_sprite_item.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_kuro.h:
 G:/devkitPro/butano/butano/include/bn_regular_bg_item.h:
 G:/devkitPro/butano/butano/include/bn_bg_palette_item.h:

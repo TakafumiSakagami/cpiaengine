@@ -1,10 +1,18 @@
 # GBA NVL engine - SepiaNVL
 A basic NVL engine for making Visual Novels, Sound Novels, etc... for the Gameboy Advance.
-Requires minimal coding knowledge! ...and Butano.
+Requires minimal coding knowledge!
 Made for an article in [C-pia! Magazine](https://c-pia.github.io/). 
 
+## Getting started
 
-## Core loop:
+SepiaNVL is effectively a template for Butano, so following [Butano's Getting Started guide](https://gvaliente.github.io/butano/getting_started.html) is how you should begin.
+
+Butano comes with plenty of general example projects, but we've added some further demos to show off SepiaNVL specifically. Feel free to steal whatever you need from them, code-wise. Don't steal the art or music please...
+
+It should be noted that this is written in C++, and... I don't understand a lick of that language. If you're proficient with C++, maybe don't look at this. It might be a disaster, I don't know; all I know is that it works. 
+
+
+## main.cpp
 
 The main gameplay loop is at
     `//scene loop`
@@ -142,10 +150,44 @@ In the above example, he'll wait for 20 frames, or 1/3 of a second.
 
 ### waiter(frames); 
 
-Gives the waiter a job. He will wait for the amount of frames specified in the `frames` flag.     
+Gives the waiter a job. He will wait for the amount of frames specified in the `frames` flag.  
+
+### Adding new functions
+
+As this Engine is functionally just a template for Butano, you can expand it freely, should you have the knowledge.
+
+In a similar way to how texter:dialogue is handled, you can add almost anything into this loop. A choice, a menu, input, character customization, gameplay segments, etc... 
+
+## texter.h
+
+Texter contains the code that handles dialogue rendering, button inputs, and some UI elements.
+
+It takes two default layouts (1 and 2) and configures the screen to fit the chosen layout. Then it renders text fed to it from main.cpp, displaying the dialogue character by character, as sprites.
+
+When a line is complete, the sprites used to build it will be swapped for compressed ones containing multiple characters, to make it harder to hit the sprite limit.
+
+Rendering will continue automatically until fed an exclamation mark, a question mark, a quotation mark, or a period. These are sentence ending symbols.
+
+Upon reaching a sentence ending symbol, the game will pause to wait for player input, and display a `click to continue` animation to the right of the sentence ending symbol.
+
+While this pause for player input is occuring, the player can press B to hide the UI, or Select to hide the background image.
+
+While the player is holding fast forward (bound to R by default), these pauses will be ignored. The game will not wait for the player to press A after a sentence ends.
+
+While the player is holding fast forward, a `fast forward` animation will display in the bottom right corner of the screen.
+
+Fast forward cannot be enabled during the pause triggered by a sentence ending symbol.
 
 
-## Finding coordinates for images/text:
+
+### Click to Continue
+
+The click-to-continue icon (`ctc.bmp` and `click_to_continue`) is positioned and animated here.
+
+### Fast Forward
+The fast forward icon (`fastforward.bmp` and `fast_forward`) is positioned and animated here.
+
+## Finding coordinates for images/text
 In the mGBA emulator, go `tools` > `view map` to find which background each element is on.
 
 Go `Audio/Video` > `Adjust Layer Placement` to move objects around.

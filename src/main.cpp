@@ -176,8 +176,8 @@ int main()
         {
           bn::string_view dialogue_text_lines[] = {
               "Sepia-tan",
-              "Select/B: Toggle BG/text",
-              "A: Go to next scene",
+              "Select/B: Toggle BG/text.",
+              "A: Go to next scene.",
               "",
               "",
               "",
@@ -200,9 +200,9 @@ int main()
         if(true)
         {
           bn::string_view dialogue_text_lines[] = {
-              "A: Go to next scene",
-              "B: Hide/Show text",
-              "SELECT: Hide/Show BG",
+              "A: Go to next scene.",
+              "B: Hide/Show text.",
+              "SELECT: Hide/Show BG.",
               "",
               "",
               "",
