@@ -25,6 +25,7 @@
 #include "transitions.h"
 #include "texter.h"
 #include "spriter.h"
+#include "panner.h"
 //#include "menu.cpp"
 
 ///////////////////////////////////////////
@@ -188,6 +189,7 @@ int main()
               "",
               };
           fade::in_slow();                                                                        //This is where fade in/out is triggered. Before the text scene.
+          panner::right_to_left(bgimg);
           fader::sp01_in(spimg, textbox);
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();

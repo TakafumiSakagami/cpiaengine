@@ -3,6 +3,7 @@ Name handling?
 Namebox decoupled from textbox?
 
 Fancy stuff - 
+Pans - a while() that moves BG image 1px, then adds 1 to a variable. When the variable reaches the width of the screen, break out of the while()
 Splash screens
 Intro MV
 
@@ -10,5 +11,6 @@ Demos -
 C-pia!
 By Your Side loop
 Yoshioka ~Startling Blue~
+Kanon - intro + crawl
 Katahane perspective-switching
-Aidos map screen
+Aidos map screen?

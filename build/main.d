@@ -127,6 +127,7 @@ main.o: G:/devkitPro/butano/cpiaengine/src/main.cpp \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01_fade_01.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01_fade_02.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01_fade_03.h \
+ G:/devkitPro/butano/cpiaengine/include/panner.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_kuro.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_textbox.h \
  G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_textbox2.h \
@@ -263,6 +264,7 @@ G:/devkitPro/butano/butano/include/bn_regular_bg_item.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01_fade_01.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01_fade_02.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_sp01_fade_03.h:
+G:/devkitPro/butano/cpiaengine/include/panner.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_kuro.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_textbox.h:
 G:/devkitPro/butano/cpiaengine/build/bn_regular_bg_items_textbox2.h:
