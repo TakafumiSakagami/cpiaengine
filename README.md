@@ -111,6 +111,24 @@ _slow = 60 frames = 1 second.
 
 Only needs to be specified when transitioning from black.
 
+### panner::left_to_right(bgimg);
+
+Triggers the mentioned panner in `panner.h`.
+
+This moves `bgimg` without moving the window containing it.
+
+Only needs to be specified when triggering a pan.
+
+### fader::sp01_in(spimg, textbox);
+
+Triggers the mentioned fader in `spriter.h`.
+
+You can make custom fades/transitions for `spimg` or `bgimg` in a sprite editor, then build them as preset animations within `spriter.h` to reuse whenever needed.
+
+An example 3-frame fade animation is provided to overlay over any images you wish to make a fader for, as well as an aseprite document showing the overlays in use.
+
+![](Dev%20Assets/sprite_transition1.png)![](Dev%20Assets/sprite_transition2.png)![](Dev%20Assets/sprite_transition3.png)
+
 ###  texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
   
 Triggers the dialogue creator in `texter.h`.
