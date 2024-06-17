@@ -178,14 +178,29 @@ While the player is holding fast forward, a `fast forward` animation will displa
 
 Fast forward cannot be enabled during the pause triggered by a sentence ending symbol.
 
-
-
 ### Click to Continue
 
 The click-to-continue icon (`ctc.bmp` and `click_to_continue`) is positioned and animated here.
 
 ### Fast Forward
 The fast forward icon (`fastforward.bmp` and `fast_forward`) is positioned and animated here.
+
+## panner.h
+
+The panner feature allows you to pan `bgimg` easily, by prebuilding camera movements as presets. Four simple prebuilt movements are included. `right_to_left`, `left_to_right`, `top_to_bottom` and `bottom to top`.
+
+The built-in pans assume a full-screen image. The screensize is 240 pixels wide and 160 pixels tall, so the pans are designed to never surpass these values.
+
+![example image](/Dev Assets/pan_chart.png)
+
+The example background image (bg01) is 256 pixels wide and 256 pixels tall. This gives us 16 extra pixels in width to pan across (256 - 240) and 96 in height (256-160).
+
+The positioning coordinates for the panner begin at the center of the background image. As a result background image ends on the x-axis at -8 pixels and +8 pixels on either side. 16 pixels in total.
+On the y-axis, -48 and +48. 96 in total.
+
+If you are using a smaller window for your backgrounds, you can increase the length of these pans by the amount of pixels being cropped. If you had a 10px border, for example, taking up some of the screen space, you could pan a further 10 pixels in either direction.
+
+
 
 ## Finding coordinates for images/text
 In the mGBA emulator, go `tools` > `view map` to find which background each element is on.

@@ -176,7 +176,7 @@ int main()
         bgimg.set_item(bn::regular_bg_items::bg01);                                               //Set background to bg01
         spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
         bgimg.set_position(-8, -90);                                                              //Set background position
-        spimg.set_position(50, 40);                                                               //Set sprite position
+        spimg.set_position(2, 40);                                                               //Set sprite position
         if(true)                                                                                  //Text input begins
         {
           bn::string_view dialogue_text_lines[] = {
@@ -189,7 +189,7 @@ int main()
               "",
               };
           fade::in_slow();                                                                        //This is where fade in/out is triggered. Before the text scene.
-          panner::right_to_left(bgimg);
+          panner::left_to_right(bgimg);
           fader::sp01_in(spimg, textbox);
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -202,7 +202,7 @@ int main()
         presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);
         bgimg.set_item(bn::regular_bg_items::bg02);
         spimg.set_item(bn::regular_bg_items::sp02);
-        bgimg.set_position(0, 0);
+        bgimg.set_position(0, 48);
         spimg.set_position(0, 40);
         if(true)
         {
@@ -216,6 +216,7 @@ int main()
               "",
               };
           fade::in_fast();
+          panner::top_to_bottom(bgimg);
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
