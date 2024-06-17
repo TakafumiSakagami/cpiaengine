@@ -191,7 +191,7 @@ The panner feature allows you to pan `bgimg` easily, by prebuilding camera movem
 
 The built-in pans assume a full-screen image. The screensize is 240 pixels wide and 160 pixels tall, so the pans are designed to never surpass these values.
 
-![example image](/Dev Assets/pan_chart.png)
+![](Dev%20Assets/pan_chart.png)
 
 The example background image (bg01) is 256 pixels wide and 256 pixels tall. This gives us 16 extra pixels in width to pan across (256 - 240) and 96 in height (256-160).
 
