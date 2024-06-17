@@ -24,6 +24,7 @@
 #include "common_info.h"
 #include "transitions.h"
 #include "texter.h"
+#include "spriter.h"
 //#include "menu.cpp"
 
 ///////////////////////////////////////////
@@ -41,6 +42,7 @@
 #include "common_fixed_8x16_sprite_font.h"
 //Sprites
 #include <bn_regular_bg_items_sp01.h>
+#include <bn_regular_bg_items_sp01_fade.h>
 #include <bn_regular_bg_items_sp02.h>
 //Backgrounds
 #include <bn_regular_bg_items_bg01.h>
@@ -144,7 +146,8 @@ int main()
     //fade color
     bn::bg_palettes::set_fade(bn::colors::black, 1);
     bn::sprite_palettes::set_fade(bn::colors::black, 1);
-
+    //start with sprite hidden
+    spimg.set_visible(false);
     //init text
     bn::sprite_text_generator text_generator(common::fixed_8x16_sprite_font);
 
@@ -163,11 +166,12 @@ int main()
     {
         //frames = 20;                                                                            //These two lines of code can be used to
         //waiter(frames);                                                                         //wait 20 frames. The game runs at 60fps!
-
+        spimg.set_visible(false);
         //01; textbox
         bgpos = 1;                                                                                //Back panel settings
         dialogue_layout = 1;                                                                      //Set layout. 1 = textbox, 2 = fullscreen
         presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);         //Code to trigger settings
+        textbox.set_visible(false);
         bgimg.set_item(bn::regular_bg_items::bg01);                                               //Set background to bg01
         spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
         bgimg.set_position(-8, -90);                                                              //Set background position
@@ -184,6 +188,7 @@ int main()
               "",
               };
           fade::in_slow();                                                                        //This is where fade in/out is triggered. Before the text scene.
+          fader::sp01_in(spimg, textbox);
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }

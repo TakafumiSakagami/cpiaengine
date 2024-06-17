@@ -75,7 +75,7 @@ namespace fade
       bn::sprite_palettes::set_fade(bn::colors::black, 0.8);
       waiter(frames);
       bn::bg_palettes::set_fade(bn::colors::black, 1.0);
-      bn::sprite_palettes::set_fade(bn::colors::black, 0.1);
+      bn::sprite_palettes::set_fade(bn::colors::black, 1.0);
       waiter(frames);
       }
 
@@ -151,7 +151,7 @@ namespace fade
       bn::sprite_palettes::set_fade(bn::colors::black, 0.9);
       waiter(frames);
       bn::bg_palettes::set_fade(bn::colors::black, 1.0);
-      bn::sprite_palettes::set_fade(bn::colors::black, 0.1);
+      bn::sprite_palettes::set_fade(bn::colors::black, 1.0);
       waiter(frames);
       }
 

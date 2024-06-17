@@ -1,11 +1,6 @@
-Presentation - 
-Sprite transitions
-
 Text engine -
-Name handling.
-Namebox decoupled from textbox.
-CtC icon.
-R being held skip icon.
+Name handling?
+Namebox decoupled from textbox?
 
 Fancy stuff - 
 Splash screens
