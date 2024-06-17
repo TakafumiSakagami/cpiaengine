@@ -225,4 +225,4 @@ In the mGBA emulator, go `tools` > `view map` to find which background each elem
 
 Go `Audio/Video` > `Adjust Layer Placement` to move objects around.
 
-Once you've got everything into the right place, note down how many pixels you had to add/remove from each coordinate, and update your `presets` and `info::info` code to match.
+Once you've got everything into the right place, note down how many pixels you had to add/remove from each coordinate.
