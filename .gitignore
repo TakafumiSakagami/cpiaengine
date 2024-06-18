@@ -4,3 +4,6 @@
 demos/Kanon/Kanon.elf
 demos/Kanon/Kanon.gba
 demos/Kanon/Kanon.sav
+/build
+cpiaengine.gba
+cpiaengine.elf

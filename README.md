@@ -3,6 +3,8 @@ A basic NVL engine for making Visual Novels, Sound Novels, etc... for the Gamebo
 Requires minimal coding knowledge!
 Made for an article in [C-pia! Magazine](https://c-pia.github.io/). 
 
+![](Dev%20Assets/demo_kanon.png)![](Dev%20Assets/demo_sepia2.png)![](Dev%20Assets/demo_sepia.png)
+
 ## Getting started
 
 SepiaNVL is effectively a template for Butano, so following [Butano's Getting Started guide](https://gvaliente.github.io/butano/getting_started.html) is how you should begin.
