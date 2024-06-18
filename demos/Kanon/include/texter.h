@@ -15,19 +15,15 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
   bn::vector<bn::sprite_ptr, 32> char_sprites;
   bn::vector<bn::sprite_ptr, 32> text_sprites;
   text_sprites.clear();
-
-  bn::sprite_ptr fast_forward = bn::sprite_items::fastforward.create_sprite(100, 62);
-  bn::sprite_animate_action<2> ff_action = bn::create_sprite_animate_action_forever(
-    fast_forward, 30, bn::sprite_items::fastforward.tiles_item(), 0, 1);
-  ff_action = bn::create_sprite_animate_action_forever(
-    fast_forward, 30, bn::sprite_items::fastforward.tiles_item(), 0, 1);
+  bn::sprite_ptr fast_forward = bn::sprite_items::fastforward.create_sprite(112, 74);
+  fast_forward.set_bg_priority(2);
     if(bn::keypad::r_held()) {fast_forward.set_visible(true);} else{fast_forward.set_visible(false);}
 
   if(dialogue_layout == 1)
   {
     int y_inc = 16;
     int lb = 16;
-    int start_x = -116;
+    int start_x = -111;
     int start_y = -lb * 3 + 81;
     int x = start_x;
     int y = start_y;
@@ -43,12 +39,12 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
             }
     if (!line.empty()) {
       char last_char = line[line.length() - 1];
-      if(last_char == '!' || last_char == '?' || last_char == '.' || last_char == '\"') {
-          bn::sprite_ptr click_to_continue = bn::sprite_items::ctc.create_sprite(x + 6, y - 2);
-          bn::sprite_animate_action<2> ctc_action = bn::create_sprite_animate_action_forever(
-                      click_to_continue, 30, bn::sprite_items::ctc.tiles_item(), 0, 1);
+      if(last_char == '|') {
+          bn::sprite_ptr click_to_continue = bn::sprite_items::ctc.create_sprite(x, y);
+          bn::sprite_animate_action<6> ctc_action = bn::create_sprite_animate_action_forever(
+                      click_to_continue, 15, bn::sprite_items::ctc.tiles_item(), 0, 1, 2, 3, 4, 5);
           ctc_action = bn::create_sprite_animate_action_forever(
-                      click_to_continue, 30, bn::sprite_items::ctc.tiles_item(), 0, 1);
+                      click_to_continue, 15, bn::sprite_items::ctc.tiles_item(), 0, 1, 2, 3, 4, 5);
 
           while(! bn::keypad::r_held())
           {
@@ -89,7 +85,7 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
    {
      int y_inc = 16;
      int lb = 16;
-     int start_x = -94;
+     int start_x = -87;
      int start_y = -lb * 3;
      int x = start_x;
      int y = start_y;
@@ -105,12 +101,12 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
              }
      if (!line.empty()) {
        char last_char = line[line.length() - 1];
-       if(last_char == '!' || last_char == '?' || last_char == '.' || last_char == '\"') {
-           bn::sprite_ptr click_to_continue = bn::sprite_items::ctc.create_sprite(x + 6, y - 2);
-           bn::sprite_animate_action<2> ctc_action = bn::create_sprite_animate_action_forever(
-                       click_to_continue, 30, bn::sprite_items::ctc.tiles_item(), 0, 1);
+       if(last_char == '|') {
+           bn::sprite_ptr click_to_continue = bn::sprite_items::ctc.create_sprite(x, y);
+           bn::sprite_animate_action<6> ctc_action = bn::create_sprite_animate_action_forever(
+                       click_to_continue, 15, bn::sprite_items::ctc.tiles_item(), 0, 1, 2, 3, 4, 5);
            ctc_action = bn::create_sprite_animate_action_forever(
-                       click_to_continue, 30, bn::sprite_items::ctc.tiles_item(), 0, 1);
+                       click_to_continue, 15, bn::sprite_items::ctc.tiles_item(), 0, 1, 2, 3, 4, 5);
 
          while(! bn::keypad::r_held())
          {

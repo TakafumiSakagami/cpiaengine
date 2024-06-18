@@ -30,7 +30,7 @@
 #---------------------------------------------------------------------------------------------------------------------
 TARGET      	:=  $(notdir $(CURDIR))
 BUILD       	:=  build
-LIBBUTANO   	:=  ..../butano
+LIBBUTANO   	:=  ../../../butano
 PYTHON      	:=  python
 SOURCES     	:=  src
 INCLUDES    	:=  include
@@ -38,8 +38,8 @@ DATA        	:=
 GRAPHICS    	:=  graphics
 AUDIO       	:=  audio
 DMGAUDIO    	:=  dmg_audio
-ROMTITLE    	:=  SEPIA KANON
-ROMCODE     	:=  CPE2
+ROMTITLE    	:=  Cpia! Kanon
+ROMCODE     	:=  CPE1
 USERFLAGS   	:=  
 USERCXXFLAGS	:=  
 USERASFLAGS 	:=  
