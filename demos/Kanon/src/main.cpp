@@ -43,10 +43,8 @@
 #include "common_fixed_8x16_sprite_font.h"
 //Sprites
 #include <bn_regular_bg_items_sp01.h>
-#include <bn_regular_bg_items_sp02.h>
 //Backgrounds
 #include <bn_regular_bg_items_bg01.h>
-#include <bn_regular_bg_items_bg02.h>
 
 //You can hide this Namescape if you just want to get to writing scenes
 namespace
@@ -152,7 +150,7 @@ int main()
     bn::sprite_text_generator text_generator(common::fixed_8x16_sprite_font);
 
     //Play example music
-    bn::music_items::dearcustomer.play(1);
+    //bn::music_items::last_regrets.play(0.6, false);
 
     /////////////////////////////////
     ///////  Begin the game  ////////
