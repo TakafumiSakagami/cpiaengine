@@ -7,3 +7,4 @@ demos/Kanon/Kanon.sav
 /build
 cpiaengine.gba
 cpiaengine.elf
+*.ss1

@@ -25,9 +25,11 @@ Default fade color changed to white.
 
 `sp02` and `bg02` removed.
 
-`sp01_fade` images removed from spriter.h.
+`sp01_fade` images removed from `spriter.h`.
 
-`cgny01_fade` images added to spriter.h.
+`cgny01_fade` images added to `spriter.h`.
+
+`logo` added to `spriter.h`.
 
 `textbox`, `textbox2`, and `kuro` redesigned.
 
@@ -41,5 +43,10 @@ Moved `external_window` default boundaries.
 
 Added `bn::sound_items` for voice playback.
 
+Added `bn::sound::stop_all();` for voice cancelling.
+
+Added `op_anim.h` for the opening animation.
+
+Added slower versions of pans in `panner.h`.
 
 

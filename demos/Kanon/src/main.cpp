@@ -27,6 +27,7 @@
 #include "texter.h"
 #include "spriter.h"
 #include "panner.h"
+#include "op_anim.h"
 //#include "menu.cpp"
 
 ///////////////////////////////////////////
@@ -188,9 +189,6 @@ int main()
               "",
               "",
               "",
-              "",
-              "",
-              "",
               };
           //because we're fading from white - could probably make this a preset
           fade::in_slow_white();
@@ -209,9 +207,6 @@ int main()
               "from the overcast sky.|",
               "",
               "",
-              "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -223,9 +218,6 @@ int main()
               "Cold, Clear air.|",
               "",
               "",
-              "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -234,9 +226,6 @@ int main()
         {
           bn::string_view dialogue_text_lines[] = {
               "Yuuichi \"`\"|",
-              "",
-              "",
-              "",
               "",
               "",
               "",
@@ -251,9 +240,6 @@ int main()
               "the bench, and correct my",
               "posture yet again.|",
               "",
-              "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -264,9 +250,6 @@ int main()
               "The crowd of people leaving",
               "the snow-covered station",
               "has slowed to a trickle.|",
-              "",
-              "",
-              "",
               "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
@@ -279,8 +262,6 @@ int main()
               "at the station plaza clock.",
               "It's three o'clock.|",
               "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -292,9 +273,6 @@ int main()
               "only guess where the sun",
               "is behind these clouds.|",
               "",
-              "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -303,9 +281,6 @@ int main()
         {
           bn::string_view dialogue_text_lines[] = {
               "Yuuichi \"`late`\"|",
-              "",
-              "",
-              "",
               "",
               "",
               "",
@@ -321,10 +296,8 @@ int main()
               "and cast one word into the",
               "sky.|",
               "",
-              "",
-              "",
-              "",
               };
+          bn::sound::stop_all();
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
@@ -335,9 +308,6 @@ int main()
               "blinds briefly, before the",
               "wind whisks it away.|",
               "",
-              "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -347,9 +317,6 @@ int main()
           bn::string_view dialogue_text_lines[] = {
               "This winter wind, piercing",
               "my skin`|",
-              "",
-              "",
-              "",
               "",
               "",
               };
@@ -363,9 +330,6 @@ int main()
               "Falling without end`|",
               "",
               "",
-              "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -377,9 +341,6 @@ int main()
               "which hide the sky, seems",
               "to thicken out of spite.|",
               "",
-              "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -389,9 +350,6 @@ int main()
           bn::string_view dialogue_text_lines[] = {
               "Once more, I disturb the",
               "air with a sigh.|",
-              "",
-              "",
-              "",
               "",
               "",
               };
@@ -405,9 +363,6 @@ int main()
               "cloud this evokes isn't all",
               "that blocks my sight.|",
               "",
-              "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -416,9 +371,6 @@ int main()
         {
           bn::string_view dialogue_text_lines[] = {
               "Girl \"``\"|",
-              "",
-              "",
-              "",
               "",
               "",
               "",
@@ -437,9 +389,6 @@ int main()
               "peer at my face; separating",
               "me from the snowy clouds.|",
               "",
-              "",
-              "",
-              "",
               };
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -449,9 +398,6 @@ int main()
           bn::string_view dialogue_text_lines[] = {
               "Girl \"You've got snow on",
               "your head.\"|",
-              "",
-              "",
-              "",
               "",
               "",
               };
@@ -466,10 +412,8 @@ int main()
               "breathe sharply, expelling",
               "another cloud of vapor.|",
               "",
-              "",
-              "",
-              "",
               };
+          bn::sound::stop_all();
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
@@ -479,9 +423,6 @@ int main()
               "Yuuichi \"That might be",
               "because I've been sitting",
               "here for two hours`\"|",
-              "",
-              "",
-              "",
               "",
               };
           bn::sound_items::z0002.play();
@@ -495,10 +436,8 @@ int main()
               "it's a miracle I'm not",
               "buried up to my neck.|",
               "",
-              "",
-              "",
-              "",
               };
+          bn::sound::stop_all();
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
@@ -506,9 +445,6 @@ int main()
         {
           bn::string_view dialogue_text_lines[] = {
               "Girl \"`oh?\"|",
-              "",
-              "",
-              "",
               "",
               "",
               "",
@@ -524,10 +460,8 @@ int main()
               "curiously at my words.|",
               "",
               "",
-              "",
-              "",
-              "",
               };
+          bn::sound::stop_all();
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
@@ -535,9 +469,6 @@ int main()
         {
           bn::string_view dialogue_text_lines[] = {
               "Girl \"What time is it?\"|",
-              "",
-              "",
-              "",
               "",
               "",
               "",
@@ -553,10 +484,8 @@ int main()
               "",
               "",
               "",
-              "",
-              "",
-              "",
               };
+          bn::sound::stop_all();
           bn::sound_items::z0005.play();
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -568,10 +497,8 @@ int main()
               "",
               "",
               "",
-              "",
-              "",
-              "",
               };
+          bn::sound::stop_all();
           bn::sound_items::z0006.play();
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
@@ -583,10 +510,8 @@ int main()
               "doesn't look surprised.|",
               "",
               "",
-              "",
-              "",
-              "",
               };
+          bn::sound::stop_all();
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
@@ -595,9 +520,6 @@ int main()
           bn::string_view dialogue_text_lines[] = {
               "Her voice is slow, feminine",
               "and sleepy.|",
-              "",
-              "",
-              "",
               "",
               "",
               };
@@ -611,12 +533,550 @@ int main()
               "still about two.\"|",
               "",
               "",
+              };
+          bn::sound_items::z0007.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "`which would only have",
+              "been one hour late.|",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"Can I ask you",
+              "something?\"|",
+              "",
+              "",
+              };
+          bn::sound_items::z0008.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"Go ahead.\"|",
               "",
               "",
               "",
               };
-          bn::sound_items::z0007.play();
+          bn::sound::stop_all();
+          bn::sound_items::z0009.play();
           texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"Aren't you cold?\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0010.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"I sure am.\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0011.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "The snow was a novelty at",
+              "first, but now it's just",
+              "depressing me.|",
+              "",
+              };
+          bn::sound::stop_all();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"Here.\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound_items::z0012.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "She hands me a can of",
+              "coffee.|",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"To make up for me",
+              "being late.\"|",
+              "",
+              "",
+              };
+          bn::sound_items::z0013.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"`and`\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0014.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"`to celebrate us",
+              "meeting again.\"|",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0015.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"`Is a reunion",
+              "after seven years only",
+              "worth one can of coffee?\"|",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0016.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "I look again at the girl's",
+              "face as I take the coffee.|",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "The can is still too hot",
+              "to hold with bare hands.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "But my numb fingertips",
+              "appreciate the warmth.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"Seven years`",
+              "Has it been that long?\"|",
+              "",
+              "",
+              };
+          bn::sound_items::z0017.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"Yeah.\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0018.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Rolling the warm can",
+              "between my hands`|",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Comparing the snowy land I'm",
+              "in with the few scraps of",
+              "memory from my childhood`|",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"Do you remember my",
+              "name?\"|",
+              "",
+              "",
+              };
+          bn::sound_items::z0019.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"Do you remember",
+              "mine?\"|",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0020.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"Of course!\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0021.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "In the snow`|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "In these snow-covered",
+              "streets`|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Memories from seven years",
+              "ago` they seem but a breath",
+              "away.|",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"Yuuichi.\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound_items::z0022.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"Hanako.\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0023.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"No~!\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0024.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"Jiro?\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0025.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"I'm a girl`\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0026.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "She adopts a worried frown.",
+              "|",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Each word, like the snow",
+              "covering the ground, fills",
+              "the holes in my memories.|",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "The snow falling past the",
+              "girl's shoulders is getting",
+              "even heavier.|",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"Okay, I think we",
+              "have wasted enough time ",
+              "talking.\"|",
+              "",
+              };
+          bn::sound_items::z0027.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"But` my name`\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0028.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"Shall we get",
+              "moving?\"|",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0029.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Girl \"My name`\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          bn::sound_items::z0030.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "A town of seven years ago`|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Surrounded by the snow of",
+              "seven years ago`|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Yuuichi \"Let's go, Nayuki.\"",
+              "|",
+              "",
+              "",
+              };
+          bn::sound_items::z0031.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "My new life, caught like a",
+              "flag in the winter wind,",
+              "spreads out before me.|",
+              "",
+              };
+          bn::sound::stop_all();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Nayuki \"Eh`?\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound_items::z0032.play();
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "Nayuki \"Okay!\"|",
+              "",
+              "",
+              "",
+              };
+          bn::sound::stop_all();
+          textbox.set_visible(false);
+          bgimg.set_item(bn::regular_bg_items::cgny02);
+          frames = 10;
+          waiter(frames);
+          bn::sound_items::z0033.play();
+          textbox.set_visible(true);
+          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+        }
+        if(true)
+        {
+          bn::sound::stop_all();
+          textbox.set_visible(false);
+          frames = 10;
+          waiter(frames);
+          //textbox.set_visible(true);
+          fade::out_slow_white();
+          video::op_anim(bgimg, spimg);
           bn::core::update();
         }
 

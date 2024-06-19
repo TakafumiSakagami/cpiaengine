@@ -71,4 +71,25 @@ namespace panner
             }
          return(0);
         }
+          int bottom_to_top_slow(bn::regular_bg_ptr& bgimg)
+          {
+            bn::fixed x_pos = bgimg.x();
+            bn::fixed y_pos = bgimg.y();
+              while(true)
+              {
+                bgimg.set_position(x_pos, y_pos);
+                y_pos += 1;
+                if (y_pos >= 49)
+                {
+                  break;
+                }
+                bn::core::update();bn::core::update();
+                bn::core::update();bn::core::update();
+                bn::core::update();bn::core::update();
+                bn::core::update();bn::core::update();
+                bn::core::update();bn::core::update();
+
+              }
+           return(0);
+          }
 }
