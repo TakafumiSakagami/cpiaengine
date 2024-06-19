@@ -9,9 +9,11 @@ This recreation of Kanon's introduction is used to demonstrate the textbox layou
 
 ### Changes made to the template for this demo include:
 
-`common_fixed_8x16_font.bmp` has been edited to make ``\`` into `…` .
-`"` has been edited to look slimmer.
-Also, `|` has been changed to an invisible character, to act as a sentence ending symbol.
+`common_fixed_8x16_font.bmp` has been edited to make \` into … .
+
+" has been edited to look slimmer.
+
+Also, | has been changed to an invisible character, to act as a sentence ending symbol.
 
 Added white fades to `transitions.h`.
 
