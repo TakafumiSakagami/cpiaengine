@@ -3,14 +3,53 @@
 #include "bn_sprite_text_generator.h"
 #include <bn_sprite_animate_actions.h>
 #include "common_info.h"
+#include "menu.h"
 //#include <bn_sprite_items_font01.h>
 #include "bn_sprite_items_ctc.h"
 #include "bn_sprite_items_fastforward.h"
 #include "common_fixed_8x16_sprite_font.h"
 
+namespace
+{
+
+  void presets(int bgpos, int dialogue_layout, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
+  {
+    if(bgpos == 1)
+    {
+        internal_window.set_boundaries(-70, -120, 24, 120); //horizontal top
+    }
+    if(bgpos == 2)
+    {
+        internal_window.set_boundaries(-40, -120, 34, 120); //horizontal mid
+    }
+    if(bgpos == 3)
+    {
+        internal_window.set_boundaries(-120, 0, 120, 92); //vertical
+    }
+
+    if(dialogue_layout == 1)
+    {
+      //kuro.set_visible(false);
+      textbox.set_item(bn::regular_bg_items::textbox);
+      textbox.set_blending_top_enabled(false); //--for textbox
+      external_window.set_boundaries(25, -119, 80, 119);
+      textbox.set_visible(true);
+    }
+    if(dialogue_layout == 2)
+    {
+      textbox.set_item(bn::regular_bg_items::kuro);
+      textbox.set_blending_top_enabled(true); //--for kuro
+      external_window.set_boundaries(-70, -110, 70, 110);
+    }
+    bn::core::update();
+  }
+
+
+}
+
 namespace texter
 {
-int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_layout, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& kuro, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
+int dialogue(const bn::span<const bn::string_view>& text_lines, int bgpos, int dialogue_layout, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
 {
   bn::vector<bn::sprite_ptr, 32> char_sprites;
   bn::vector<bn::sprite_ptr, 32> text_sprites;
@@ -55,6 +94,17 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
             fast_forward.set_visible(false);
             while(! bn::keypad::a_pressed())
             {
+                if(bn::keypad::start_pressed())
+                {
+                    internal_window.set_visible(true);
+                    bgimg.set_visible(true);
+                    external_window.set_visible(true);
+                    textbox.set_visible(true);
+                    internal_window.set_show_sprites(true);
+                    external_window.set_show_sprites(true);
+                    menu::pause(bgpos, dialogue_layout, textbox, internal_window, external_window);
+                    presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
+                }
                 if(bn::keypad::select_pressed())
                 {
                     internal_window.set_visible(! internal_window.visible());
@@ -73,6 +123,12 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
             }
             if (bn::keypad::a_pressed())
             {
+              internal_window.set_visible(true);
+              bgimg.set_visible(true);
+              external_window.set_visible(true);
+              textbox.set_visible(true);
+              internal_window.set_show_sprites(true);
+              external_window.set_show_sprites(true);
               break;
             }
            bn::core::update();
@@ -116,6 +172,17 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
          {
            while(! bn::keypad::a_pressed())
            {
+               if(bn::keypad::start_pressed())
+               {
+                   internal_window.set_visible(true);
+                   bgimg.set_visible(true);
+                   external_window.set_visible(true);
+                   textbox.set_visible(true);
+                   internal_window.set_show_sprites(true);
+                   external_window.set_show_sprites(true);
+                   menu::pause(bgpos, dialogue_layout, textbox, internal_window, external_window);
+                   presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
+               }
                if(bn::keypad::select_pressed())
                {
                    internal_window.set_visible(! internal_window.visible());
@@ -124,7 +191,7 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
                if(bn::keypad::b_pressed())
                {
                    external_window.set_visible(! external_window.visible());
-                   kuro.set_visible(! kuro.visible());
+                   textbox.set_visible(! textbox.visible());
                    internal_window.set_show_sprites(! internal_window.show_sprites());
                    external_window.set_show_sprites(! external_window.show_sprites());
 
@@ -134,6 +201,12 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
            }
            if (bn::keypad::a_pressed())
            {
+             internal_window.set_visible(true);
+             bgimg.set_visible(true);
+             external_window.set_visible(true);
+             textbox.set_visible(true);
+             internal_window.set_show_sprites(true);
+             external_window.set_show_sprites(true);
              break;
            }
           bn::core::update();

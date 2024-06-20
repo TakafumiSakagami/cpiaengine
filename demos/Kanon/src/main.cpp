@@ -146,7 +146,7 @@ int main()
     outside_window.set_show_bg(bgimg, true);
     outside_window.set_show_bg(kuro, true);
     outside_window.set_show_bg(textbox, true);
-    outside_window.set_show_sprites(true);
+    outside_window.set_show_sprites(false);
     kuro.set_visible_in_window(true, internal_window);
     textbox.set_visible_in_window(true, internal_window);
     bgimg.set_visible_in_window(false, external_window);

@@ -23,7 +23,7 @@ The main gameplay loop is at
  
 Adjusts the cropping and positioning of the window that contains the background image.
 
-There are several presets by default, stored within the `void presets` area of code in `main.cpp`.
+There are several presets by default, stored within the `void presets` area of code in `texter.h`.
 
 You can change these, or add more.
 
@@ -34,7 +34,7 @@ Only needs to be specified if changed/updated.
  
 Adjusts the cropping and positioning of the window that contains the textbox image.
 
-There are two presets by default stored within the `void presets` area of code in `main.cpp`.
+There are two presets by default stored within the `void presets` area of code in `texter.h`.
 
 1 sets it to a conventional dialogue box, while 2 takes up a large amount of the screen.
 
@@ -42,7 +42,7 @@ These values are also checked by `dialogue` in `texter.h`.
 
 Only needs to be specified if changed/updated.
 
-###  presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);
+###  presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
 
 This simply triggers the code in `void presets`, enabling the settings made by changing bgpos and dialogue_layout.
 
@@ -131,7 +131,7 @@ An example 3-frame fade animation can be made by applying the provided dither pa
 
 ![](Dev%20Assets/sprite_transition1.png)![](Dev%20Assets/sprite_transition2.png)![](Dev%20Assets/sprite_transition3.png)
 
-###  texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+###  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
   
 Triggers the dialogue creator in `texter.h`.
 
@@ -190,7 +190,7 @@ Rendering will continue automatically until fed an exclamation mark, a question 
 
 Upon reaching a sentence ending symbol, the game will pause to wait for player input, and display a `click to continue` animation to the right of the sentence ending symbol.
 
-While this pause for player input is occuring, the player can press B to hide the UI, or Select to hide the background image.
+While this pause for player input is occuring, the player can press B to hide the UI, or Select to hide the background image. Start brings up a pause menu.
 
 While the player is holding fast forward (bound to R by default), these pauses will be ignored. The game will not wait for the player to press A after a sentence ends.
 
@@ -204,6 +204,18 @@ The click-to-continue icon (`ctc.bmp` and `click_to_continue`) is positioned and
 
 ### Fast Forward
 The fast forward icon (`fastforward.bmp` and `fast_forward`) is positioned and animated here.
+
+## menu.h
+
+Here we have `menu::pause`, which is... a pause menu. There's no actual functionality programmed into it, but I added it in for demonstration purposes.
+
+`menu::pause` is triggered by texter::dialogue, during the input checking portion signaled in-game by the click to continue icon.
+
+If the player presses start, a simple image-based menu will appear. The player's cursor is stored as a value named `menu_pos`, which updates whenever the player presses up or down.
+
+By default, `menu_pos` is set to 1. If the player pressed down twice, `menu_pos` would become 3.
+
+You could program it so that, if the player presses A while `menu_pos` is 3, the third option on the menu will be triggered.
 
 ## panner.h
 

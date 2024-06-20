@@ -38,6 +38,12 @@
 #include <bn_regular_bg_items_kuro.h>
 #include <bn_regular_bg_items_textbox.h>
 #include <bn_regular_bg_items_textbox2.h>
+
+#include <bn_regular_bg_items_pause_01.h>
+#include <bn_regular_bg_items_pause_02.h>
+#include <bn_regular_bg_items_pause_03.h>
+#include <bn_regular_bg_items_pause_04.h>
+#include <bn_regular_bg_items_pause_05.h>
 //Fonts
 //#include <bn_sprite_items_font01.h>
 #include "common_fixed_8x16_sprite_font.h"
@@ -57,38 +63,6 @@ namespace
       for(int i = 0; i < frames; ++i) {
           bn::core::update();
       }
-    }
-    //constexpr bn::fixed lb = 16;
-    //constexpr bn::fixed text_x_limit = 208;
-
-    void presets(int bgpos, int dialogue_layout, bn::regular_bg_ptr& kuro, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
-    {
-      if(bgpos == 1)
-      {
-          internal_window.set_boundaries(-70, -120, 24, 120); //horizontal top
-      }
-      if(bgpos == 2)
-      {
-          internal_window.set_boundaries(-40, -120, 34, 120); //horizontal mid
-      }
-      if(bgpos == 3)
-      {
-          internal_window.set_boundaries(-120, 0, 120, 92); //vertical
-      }
-
-      if(dialogue_layout == 1)
-      {
-        kuro.set_visible(false);
-        external_window.set_boundaries(25, -119, 80, 119);
-        textbox.set_visible(true);
-      }
-      if(dialogue_layout == 2)
-      {
-        textbox.set_visible(false);
-        external_window.set_boundaries(-70, -110, 70, 110);
-        kuro.set_visible(true);
-      }
-      bn::core::update();
     }
 }
 
@@ -120,10 +94,10 @@ int main()
     //sprite positioning
     bn::regular_bg_ptr spimg = bn::regular_bg_items::sp01.create_bg(0, 40);
     //Textbox asset
-    bn::regular_bg_ptr kuro = bn::regular_bg_items::kuro.create_bg(0, 0);
+    //bn::regular_bg_ptr textbox = bn::regular_bg_items::kuro.create_bg(0, 0);
     bn::regular_bg_ptr textbox = bn::regular_bg_items::textbox.create_bg(0, 0);
-    kuro.set_blending_top_enabled(true);
-    textbox.set_blending_top_enabled(false);
+    //text.set_blending_top_enabled(true); //--for kuro
+    textbox.set_blending_top_enabled(false); //--for textbox
 
     //textbox window
     external_window.set_boundaries(-70, -110, 70, 110); // full screen text by default
@@ -136,10 +110,9 @@ int main()
 
     //constrain everything to windows
     outside_window.set_show_bg(bgimg, false);
-    outside_window.set_show_bg(kuro, false);
+    //outside_window.set_show_bg(false);
     outside_window.set_show_bg(textbox, false);
     outside_window.set_show_sprites(false);
-    kuro.set_visible_in_window(true, internal_window);
     textbox.set_visible_in_window(true, internal_window);
     bgimg.set_visible_in_window(false, external_window);
 
@@ -170,7 +143,7 @@ int main()
         //01; textbox
         bgpos = 1;                                                                                //Back panel settings
         dialogue_layout = 1;                                                                      //Set layout. 1 = textbox, 2 = fullscreen
-        presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);         //Code to trigger settings
+        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);         //Code to trigger settings
         textbox.set_visible(false);
         bgimg.set_item(bn::regular_bg_items::bg01);                                               //Set background to bg01
         spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
@@ -190,7 +163,7 @@ int main()
           fade::in_slow();                                                                        //This is where fade in/out is triggered. Before the text scene.
           panner::left_to_right(bgimg);
           fader::sp01_in(spimg, textbox);
-          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
         //01 End;
@@ -198,7 +171,7 @@ int main()
         //02; full screen text
         bgpos = 3;
         dialogue_layout = 2;
-        presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);
+        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
         bgimg.set_item(bn::regular_bg_items::bg02);
         spimg.set_item(bn::regular_bg_items::sp02);
         bgimg.set_position(0, 48);
@@ -216,14 +189,14 @@ int main()
               };
           fade::in_fast();
           panner::top_to_bottom(bgimg);
-          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
         //
         fade::out_med();
         //
         bgpos = 1;
-        presets(bgpos, dialogue_layout, kuro, textbox, internal_window, external_window);
+        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
         bgimg.set_item(bn::regular_bg_items::bg01);
         spimg.set_item(bn::regular_bg_items::sp01);
         bgimg.set_position(-8, -90);
@@ -240,7 +213,7 @@ int main()
               "",
               };
           fade::in_med();
-          texter::dialogue(dialogue_text_lines, dialogue_layout, bgimg, kuro, textbox, internal_window, external_window, text_generator);
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
         //

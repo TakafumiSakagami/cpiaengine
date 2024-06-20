@@ -69,6 +69,12 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
             }
             if (bn::keypad::a_pressed())
             {
+              internal_window.set_visible(true);
+              bgimg.set_visible(true);
+              external_window.set_visible(true);
+              textbox.set_visible(true);
+              internal_window.set_show_sprites(true);
+              external_window.set_show_sprites(true);
               break;
             }
            bn::core::update();
@@ -130,6 +136,12 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int dialogue_lay
            }
            if (bn::keypad::a_pressed())
            {
+              internal_window.set_visible(true);
+              bgimg.set_visible(true);
+              external_window.set_visible(true);
+              textbox.set_visible(true);
+              internal_window.set_show_sprites(true);
+              external_window.set_show_sprites(true);
              break;
            }
           bn::core::update();

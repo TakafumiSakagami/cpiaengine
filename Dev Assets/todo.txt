@@ -1,7 +1,3 @@
-Text engine -
-Name handling?
-Namebox decoupled from textbox?
-
 Fancy stuff - 
 Splash screens
 Intro MV
@@ -10,6 +6,8 @@ Demos -
 C-pia!
 By Your Side loop
 Yoshioka ~Startling Blue~
-Kanon - intro + crawl
+
+Kanon - intro + crawl - DONE
+
 Katahane perspective-switching
 Aidos map screen?
