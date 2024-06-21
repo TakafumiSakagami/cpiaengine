@@ -12,7 +12,7 @@ By Your Side loop
 
 Disable BG hiding.
 
-Date + Money create/delete command.
+Date + Energy + Money create/delete command.
 
 Wardrobe screen:
 Icons for 3 outfits.
