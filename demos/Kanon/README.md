@@ -43,9 +43,9 @@ Default fade color changed to white.
 
 `bgpos == 1` in presets (`main.cpp`) has been changed to allow for a full-screen background frame.
 
-Moved `start_x` and `click to continue` icon in `texter.h`.
+Repositioned `start_x` and `click to continue` icon in `texter.h`.
 
-Moved `external_window` default boundaries.
+Repositioned `external_window` default boundaries.
 
 Added `bn::sound_items` for voice playback.
 
