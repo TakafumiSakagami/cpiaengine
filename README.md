@@ -19,7 +19,7 @@ If you extract it to the `Butano` folder (alongside files such as `readme.md`, a
 
 You can change `../butano` to the location of the butano folder that contains `butano.mak`. For me, that's `G:\devkitPro\butano\butano`.
 
-With that done, just open up Command Prompt, type `cd G:\devkitPro\butano\cpiaengine` (or wherever you extracted it the .zip to), or if you're on a non-C drive, type the drive you're on first, such as `G:`. Press enter after each! Then type `make` and hit enter once again, and `cpiaengine.gba` will magically appear.
+With that done, just open up Command Prompt, type `cd G:\devkitPro\butano\cpiaengine` (or wherever you extracted it the .zip to), and if you're on a non-C drive, type the drive you're on, such as `G:`. Press enter after each! Then type `make` and hit enter once again, and `cpiaengine.gba` will magically appear.
 
 That's the hardest part. I promise. Copy the `cpiaengine` folder somewhere, rename it to whatever you want, and now you can begin making your novel! The main script is in `main.cpp` in the `src` folder, and more complex things are in the `include` folder.
 
