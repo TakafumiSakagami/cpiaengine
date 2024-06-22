@@ -13,6 +13,10 @@ Butano comes with plenty of general example projects, but we've added some furth
 
 It should be noted that this is written in C++, and... I don't understand a lick of that language. If you're proficient with C++, maybe don't look at this. It might be a disaster, I don't know; all I know is that it works. 
 
+## Script Converter
+
+A python script for converting written prose into programmed dialogue code can be found in the `Dev Assets` folder, along with other conveniences. More details can be found there.
+
 
 ## main.cpp
 

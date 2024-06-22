@@ -80,4 +80,37 @@ namespace menu
         internal_window.set_visible(true);
         external_window.set_show_sprites(true);
     return(0);}
+    int map(int bgpos, int dialogue_layout, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
+    {
+        textbox.set_item(bn::regular_bg_items::bg01_a);
+        textbox.set_blending_top_enabled(false);
+        external_window.set_boundaries(-70, -110, 70, 110);
+        internal_window.set_visible(false);
+        int menu_pos = 1;
+        //external_window.set_show_sprites(false);
+        bn::core::update();
+        bn::core::update();
+        bn::core::update();
+         while(true)
+         {
+           if(bn::keypad::left_pressed())
+              {
+               menu_pos = 1;
+              textbox.set_item(bn::regular_bg_items::bg01_a);
+              }
+           if(bn::keypad::up_pressed())
+              {
+               menu_pos = 2;
+              textbox.set_item(bn::regular_bg_items::bg01_b);
+              }
+           if(bn::keypad::right_pressed())
+              {
+               menu_pos = 3;
+              textbox.set_item(bn::regular_bg_items::bg01_c);
+              }
+          bn::core::update();
+         }
+        internal_window.set_visible(true);
+        external_window.set_show_sprites(true);
+    return(0);}
 }
