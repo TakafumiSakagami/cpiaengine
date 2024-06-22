@@ -17,54 +17,54 @@ Though this won't insert intricate things such as image choices, fades, sound ef
 
 For example, a text file containing:
 
-  A "bcde."
-  F "ghijk."
-  "lmnop."
-  Q "rstu."
+    A "bcde."
+    F "ghijk."
+    "lmnop."
+    Q "rstu."
 
 Would be automatically converted into:
 
-  if(true)
-  {
-    bn::string_view dialogue_text_lines[] = {
-        "A",
-        "bcde.",
-        "",
-        "",
-        };
-    texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
-    bn::core::update();
-  }
-  if(true)
-  {
-    bn::string_view dialogue_text_lines[] = {
-        "F",
-        "ghijk.",
-        "",
-        "",
-        };
-    texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
-    bn::core::update();
-  }
-  if(true)
-  {
-    bn::string_view dialogue_text_lines[] = {
-        "",
-        "lmnop.",
-        "",
-        "",
-        };
-    texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
-    bn::core::update();
-  }
-  if(true)
-  {
-    bn::string_view dialogue_text_lines[] = {
-        "Q",
-        "rstu.",
-        "",
-        "",
-        };
-    texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
-    bn::core::update();
-  }
+    if(true)
+    {
+      bn::string_view dialogue_text_lines[] = {
+          "A",
+          "bcde.",
+          "",
+          "",
+          };
+      texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+      bn::core::update();
+    }
+    if(true)
+    {
+      bn::string_view dialogue_text_lines[] = {
+          "F",
+          "ghijk.",
+          "",
+          "",
+          };
+      texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+      bn::core::update();
+    }
+    if(true)
+    {
+      bn::string_view dialogue_text_lines[] = {
+          "",
+          "lmnop.",
+          "",
+          "",
+          };
+      texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+      bn::core::update();
+    }
+    if(true)
+    {
+      bn::string_view dialogue_text_lines[] = {
+          "Q",
+          "rstu.",
+          "",
+          "",
+          };
+      texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+      bn::core::update();
+    }
