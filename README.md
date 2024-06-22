@@ -1,7 +1,9 @@
 # GBA NVL engine - SepiaNVL
 A basic NVL engine for making Visual Novels, Sound Novels, etc... for the Gameboy Advance.
 Requires minimal coding knowledge!
-Made for an article in [C-pia! Magazine](https://c-pia.github.io/). 
+Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
+
+It should be noted that this is written in C++, and... I don't understand a lick of that language. If you're proficient with C++, maybe don't look at this. It might be a disaster, I don't know; all I know is that it works.  
 
 ![](Dev%20Assets/demo_kanon.png)![](Dev%20Assets/demo_sepia2.png)![](Dev%20Assets/demo_sepia.png)
 
@@ -9,9 +11,19 @@ Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
 
 SepiaNVL is effectively a template for Butano, so following [Butano's Getting Started guide](https://gvaliente.github.io/butano/getting_started.html) is how you should begin.
 
-Butano comes with plenty of general example projects, but we've added some further demos to show off SepiaNVL specifically. Feel free to steal whatever you need from them, code-wise. Don't steal the art or music please...
+Once you have devkitARM and Butano installed, you can download SepiaNVL as a .zip file and extract it to a convenient location on your computer.
 
-It should be noted that this is written in C++, and... I don't understand a lick of that language. If you're proficient with C++, maybe don't look at this. It might be a disaster, I don't know; all I know is that it works. 
+If you extract it to the `Butano` folder (alongside files such as `readme.md`, and folders like `examples`, `games`, and `common`, you're done! Otherwise you will have to edit this line in `makefile` with a text editor:
+
+    LIBBUTANO   	:=  ../butano
+
+You can change `../butano` to the location of the butano folder that contains `butano.mak`. For me, that's `G:\devkitPro\butano\butano`.
+
+With that done, just open up Command Prompt, type `cd G:\devkitPro\butano\cpiaengine` (or wherever you extracted it the .zip to), or if you're on a non-C drive, type the drive you're on first, such as `G:`. Press enter after each! Then type `make` and hit enter once again, and `cpiaengine.gba` will magically appear.
+
+That's the hardest part. I promise. Copy the `cpiaengine` folder somewhere, rename it to whatever you want, and now you can begin making your novel! The main script is in `main.cpp` in the `src` folder, and more complex things are in the `include` folder.
+
+Butano comes with plenty of general example projects, but we've added some further demos to show off SepiaNVL specifically, tucked away in the `demos` folder. These examples should help you grow familiar with the overall structure of SepiaNVL projects, and provide code for additional features. Feel free to steal whatever you need from them, code-wise. Don't steal the art or music please...
 
 ## Script Converter
 
