@@ -7,6 +7,8 @@ Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
 
 ## Script Converter
 
+![](demo.png)
+
 `convert_txt_to_dialogue.py` is a python script that can take a plain text file containing your writtenprose and turn it into generic dialogue code blocks.
 
 The output file will automatically insert a linebreak whenever the text surpasses a specified character limit (27 by default), breaking before the word that passes the character limit. Incidentally, this can help you to quickly identify lines that are too large for your textbox.
