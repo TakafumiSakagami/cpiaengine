@@ -9,6 +9,12 @@ def reformat_lines(input_file, output_file, max_chars=20):
             identifier = parts[0].strip()
             dialogue = parts[1].strip()
 
+            # Replace ... with `
+            dialogue = dialogue.replace('...', '`')
+
+            # Add | to the end of every line
+            dialogue += '|'
+
             # Split dialogue into chunks of max_chars characters
             chunks = []
             current_chunk = ""

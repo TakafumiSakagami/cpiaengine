@@ -143,24 +143,24 @@ int main()
         //01; textbox
         bgpos = 1;                                                                                //Back panel settings
         dialogue_layout = 1;                                                                      //Set layout. 1 = textbox, 2 = fullscreen
-        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);         //Code to trigger settings
+        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);               //Code to trigger settings
         textbox.set_visible(false);
         bgimg.set_item(bn::regular_bg_items::bg01);                                               //Set background to bg01
         spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
         bgimg.set_position(-8, -90);                                                              //Set background position
-        spimg.set_position(2, 40);                                                               //Set sprite position
+        spimg.set_position(2, 40);                                                                //Set sprite position
         if(true)                                                                                  //Text input begins
         {
           bn::string_view dialogue_text_lines[] = {
               "Sepia-tan",
               "Select/B: Toggle BG/text.",
-              "A: Go to next scene.",
+              "A: Go to next scene.|",
               "",
               "",
               "",
               "",
               };
-          fade::in_slow();                                                                        //This is where fade in/out is triggered. Before the text scene.
+          fade::in_slow();                                                                         //This is where fade in/out is triggered. Before the text scene.
           panner::left_to_right(bgimg);
           fader::sp01_in(spimg, textbox);
           texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -181,7 +181,7 @@ int main()
           bn::string_view dialogue_text_lines[] = {
               "A: Go to next scene.",
               "B: Hide/Show text.",
-              "SELECT: Hide/Show BG.",
+              "SELECT: Hide/Show BG.|",
               "",
               "",
               "",
@@ -206,9 +206,9 @@ int main()
           bn::string_view dialogue_text_lines[] = {
               "Here is some text.",
               "Hold R to skip any and",
-              "all pauses.",
+              "all pauses.|",
               "",
-              "It's handy, huh?",
+              "It's handy, huh?|",
               "",
               "",
               };

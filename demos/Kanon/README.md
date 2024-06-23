@@ -15,12 +15,6 @@ The textbox, rather than being the singular `bn::regular_bg_ptr textbox` that sw
 
 ...I don't think there's any functional difference, so go with whichever you prefer aesthetically.
 
-`common_fixed_8x16_font.bmp` has been edited to make \` into … .
-
-" has been edited to look slimmer.
-
-Also, | has been changed to an invisible character, to act as a sentence ending symbol.
-
 Added white fades to `transitions.h`.
 
 Added code to `main.cpp`'s loop for white fade handling.

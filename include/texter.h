@@ -82,8 +82,8 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int bgpos, int d
             }
     if (!line.empty()) {
       char last_char = line[line.length() - 1];
-      if(last_char == '!' || last_char == '?' || last_char == '.' || last_char == '\"') {
-          bn::sprite_ptr click_to_continue = bn::sprite_items::ctc.create_sprite(x + 6, y - 2);
+      if(last_char == '|') {
+          bn::sprite_ptr click_to_continue = bn::sprite_items::ctc.create_sprite(x, y - 2);
           bn::sprite_animate_action<2> ctc_action = bn::create_sprite_animate_action_forever(
                       click_to_continue, 30, bn::sprite_items::ctc.tiles_item(), 0, 1);
           ctc_action = bn::create_sprite_animate_action_forever(
@@ -161,8 +161,8 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int bgpos, int d
              }
      if (!line.empty()) {
        char last_char = line[line.length() - 1];
-       if(last_char == '!' || last_char == '?' || last_char == '.' || last_char == '\"') {
-           bn::sprite_ptr click_to_continue = bn::sprite_items::ctc.create_sprite(x + 6, y - 2);
+       if(last_char == '|') {
+           bn::sprite_ptr click_to_continue = bn::sprite_items::ctc.create_sprite(x, y - 2);
            bn::sprite_animate_action<2> ctc_action = bn::create_sprite_animate_action_forever(
                        click_to_continue, 30, bn::sprite_items::ctc.tiles_item(), 0, 1);
            ctc_action = bn::create_sprite_animate_action_forever(

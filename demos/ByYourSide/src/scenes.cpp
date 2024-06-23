@@ -12,7 +12,7 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of some",
-            "ducks.",
+            "ducks.|",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -23,7 +23,7 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of the",
-            "river.",
+            "river.|",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -34,7 +34,7 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of a",
-            "shopfront.",
+            "shopfront.|",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -45,7 +45,7 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of some",
-            "flowers.",
+            "flowers.|",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -56,7 +56,7 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of some",
-            "boats.",
+            "boats.|",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -67,7 +67,7 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of a",
-            "church.",
+            "church.|",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -78,7 +78,7 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of the",
-            "museum.",
+            "museum.|",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -89,7 +89,8 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of some",
-            "bees.",
+            "bees.|",
+            "",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -100,7 +101,8 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of a",
-            "supermarket.",
+            "supermarket.|",
+            "",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -111,7 +113,8 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of some",
-            "seagulls.",
+            "seagulls.|",
+            "",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -122,7 +125,8 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of a",
-            "bridge.",
+            "bridge.|",
+            "",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -133,7 +137,8 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Boss",
             "Get me a picture of a",
-            "squirrel.",
+            "squirrel.|",
+            "",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
@@ -151,8 +156,8 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "You",
-              "Hey, isn't this TV...",
-              "Weird?",
+              "Hey, isn't this TV`",
+              "Weird?|",
               "",
               "",
               };
@@ -163,7 +168,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "Her",
-              "How do you mean?",
+              "How do you mean?|",
               "",
               "",
               };
@@ -174,7 +179,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "You",
-              "Well, look at it...",
+              "Well, look at it`|",
               "",
               "",
               };
@@ -185,7 +190,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "Her",
-              "Mhm.",
+              "Mhm.|",
               "",
               "",
               };
@@ -197,7 +202,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "You",
               "You don't think it's",
-              "strange?",
+              "strange?|",
               "",
               "",
               };
@@ -209,7 +214,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "Her",
               "Not really. It's a normal",
-              "TV.",
+              "TV.|",
               "",
               "",
               };
@@ -221,7 +226,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "You",
               "That's not right, is it?",
-              "TVs aren't that thin...",
+              "TVs aren't that thin`|",
               "",
               "",
               };
@@ -233,7 +238,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "You",
               "And they don't come with",
-              "little stands like that.",
+              "little stands like that.|",
               "",
               "",
               };
@@ -245,7 +250,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "Her",
               "But it's a box with a",
-              "screen.",
+              "screen.|",
               "",
               "",
               };
@@ -258,7 +263,7 @@ namespace scene
               "You",
               "Huh, there aren't even any",
               "dials. It really is",
-              "strange.",
+              "strange.|",
               "",
               "",
               };
@@ -269,7 +274,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "You",
-              "Where'd you find it?",
+              "Where'd you find it?|",
               "",
               "",
               };
@@ -280,7 +285,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "Her",
-              "Huh? Where'd I find it?",
+              "Huh? Where'd I find it?|",
               "",
               "",
               };
@@ -291,7 +296,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "You",
-              "That's what I asked.",
+              "That's what I asked.|",
               "",
               "",
               };
@@ -302,7 +307,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "Her",
-              "Uuuuh...",
+              "Uuuuh`|",
               "",
               "",
               };
@@ -313,7 +318,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "Her",
-              "I can't remember!",
+              "I can't remember!|",
               "",
               "",
               };
@@ -325,7 +330,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "You",
               "There's that terrible",
-              "memory again.",
+              "memory again.|",
               "",
               "",
               };
@@ -337,7 +342,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "Her",
               "Ehehe~ It's a forever",
-              "problem.",
+              "problem.|",
               "",
               "",
               };
@@ -350,7 +355,7 @@ namespace scene
               "You",
               "You should really try and",
               "fix that. Memory loss",
-              "isn't a normal thing.",
+              "isn't a normal thing.|",
               "",
               "",
               };
@@ -362,7 +367,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "Her",
               "Uuuu, that's fine. I'm not",
-              "normal anyway!",
+              "normal anyway!|",
               "",
               "",
               };
@@ -374,7 +379,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "You",
               "Anyway, it's a color",
-              "television too.",
+              "television too.|",
               "",
               "",
               };
@@ -386,7 +391,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "You",
               "Not many places around here",
-              "sell those kinds.",
+              "sell those kinds.|",
               "",
               "",
               };
@@ -397,7 +402,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "Her",
-              "Yeah?",
+              "Yeah?|",
               "",
               "",
               };
@@ -410,7 +415,7 @@ namespace scene
               "You",
               "We'd have to go into the",
               "city center for all the",
-              "new fancy stuff.",
+              "new fancy stuff.|",
               "",
               "",
               };
@@ -422,7 +427,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "You",
               "Maybe I'll ask around next",
-              "time I head down there.",
+              "time I head down there.|",
               "",
               "",
               };
@@ -434,7 +439,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "Her",
               "Will you get me a present",
-              "on the way?",
+              "on the way?|",
               "",
               "",
               };
@@ -446,7 +451,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "You",
               "Sure, just put the money",
-              "for it in our account.",
+              "for it in our account.|",
               "",
               "",
               };
@@ -457,7 +462,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "Her",
-              "Eeeh, stingy!",
+              "Eeeh, stingy!|",
               "",
               "",
               };
@@ -470,7 +475,7 @@ namespace scene
         {
           bn::string_view dialogue_text_lines[] = {
               "Her",
-              "Hmm? You want to talk?",
+              "Hmm? You want to talk?|",
               "",
               "",
               };
@@ -482,7 +487,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Oh, by the way...",
+                  "Oh, by the way`|",
                   "",
                   "",
                   };
@@ -493,7 +498,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Yeah?",
+                  "Yeah?|",
                   "",
                   "",
                   };
@@ -504,7 +509,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "We got some mail earlier.",
+                  "We got some mail earlier.|",
                   "",
                   "",
                   };
@@ -515,7 +520,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Oh? Important mail?",
+                  "Oh? Important mail?|",
                   "",
                   "",
                   };
@@ -527,7 +532,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "Maybe~ The sender had your",
-                  "surname.",
+                  "surname.|",
                   "",
                   "",
                   };
@@ -539,7 +544,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Where is it? I'll check it",
-                  "out.",
+                  "out.|",
                   "",
                   "",
                   };
@@ -550,7 +555,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "On the table~",
+                  "On the table~|",
                   "",
                   "",
                   };
@@ -561,7 +566,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Thanks.",
+                  "Thanks.|",
                   "",
                   "",
                   };
@@ -574,7 +579,7 @@ namespace scene
                   "",
                   "I walk over to the table",
                   "and look through a small",
-                  "pile of papers.",
+                  "pile of papers.|",
                   "",
                   "",
                   };
@@ -587,7 +592,7 @@ namespace scene
                   "",
                   "Flicking through them all,",
                   "I happen upon a signed",
-                  "envelope.",
+                  "envelope.|",
                   "",
                   "",
                   };
@@ -600,7 +605,7 @@ namespace scene
                   "",
                   "The name scribed atop the",
                   "seal is an all too",
-                  "familiar one.",
+                  "familiar one.|",
                   "",
                   "",
                   };
@@ -611,7 +616,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "",
-                  "Ida... My mother.",
+                  "Ida` My mother.|",
                   "",
                   "",
                   };
@@ -623,7 +628,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "",
                   "I open it up and skim",
-                  "through the letter.",
+                  "through the letter.|",
                   "",
                   "",
                   };
@@ -635,7 +640,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "",
                   "It's the typical update",
-                  "letter.",
+                  "letter.|",
                   "",
                   "",
                   };
@@ -648,7 +653,7 @@ namespace scene
                   "",
                   "Stuff about people in the",
                   "village and what they're",
-                  "up to.",
+                  "up to.|",
                   "",
                   "",
                   };
@@ -661,7 +666,7 @@ namespace scene
                   "",
                   "Some words asking about",
                   "city life. A bit about the",
-                  "news...",
+                  "news`|",
                   "",
                   "",
                   };
@@ -675,7 +680,7 @@ namespace scene
                   "Nothing interesting,",
                   "but there's a tinge of",
                   "nostalgia embedded within",
-                  "this familiar handwriting.",
+                  "this familiar handwriting.|",
                   "",
                   "",
                   "",
@@ -687,7 +692,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "So? How is it?",
+                  "So? How is it?|",
                   "",
                   "",
                   };
@@ -698,9 +703,9 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Ah... It's just an update",
+                  "Ah` It's just an update",
                   "letter. She sends these",
-                  "sometimes.",
+                  "sometimes.|",
                   "",
                   "",
                   };
@@ -711,7 +716,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "I see~",
+                  "I see~|",
                   "",
                   "",
                   };
@@ -724,7 +729,7 @@ namespace scene
                   "",
                   "I place the letter aside.",
                   "I can store it somewhere",
-                  "later.",
+                  "later.|",
                   "",
                   "",
                   };
@@ -735,7 +740,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Do you miss her?",
+                  "Do you miss her?|",
                   "",
                   "",
                   };
@@ -746,7 +751,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Kinda... But not really.",
+                  "Kinda` But not really.|",
                   "",
                   "",
                   };
@@ -757,7 +762,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Then... Does she miss you?",
+                  "Then` Does she miss you?|",
                   "",
                   "",
                   };
@@ -770,7 +775,7 @@ namespace scene
                   "You",
                   "Ahaha, probably. But she's",
                   "always been good at",
-                  "staying too busy to think.",
+                  "staying too busy to think.|",
                   "",
                   "",
                   };
@@ -781,7 +786,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "How so?",
+                  "How so?|",
                   "",
                   "",
                   };
@@ -794,7 +799,7 @@ namespace scene
                   "You",
                   "She volunteers for community",
                   "activities, and spends her time",
-                  "getting caught up in books.",
+                  "getting caught up in books.|",
                   "",
                   "",
                   "",
@@ -806,8 +811,8 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Community activities... It",
-                  "sounds nice, village life.",
+                  "Community activities` It",
+                  "sounds nice, village life.|",
                   "",
                   "",
                   };
@@ -818,7 +823,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "It'd suit you~",
+                  "It'd suit you~|",
                   "",
                   "",
                   };
@@ -830,7 +835,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "What kinds of books does",
-                  "she read?",
+                  "she read?|",
                   "",
                   "",
                   };
@@ -841,7 +846,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Aah, typical mom stuff.",
+                  "Aah, typical mom stuff.|",
                   "",
                   "",
                   "",
@@ -855,7 +860,7 @@ namespace scene
                   "You",
                   "She likes romance stories",
                   "mostly. And books with",
-                  "inspiring female leads...",
+                  "inspiring female leads`|",
                   "",
                   "",
                   };
@@ -868,7 +873,7 @@ namespace scene
                   "You",
                   "When she was younger she",
                   "really liked this one",
-                  "book...",
+                  "book`|",
                   "",
                   "",
                   };
@@ -879,9 +884,9 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "My gran... Her mom... She",
+                  "My gran` Her mom` She",
                   "used to read it to her",
-                  "when she was a child.",
+                  "when she was a child.|",
                   "",
                   "",
                   };
@@ -894,7 +899,7 @@ namespace scene
                   "You",
                   "And so when I was born,",
                   "she really wanted to name",
-                  "me after it.",
+                  "me after it.|",
                   "",
                   "",
                   };
@@ -906,7 +911,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Anne if I was female.",
-                  "Edward if I were male.",
+                  "Edward if I were male.|",
                   "",
                   "",
                   };
@@ -918,7 +923,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Of course my dad wasn't",
-                  "fond of either.",
+                  "fond of either.|",
                   "",
                   "",
                   };
@@ -931,7 +936,7 @@ namespace scene
                   "Her",
                   "Ehehe, the classic name",
                   "discussions. That must be",
-                  "a hard thing to decide on.",
+                  "a hard thing to decide on.|",
                   "",
                   "",
                   };
@@ -943,7 +948,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "Oh, if you had a kid, what",
-                  "would you name it?",
+                  "would you name it?|",
                   "",
                   "",
                   };
@@ -955,7 +960,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "I really can't imagine",
-                  "having a kid...",
+                  "having a kid`|",
                   "",
                   "",
                   };
@@ -968,7 +973,7 @@ namespace scene
                   "Her",
                   "Eeh, come on! What if we",
                   "woke up tomorrow and there",
-                  "was a baby between us?",
+                  "was a baby between us?|",
                   "",
                   "",
                   };
@@ -979,7 +984,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "I'd question reality...",
+                  "I'd question reality`|",
                   "",
                   "",
                   };
@@ -992,7 +997,7 @@ namespace scene
                   "Her",
                   "And then give the baby a",
                   "name! So what would you",
-                  "name it?",
+                  "name it?|",
                   "",
                   "",
                   };
@@ -1003,9 +1008,9 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Uuuuum... I've never",
+                  "Uuuuum` I've never",
                   "really thought about this",
-                  "kind of thing before.",
+                  "kind of thing before.|",
                   "",
                   "",
                   };
@@ -1016,7 +1021,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Never?",
+                  "Never?|",
                   "",
                   "",
                   };
@@ -1027,7 +1032,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Never.",
+                  "Never.|",
                   "",
                   "",
                   };
@@ -1039,7 +1044,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "Uuu, fine. Then I'll tell",
-                  "you mine!",
+                  "you mine!|",
                   "",
                   "",
                   };
@@ -1052,7 +1057,7 @@ namespace scene
                   "",
                   "She gets close and",
                   "whispers a name into my",
-                  "ear...",
+                  "ear`|",
                   "",
                   "",
                   };
@@ -1063,7 +1068,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Ehehe~ What do you think?",
+                  "Ehehe~ What do you think?|",
                   "",
                   "",
                   };
@@ -1074,7 +1079,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "...Rejected.",
+                  "`Rejected.|",
                   "",
                   "",
                   };
@@ -1085,7 +1090,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "EEEEH!? WHY?",
+                  "EEEEH!? WHY?|",
                   "",
                   "",
                   };
@@ -1097,7 +1102,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "We're not naming them",
-                  "that!",
+                  "that!|",
                   "",
                   "",
                   };
@@ -1109,7 +1114,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "Ehehe, now we're like",
-                  "parents~",
+                  "parents~|",
                   "",
                   "",
                   };
@@ -1120,7 +1125,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Ahaha~",
+                  "Ahaha~|",
                   "",
                   "",
                   };
@@ -1133,7 +1138,7 @@ namespace scene
                   "You",
                   "So, what's your family",
                   "like? Any interesting",
-                  "stories?",
+                  "stories?|",
                   "",
                   "",
                   };
@@ -1144,7 +1149,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Eh? Me?",
+                  "Eh? Me?|",
                   "",
                   "",
                   };
@@ -1156,7 +1161,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Yeah. Come on, spill the",
-                  "beans~",
+                  "beans~|",
                   "",
                   "",
                   };
@@ -1167,7 +1172,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "I prefer my beans unspilt!",
+                  "I prefer my beans unspilt!|",
                   "",
                   "",
                   };
@@ -1178,7 +1183,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Mom? Dad? Anything?",
+                  "Mom? Dad? Anything?|",
                   "",
                   "",
                   };
@@ -1189,7 +1194,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Hmm... Then...",
+                  "Hmm` Then`|",
                   "",
                   "",
                   };
@@ -1200,8 +1205,8 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "I had like... An older",
-                  "sister.",
+                  "I had like` An older",
+                  "sister.|",
                   "",
                   "",
                   };
@@ -1212,7 +1217,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Oooh, you did?",
+                  "Oooh, you did?|",
                   "",
                   "",
                   };
@@ -1225,7 +1230,7 @@ namespace scene
                   "Her",
                   "Mhm! She's why I'm here",
                   "today. She made me who I",
-                  "am.",
+                  "am.|",
                   "",
                   "",
                   };
@@ -1236,7 +1241,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "And your parents didn't?",
+                  "And your parents didn't?|",
                   "",
                   "",
                   };
@@ -1247,7 +1252,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Pffft! Shush you!",
+                  "Pffft! Shush you!|",
                   "",
                   "",
                   };
@@ -1258,7 +1263,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "What was she like?",
+                  "What was she like?|",
                   "",
                   "",
                   };
@@ -1269,7 +1274,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Hmm... Mature.",
+                  "Hmm` Mature.|",
                   "",
                   "",
                   };
@@ -1281,7 +1286,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Classic older sister",
-                  "material.",
+                  "material.|",
                   "",
                   "",
                   };
@@ -1294,7 +1299,7 @@ namespace scene
                   "Her",
                   "No no, not that kind of",
                   "mature. Like a grumpy old",
-                  "lady.",
+                  "lady.|",
                   "",
                   "",
                   };
@@ -1305,7 +1310,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Seriously?",
+                  "Seriously?|",
                   "",
                   "",
                   };
@@ -1318,7 +1323,7 @@ namespace scene
                   "Her",
                   "She had charisma, and she",
                   "was funny, but she always",
-                  "had bags under her eyes.",
+                  "had bags under her eyes.|",
                   "",
                   "",
                   };
@@ -1329,8 +1334,8 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "And she always looked...",
-                  "Very very tired.",
+                  "And she always looked`",
+                  "Very very tired.|",
                   "",
                   "",
                   };
@@ -1341,7 +1346,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Ah, but she was inspiring!",
+                  "Ah, but she was inspiring!|",
                   "",
                   "",
                   };
@@ -1354,7 +1359,7 @@ namespace scene
                   "You",
                   "What did she do? Did she",
                   "have a stressful job or",
-                  "something?",
+                  "something?|",
                   "",
                   "",
                   };
@@ -1365,7 +1370,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Hmm... She traveled.",
+                  "Hmm` She traveled.|",
                   "",
                   "",
                   };
@@ -1377,7 +1382,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "What kind of job is",
-                  "that...?",
+                  "that`?|",
                   "",
                   "",
                   };
@@ -1390,7 +1395,7 @@ namespace scene
                   "Her",
                   "She went from place to",
                   "place, meeting new people",
-                  "and learning new things.",
+                  "and learning new things.|",
                   "",
                   "",
                   };
@@ -1402,7 +1407,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "She taught me a lot about",
-                  "the world.",
+                  "the world.|",
                   "",
                   "",
                   };
@@ -1413,9 +1418,9 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "It's like... Before then I",
+                  "It's like` Before then I",
                   "didn't realize how big it",
-                  "was.",
+                  "was.|",
                   "",
                   "",
                   };
@@ -1428,7 +1433,7 @@ namespace scene
                   "Her",
                   "There were more people and",
                   "places out there than I ",
-                  "could imagine.",
+                  "could imagine.|",
                   "",
                   "",
                   "",
@@ -1441,7 +1446,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "That's right, you've",
-                  "always been a city girl.",
+                  "always been a city girl.|",
                   "",
                   "",
                   };
@@ -1453,7 +1458,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "Mhm, so the stories that",
-                  "she would tell me...",
+                  "she would tell me`|",
                   "",
                   "",
                   };
@@ -1465,7 +1470,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "They let me imagine a",
-                  "world beyond my own.",
+                  "world beyond my own.|",
                   "",
                   "",
                   };
@@ -1478,7 +1483,7 @@ namespace scene
                   "Her",
                   "I realized that my",
                   "existence was just a small",
-                  "part of something more.",
+                  "part of something more.|",
                   "",
                   "",
                   };
@@ -1490,7 +1495,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "That there was something",
-                  "for me to find...",
+                  "for me to find`|",
                   "",
                   "",
                   "",
@@ -1502,7 +1507,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "She sounds nice.",
+                  "She sounds nice.|",
                   "",
                   "",
                   };
@@ -1513,7 +1518,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Yeah... She was.",
+                  "Yeah` She was.|",
                   "",
                   "",
                   };
@@ -1525,7 +1530,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "So, role reversal! Do you",
-                  "miss her?",
+                  "miss her?|",
                   "",
                   "",
                   };
@@ -1536,7 +1541,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Question thief!",
+                  "Question thief!|",
                   "",
                   "",
                   };
@@ -1547,7 +1552,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Ahaha~",
+                  "Ahaha~|",
                   "",
                   "",
                   };
@@ -1558,7 +1563,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "I do, sometimes... But...",
+                  "I do, sometimes` But`|",
                   "",
                   "",
                   };
@@ -1569,7 +1574,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "But?",
+                  "But?|",
                   "",
                   "",
                   };
@@ -1580,7 +1585,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "You're here.",
+                  "You're here.|",
                   "",
                   "",
                   };
@@ -1593,7 +1598,7 @@ namespace scene
                   "Her",
                   "When I look at you, I feel",
                   "a warmth. Something I",
-                  "can't describe.",
+                  "can't describe.|",
                   "",
                   "",
                   };
@@ -1606,7 +1611,7 @@ namespace scene
                   "Her",
                   "It fills me up entirely.",
                   "Every dream and every",
-                  "desire...",
+                  "desire`|",
                   "",
                   "",
                   };
@@ -1618,7 +1623,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "That's what I see when",
-                  "I look at you.",
+                  "I look at you.|",
                   "",
                   "",
                   };
@@ -1631,7 +1636,7 @@ namespace scene
                   "Her",
                   "How could I ever miss",
                   "anyone when everything I",
-                  "need is right here?",
+                  "need is right here?|",
                   "",
                   "",
                   };
@@ -1642,7 +1647,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "...!",
+                  "`!|",
                   "",
                   "",
                   };
@@ -1653,7 +1658,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Ehehe, you're blushing.",
+                  "Ehehe, you're blushing.|",
                   "",
                   "",
                   };
@@ -1664,7 +1669,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "No I'm not!",
+                  "No I'm not!|",
                   "",
                   "",
                   };
@@ -1675,7 +1680,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Yes you aaare!",
+                  "Yes you aaare!|",
                   "",
                   "",
                   };
@@ -1688,7 +1693,7 @@ namespace scene
                   "You",
                   "You've already stolen my",
                   "heart! You don't need to",
-                  "keep doing it!",
+                  "keep doing it!|",
                   "",
                   "",
                   };
@@ -1700,7 +1705,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "I've got to make sure I",
-                  "got everything~",
+                  "got everything~|",
                   "",
                   "",
                   };
@@ -1712,7 +1717,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "You did! There's nothing",
-                  "left!",
+                  "left!|",
                   "",
                   "",
                   };
@@ -1723,7 +1728,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Reeeaaally?",
+                  "Reeeaaally?|",
                   "",
                   "",
                   };
@@ -1734,7 +1739,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "It's true.",
+                  "It's true.|",
                   "",
                   "",
                   };
@@ -1745,7 +1750,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Prove it.",
+                  "Prove it.|",
                   "",
                   "",
                   };
@@ -1756,7 +1761,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "How?",
+                  "How?|",
                   "",
                   "",
                   };
@@ -1767,7 +1772,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "...Tell me you love me.",
+                  "`Tell me you love me.|",
                   "",
                   "",
                   };
@@ -1779,7 +1784,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "I do that all the time! I",
-                  "loooove you!",
+                  "loooove you!|",
                   "",
                   "",
                   };
@@ -1790,7 +1795,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Ehehe~ Then... Kiss me.",
+                  "Ehehe~ Then` Kiss me.|",
                   "",
                   "",
                   };
@@ -1802,8 +1807,8 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Okay maybe we don't do",
-                  "that all the time... But",
-                  "umm...",
+                  "that all the time` But",
+                  "umm`|",
                   "",
                   "",
                   };
@@ -1814,7 +1819,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Pfft, so shy! Come come.",
+                  "Pfft, so shy! Come come.|",
                   "",
                   "",
                   };
@@ -1826,7 +1831,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Aaah fine! But don't try",
-                  "to suffocate me this time!",
+                  "to suffocate me this time!|",
                   "",
                   "",
                   };
@@ -1838,7 +1843,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "I never try to do that!",
-                  "...Not intentionally.",
+                  "`Not intentionally.|",
                   "",
                   "",
                   };
@@ -1849,7 +1854,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Suuuure you don't.",
+                  "Suuuure you don't.|",
                   "",
                   "",
                   };
@@ -1860,7 +1865,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Shhh, kissy time.",
+                  "Shhh, kissy time.|",
                   "",
                   "",
                   };
@@ -1871,7 +1876,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "You- MMM!",
+                  "You- MMM!|",
                   "",
                   "",
                   };
@@ -1882,7 +1887,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Mwah!",
+                  "Mwah!|",
                   "",
                   "",
                   };
@@ -1893,7 +1898,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Haah! You surprised me!",
+                  "Haah! You surprised me!|",
                   "",
                   "",
                   };
@@ -1904,7 +1909,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Ehehe~",
+                  "Ehehe~|",
                   "",
                   "",
                   };
@@ -1916,7 +1921,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Anyway! There's your",
-                  "proof!",
+                  "proof!|",
                   "",
                   "",
                   };
@@ -1927,8 +1932,8 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "But... I initiated it. You",
-                  "need to initiate!",
+                  "But` I initiated it. You",
+                  "need to initiate!|",
                   "",
                   "",
                   };
@@ -1939,7 +1944,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Eh? Then...",
+                  "Eh? Then`|",
                   "",
                   "",
                   };
@@ -1951,7 +1956,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "We've already kissed. The",
-                  "next task is harder!",
+                  "next task is harder!|",
                   "",
                   "",
                   };
@@ -1963,7 +1968,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Eeeh? When did this become",
-                  "such a large quest?",
+                  "such a large quest?|",
                   "",
                   "",
                   };
@@ -1974,7 +1979,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Ask me on a date!",
+                  "Ask me on a date!|",
                   "",
                   "",
                   };
@@ -1987,7 +1992,7 @@ namespace scene
                   "You",
                   "Oh, easy! Let's go out",
                   "together. Wanna see a",
-                  "movie?",
+                  "movie?|",
                   "",
                   "",
                   };
@@ -1998,7 +2003,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "...Too casual.",
+                  "`Too casual.|",
                   "",
                   "",
                   };
@@ -2010,7 +2015,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Eeeh, but that's how I",
-                  "always do it!",
+                  "always do it!|",
                   "",
                   "",
                   };
@@ -2021,8 +2026,8 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "How about... You ask me to",
-                  "marry you?",
+                  "How about` You ask me to",
+                  "marry you?|",
                   "",
                   "",
                   };
@@ -2033,7 +2038,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "...!",
+                  "`!|",
                   "",
                   "",
                   };
@@ -2044,7 +2049,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "You're blushing again!",
+                  "You're blushing again!|",
                   "",
                   "",
                   };
@@ -2055,7 +2060,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "No I'm nooot!",
+                  "No I'm nooot!|",
                   "",
                   "",
                   };
@@ -2067,7 +2072,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "Ehehe, I was joking",
-                  "though~",
+                  "though~|",
                   "",
                   "",
                   };
@@ -2079,7 +2084,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Haah! Don't shock me like",
-                  "that.",
+                  "that.|",
                   "",
                   "",
                   };
@@ -2090,7 +2095,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "But I wouldn't say no~",
+                  "But I wouldn't say no~|",
                   "",
                   "",
                   };
@@ -2101,7 +2106,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "...!",
+                  "`!|",
                   "",
                   "",
                   };
@@ -2112,7 +2117,7 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Her",
-                  "Pffft, so shhyyyy!",
+                  "Pffft, so shhyyyy!|",
                   "",
                   "",
                   };
@@ -2125,7 +2130,7 @@ namespace scene
                   "",
                   "I spent the rest of my",
                   "morning dizzy from",
-                  "blushing so much.",
+                  "blushing so much.|",
                   "",
                   "",
                   };
@@ -2139,7 +2144,7 @@ namespace scene
               "Her",
               "Oh, did you hear about",
               "Gaulle? Another veto",
-              "apparently.",
+              "apparently.|",
               "",
               "",
               };
@@ -2153,7 +2158,7 @@ namespace scene
             "Her",
             "Do you still have that red",
             "dress? You looked sooo",
-            "good in it.",
+            "good in it.|",
             "",
             "",
             };
@@ -2166,7 +2171,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "Her",
               "The neighbours have this",
-              "big plantie on the balcony!",
+              "big plantie on the balcony!|",
               "",
               "",
               "",
@@ -2179,7 +2184,7 @@ namespace scene
             bn::string_view dialogue_text_lines[] = {
                 "Her",
                 "It hasn't been trimmed",
-                "for months!",
+                "for months!|",
                 "",
                 "",
                 "",
@@ -2195,7 +2200,7 @@ namespace scene
               "Her",
               "Ugh, who decided cooking",
               "broadcasts should be a",
-              "thing?",
+              "thing?|",
               "",
               "",
               };
@@ -2207,7 +2212,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "Her",
               "The eating sounds drive",
-              "me crazy!",
+              "me crazy!|",
               "",
               "",
               "",

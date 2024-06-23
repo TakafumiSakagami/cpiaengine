@@ -115,7 +115,7 @@ Only needs to be specified if changed/updated.
 
 Fades the scene in from black. 
 
-Should be placed before `common::info info` to fade in before text displays, or you can place it before a `_text_scene` to fade into a scene where text is already present.
+Should be placed before `texter::dialogue` to fade in before text displays, or you can place it after to fade into a scene where text is already present.
 
 There is also `fade::in_med();` and `fade::in_slow();`.
 
@@ -125,7 +125,7 @@ _med = 30 frames = 1/2 of a second.
 
 _slow = 60 frames = 1 second.
 
-`fade::in` has a 1-second pause before triggering. You can remove this, if you wish, in `transitions.h` by ommitting the first 4 lines of any given `in_` void and making `frames = 2;` into `int frames = 2;`.
+`fade::in` has a 1-second pause before triggering. You can remove this, if you wish, in `transitions.h` by ommitting the first 4 lines of any given `in_` void and making `frames = 2;` into `int frames = 2;`. You can also make your own.
 
 Only needs to be specified when transitioning from black.
 
@@ -133,7 +133,7 @@ Only needs to be specified when transitioning from black.
 
 Triggers the mentioned panner in `panner.h`.
 
-This moves `bgimg` without moving the window containing it.
+This moves `bgimg` without moving the window containing it, allowing you to pan over a cropped image in a manner reminiscient of Mahoyo or the Tsukihime remake.
 
 Only needs to be specified when triggering a pan.
 
@@ -160,9 +160,9 @@ Must be specified every time.
 
 ###  bn::core::update();
   
-Progresses the frame. Think of it as finalizing everything above.
+Progresses the frame by 1. Think of it as finalizing everything above.
 
-Must be specified every time.
+Must be specified every time you wish the game to catch up to the code fed to it.
 
 ### fade::out_fast();
 
@@ -192,7 +192,7 @@ Gives the waiter a job. He will wait for the amount of frames specified in the `
 
 As this Engine is functionally just a template for Butano, you can expand it freely, should you have the knowledge.
 
-In a similar way to how texter:dialogue is handled, you can add almost anything into this loop. A choice, a menu, input, character customization, gameplay segments, etc... 
+In a similar way to how `texter::dialogue` or `fade::in_fast` is handled, you can add almost anything into this loop. A choice, a menu, input, character customization, gameplay segments, etc... Some examples of this can be found in the demo projects.
 
 ## texter.h
 
@@ -202,9 +202,9 @@ It takes two default layouts (1 and 2) and configures the screen to fit the chos
 
 When a line is complete, the sprites used to build it will be swapped for compressed ones containing multiple characters, to make it harder to hit the sprite limit.
 
-Rendering will continue automatically until fed an exclamation mark, a question mark, a quotation mark, or a period. These are sentence ending symbols.
+Rendering will continue automatically until fed a sentence ending symbol.
 
-Upon reaching a sentence ending symbol, the game will pause to wait for player input, and display a `click to continue` animation to the right of the sentence ending symbol.
+Upon reaching a sentence ending symbol, the game will pause to wait for player input, and display a `click to continue` animation where the sentence ending symbol is.
 
 While this pause for player input is occuring, the player can press B to hide the UI, or Select to hide the background image. Start brings up a pause menu.
 
@@ -213,6 +213,16 @@ While the player is holding fast forward (bound to R by default), these pauses w
 While the player is holding fast forward, a `fast forward` animation will display in the bottom right corner of the screen.
 
 Fast forward cannot be enabled during the pause triggered by a sentence ending symbol.
+
+The sentence ending symbol can be found on the line:
+
+     if(last_char == '|') {
+
+By default, this character is |, which with the default font, appears to be invisible. You can change this if you wish, though I suggest retaining a manual sentence ending symbol rather than relying on automation. An example alternative is...
+
+     if(last_char == '!' || last_char == '?' || last_char == '.' || last_char == '|') {
+
+This would break every time the script runs into an exclamation mark, a question mark, a period, or the same | as before. This could be useful for games that use a full-screen textbox and need to break mid-paragraph frequently, but using !, ? and . within quotation marks will cause some problems that don't exist with the manual |-only method.
 
 ### Click to Continue
 
@@ -225,13 +235,13 @@ The fast forward icon (`fastforward.bmp` and `fast_forward`) is positioned and a
 
 Here we have `menu::pause`, which is... a pause menu. There's no actual functionality programmed into it, but I added it in for demonstration purposes.
 
-`menu::pause` is triggered by texter::dialogue, during the input checking portion signaled in-game by the click to continue icon.
+`menu::pause` is triggered by `texter::dialogue`, during the input checking portion signaled in-game by the click to continue icon.
 
 If the player presses start, a simple image-based menu will appear. The player's cursor is stored as a value named `menu_pos`, which updates whenever the player presses up or down.
 
 By default, `menu_pos` is set to 1. If the player pressed down twice, `menu_pos` would become 3.
 
-You could program it so that, if the player presses A while `menu_pos` is 3, the third option on the menu will be triggered.
+You could program it so that, if the player presses A while `menu_pos` is 3, the third option on the menu will be triggered. Examples of this in action can be found in the By Your Side demo's map menu and choice menu.
 
 ## panner.h
 
@@ -248,7 +258,7 @@ On the y-axis, -48 and +48. 96 in total.
 
 If you are using a smaller window for your backgrounds, you can increase the length of these pans by the amount of pixels being cropped. If you had a 10px border, for example, taking up some of the screen space, you could pan a further 10 pixels in either direction.
 
-
+Similarly, if you're using a larger image, you could write a custom pan that allows for a greater range of movement.
 
 ## Finding coordinates for images/text
 In the mGBA emulator, go `tools` > `view map` to find which background each element is on.
