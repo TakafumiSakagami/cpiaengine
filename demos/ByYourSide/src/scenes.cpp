@@ -5216,8 +5216,9 @@ namespace scene
           //$money += 50
           bn::core::update();
             }
-      if (day >= "32" & day32scene == "0")
-            {
+        }
+    if (day >= "32" & day32scene == "0")
+        {
             if(true)
                 {
               bn::string_view dialogue_text_lines[] = {
@@ -6201,7 +6202,6 @@ namespace scene
               bn::core::update();
                 }
             }
-        }    
     } 
  
  
@@ -6776,6 +6776,1193 @@ namespace scene
           bn::core::update();
             }
         }    
-    }         
+    }     
+ 
+ 
+///////////////////////////////////////////////////////////
+/////                    Work - City                  /////
+///////////////                             ///////////////
+///////////////////////////////////////////////////////////   
+ 
+     void downtownhub()
+    {
+    if(workflag = "Ducks")
+        {
+      if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for",
+              "some ducks.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "But out here in the busy",
+              "city streets, ducks will",
+              "be a rare sight.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+        }        
+    if(workflag = "River")
+        {
+        if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for a",
+              "river.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "But I've gone far in-land.",
+              "Why would there be a river",
+              "out here?|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+        }
+    if(workflag = "Shop")
+        {
+        if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for a",
+              "shop.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Downtown is where all the",
+              "business happens. There",
+              "are shops aplenty.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Such a selection of",
+              "displays, I may as well",
+              "take some extra photos.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome2.png}" with wiperight
+          //$money += 50
+          bn::core::update();
+            }     
+        } 
+    if(workflag = "Flowers")
+        {
+        if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for",
+              "some flowers.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "City streets aren't",
+              "normally where you'd go to",
+              "find wild flowers`|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "But the boss said nothing",
+              "about wild.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I can just go to a flower",
+              "shop!|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          //$money += 25
+          bn::core::update();
+            }
+        } 
+    if(workflag = "Boats")
+        {
+      if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for",
+              "some boats.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "But I don't think I'll",
+              "find any here. There's no",
+              "water in this area.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Maybe if I'm lucky,",
+              "someone will have gotten",
+              "shipwrecked here.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "As if!|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }  
+        }
+    if(workflag = "Church")
+        {
+      if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for a",
+              "church.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Amidst all these shops,",
+              "there's bound to be a",
+              "modern church.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "One of those new ones that",
+              "doesn't really look like a",
+              "church.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "It's technically still",
+              "what the boss asked for.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          //$money += 25
+          bn::core::update();
+            }
+        }        
+    if(workflag = "Museum")
+        {
+      if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for a",
+              "museum.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "But the only museum in the",
+              "city is in the park.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "There's no museum out",
+              "here.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+        }
+    if(workflag = "Bees")
+        {
+      if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for",
+              "some bees.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "It's a weird request, so",
+              "I'm not really sure where",
+              "to look.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Are there even any",
+              "beehives in the city?|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+            
+        }
+    if(workflag = "Supermarket")
+        {
+      if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for a",
+              "supermarket.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "There are multiple to",
+              "choose from in this area.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I may as well take some",
+              "extra photos.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome2.png}" with wiperight
+          //$money += 50
+          bn::core::update();
+            }
+    }
+    if(workflag = "Seagulls")
+        {
+      if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for",
+              "some seagulls.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "There are some fish and",
+              "chip shops in this area`|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "And if I know anything",
+              "about seagulls, they love",
+              "fish and chips.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          //$money += 25
+          bn::core::update();
+            }   
+        }
+    if(workflag = "Bridge")
+        {
+        if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for",
+              "a bridge.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "But this area is one big",
+              "grid of streets.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "No gaps. No water. No",
+              "clearings.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "No bridge.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+        }
+    if(workflag = "Squirrel")
+        {
+      if(true)
+            {
+          //$workflag = 0
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I go on the search for",
+              "a squirrel.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+                {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "There are lots of people",
+              "here. Won't they scare",
+              "away any squirrels?|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+                }
+        if(true)
+                {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "I don't think I'll find",
+              "one here.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+                }
+        }
+    if (tvknowledge == "1" & money >= "100")
+        {
+            //$tvknowledge = False
+            //$laptop = True
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Hey kid.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "",
+                  "On the way back home, a",
+                  "rough hand grabs my",
+                  "shoulder.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "That camera. How long have",
+                  "you had it?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Huh? Uuum` 10 years I",
+                  "think. Why?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "You're a catcher? Here in",
+                  "the city?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Catcher? What-|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Come with me.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "",
+                  "The man pulls me into a",
+                  "shop.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "",
+                  "The inside is full of",
+                  "technology, some I've",
+                  "never even seen before.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "You the supplier?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Huh?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Guess not. You're a buyer",
+                  "then.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "",
+                  "On one of the many",
+                  "displays I spot a familiar",
+                  "sight.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Ah, so that's where our TV",
+                  "came from.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "You bought one of those",
+                  "beauties? Rare model. Not",
+                  "cheap.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Not me. My girlfriend",
+                  "must've bought it.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Yeah? She must have a keen",
+                  "eye for technology.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Ahaha, I don't know about",
+                  "that.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Tell ya what. We got some",
+                  "great gifts here. Spot",
+                  "something she might like",
+                  "and I'll even wrap it for",
+                  "ya.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Pricey stuff though.",
+                  "What's her favorite",
+                  "color?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Eh? Ah, pink.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Pink eh? How 'bout this",
+                  "laptop then?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "",
+                  "The man brings up a small",
+                  "portable tv thing, encased",
+                  "in pink.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Only costs a thousand.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Laptop? What is it?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "It's a computer. Tool of",
+                  "convenience.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "EH? THAT'S A COMPUTER?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "But` It's so small!|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Impressive huh? Just a",
+                  "hundo and you can have",
+                  "it.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "How does it work?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "You just press the power",
+                  "button. Then it works",
+                  "like` A typewriter.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Ah, but who made it?",
+                  "Shouldn't they be on the",
+                  "news?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Nah mate, you won't see",
+                  "this stuff in any",
+                  "newspapers.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Why not?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "'cause it don't exist yet.",
+                  "Like that camera o'",
+                  "yours.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "`What?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "You didn't even know?",
+                  "Haha, tell ya what. Buy",
+                  "the laptop and I'll tell",
+                  "ya.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+//CHOICE INSERT POINT
+            if(choice == "1")
+                {
+            ///Buy the laptop:
+                //$laptop = True
+                //$money -= 100
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "You",
+                      "Fine, I'll take it.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "Man",
+                      "Pass the cash and we got a",
+                      "deal.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "",
+                      "I bought the laptop.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "Man",
+                      "This stuff is all grabbed,",
+                      "y'see. Plucked from a",
+                      "place beyond.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "You",
+                      "What kind of explanation",
+                      "is that?|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "Man",
+                      "Sometimes, for the lucky",
+                      "folk, the future appears",
+                      "to 'em. Sends 'em stuff.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "You",
+                      "So this is all future",
+                      "technology?|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "Man",
+                      "Sure is. Pretty magical,",
+                      "ey?|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "You",
+                      "So that's it? They just",
+                      "appear here?|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "Man",
+                      "That's it.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "You",
+                      "Well, this laptop thing",
+                      "better be worth the money,",
+                      "'cause the explanation",
+                      "wasn't.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "Man",
+                      "Haha, nice doin' business",
+                      "with ya.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                }
+            else
+            {
+                if(true)
+                {
+                  bn::string_view dialogue_text_lines[] = {
+                      "You",
+                      "I don't really want to",
+                      "spend that kind of money.",
+                      "Sorry.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                }
+                if(true)
+                {
+                  bn::string_view dialogue_text_lines[] = {
+                      "Man",
+                      "Nah, makes sense. Not much",
+                      "use for a laptop in this",
+                      "day and age.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                }
+                if(true)
+                {
+                  bn::string_view dialogue_text_lines[] = {
+                      "",
+                      "I decided not to buy the",
+                      "laptop.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                }
+            }
+        }
+   }     
  
 }
