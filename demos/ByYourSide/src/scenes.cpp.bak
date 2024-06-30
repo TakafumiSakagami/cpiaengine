@@ -10,7 +10,7 @@ namespace scene
 ///////////////////////////////////////////////////////////    
 
   //Work - Eternum (Incessant)
-    void working(workflag)
+    void working(int workflag)
     {
       if(workflag = "Ducks")
       {
@@ -157,7 +157,7 @@ namespace scene
 ///////////////                             ///////////////
 ///////////////////////////////////////////////////////////    
 
-    void tvtalk()
+    void tvtalk(int tvflag, int tvknowledge, int energy, int relation)
     {
         //$tvflag = False
         //$tvknowledge = True
@@ -488,11 +488,13 @@ namespace scene
 ///////////////                             ///////////////
 ///////////////////////////////////////////////////////////    
 
-    void talk1()
+    void talk1(int bgpos, int dialogue_layout, bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
     {
         //talktext
         if(true)
         {
+          bn::random talkrng;
+          int d10roll = talkrng.get_int(1, 6)
           bn::string_view dialogue_text_lines[] = {
               "Her",
               "Hmm? You want to talk?|",
@@ -2162,7 +2164,7 @@ namespace scene
             }
         }
 
-        if (d10roll == "2")
+        if (d10roll == "1")
         {
             bn::string_view dialogue_text_lines[] = {
               "Her",
@@ -2176,7 +2178,7 @@ namespace scene
             bn::core::update();
         }
 
-        if (d10roll == "3")
+        if (d10roll == "2")
         {
         bn::string_view dialogue_text_lines[] = {
             "Her",
@@ -2190,7 +2192,7 @@ namespace scene
         bn::core::update();
         }
 
-        if (d10roll == "4")
+        if (d10roll == "3")
         {
             if(true)
             {
@@ -2221,7 +2223,7 @@ namespace scene
             }
         }
 
-        if (d10roll == "5")
+        if (d10roll == "4")
         {
         if(true)
             {
@@ -2251,7 +2253,7 @@ namespace scene
             }
         }
    
-        if (d10roll == "6" & laptop == "1")
+        if (d10roll == "5" & laptop == "1")
             {
             if(true)
                 {
@@ -2717,7 +2719,7 @@ namespace scene
                 }
             }
 
-        elif (d10roll == "6")
+        elif (d10roll == "5")
             {
             if(true)
                 {

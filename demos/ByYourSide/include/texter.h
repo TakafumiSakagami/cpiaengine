@@ -26,6 +26,10 @@ namespace
     {
         internal_window.set_boundaries(-120, 0, 120, 92); //vertical
     }
+    if(bgpos == 4)
+    {
+        internal_window.set_boundaries(-80, -120, 80, 120); //full screen
+    }
 
     if(dialogue_layout == 1)
     {
@@ -51,7 +55,7 @@ namespace texter
 {
 int dialogue(const bn::span<const bn::string_view>& text_lines, int bgpos, int dialogue_layout, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
 {
-  bn::vector<bn::sprite_ptr, 32> char_sprites;
+  bn::vector<bn::sprite_ptr, 64> char_sprites;
   bn::vector<bn::sprite_ptr, 32> text_sprites;
   text_sprites.clear();
 

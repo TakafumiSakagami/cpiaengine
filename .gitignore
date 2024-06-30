@@ -11,3 +11,5 @@ cpiaengine.elf
 *.sav
 /Dev Assets/BYS
 /Dev Assets/cpia
+demos/ByYourSide/ByYourSide.elf
+demos/ByYourSide/ByYourSide.gba

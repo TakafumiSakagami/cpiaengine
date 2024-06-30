@@ -14,29 +14,29 @@
 #include "bn_regular_bg_position_hbe_ptr.h"
 
 //Place sprites here
-#include "bn_regular_bg_items_sp01.h"
-#include "bn_regular_bg_items_sp01_fade_01.h"
-#include "bn_regular_bg_items_sp01_fade_02.h"
-#include "bn_regular_bg_items_sp01_fade_03.h"
+// #include "bn_regular_bg_items_sp01.h"
+// #include "bn_regular_bg_items_sp01_fade_01.h"
+// #include "bn_regular_bg_items_sp01_fade_02.h"
+// #include "bn_regular_bg_items_sp01_fade_03.h"
 
 namespace fader
 {
-  int sp01_in(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& textbox)
-  {
+  // int sp01_in(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& textbox)
+  // {
 
-          spimg.set_visible(true);
-          textbox.set_visible(false);
-          spimg.set_item(bn::regular_bg_items::sp01_fade_01);
-          bn::core::update();bn::core::update();
-          bn::core::update();bn::core::update();
-          spimg.set_item(bn::regular_bg_items::sp01_fade_02);
-          bn::core::update();bn::core::update();
-          bn::core::update();bn::core::update();
-          spimg.set_item(bn::regular_bg_items::sp01_fade_03);
-          bn::core::update();bn::core::update();
-          bn::core::update();bn::core::update();
-          spimg.set_item(bn::regular_bg_items::sp01);
-          textbox.set_visible(true);
-          return(0);
-  }
+          // spimg.set_visible(true);
+          // textbox.set_visible(false);
+          // spimg.set_item(bn::regular_bg_items::sp01_fade_01);
+          // bn::core::update();bn::core::update();
+          // bn::core::update();bn::core::update();
+          // spimg.set_item(bn::regular_bg_items::sp01_fade_02);
+          // bn::core::update();bn::core::update();
+          // bn::core::update();bn::core::update();
+          // spimg.set_item(bn::regular_bg_items::sp01_fade_03);
+          // bn::core::update();bn::core::update();
+          // bn::core::update();bn::core::update();
+          // spimg.set_item(bn::regular_bg_items::sp01);
+          // textbox.set_visible(true);
+          // return(0);
+  // }
 }

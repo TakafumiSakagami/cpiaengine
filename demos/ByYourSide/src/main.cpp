@@ -6,6 +6,7 @@
 #include "bn_keypad.h"
 #include "bn_display.h"
 #include "bn_blending.h"
+#include <bn_string.h>
 #include <bn_blending_transparency_attributes.h>
 #include "bn_bgs_mosaic.h"
 #include "bn_bg_palettes.h"
@@ -19,8 +20,9 @@
 #include "bn_music_actions.h"
 #include "bn_sound_actions.h"
 #include "bn_music_item.h"
-#include "bn_music_items.h"
+//#include "bn_music_items.h"
 #include "bn_sound_item.h"
+#include <bn_random.h>
 #include "common_info.h"
 #include "transitions.h"
 #include "texter.h"
@@ -51,10 +53,21 @@
 #include <bn_regular_bg_items_sp01.h>
 #include <bn_regular_bg_items_sp02.h>
 //Backgrounds
+#include <bn_regular_bg_items_bg00.h>
+#include <bn_regular_bg_items_bg00_n.h>
 #include <bn_regular_bg_items_bg01.h>
+#include <bn_regular_bg_items_bg01_a.h>
+#include <bn_regular_bg_items_bg01_b.h>
+#include <bn_regular_bg_items_bg01_c.h>
 #include <bn_regular_bg_items_bg02.h>
+#include <bn_regular_bg_items_bg03.h>
+#include <bn_regular_bg_items_bg04.h>
+#include <bn_regular_bg_items_bg05.h>
+#include <bn_regular_bg_items_bg06.h>
 
 //You can hide this Namescape if you just want to get to writing scenes
+
+
 namespace
 {
 
@@ -76,6 +89,10 @@ int main()
     int bgpos = 1;
     int dialogue_layout = 1;
     int frames = 60;
+    int energy = 2;
+    int relationship = 0;
+    int money = 0;
+    int date = 1;
     bn::rect_window internal_window = bn::rect_window::internal();
     bn::rect_window external_window = bn::rect_window::external();
     bn::window outside_window = bn::window::outside();
@@ -88,7 +105,7 @@ int main()
 
     //bg image positioning
     //bn::regular_bg_ptr bgimg = bn::regular_bg_items::bg01.create_bg(0, 0); //vertical
-    bn::regular_bg_ptr bgimg = bn::regular_bg_items::bg01.create_bg(-8, -90); //horizontal
+    bn::regular_bg_ptr bgimg = bn::regular_bg_items::bg00.create_bg(-8, -90); //horizontal
     bgimg.set_blending_bottom_enabled(true);
     bgimg.put_below();
     //sprite positioning
@@ -125,7 +142,7 @@ int main()
     bn::sprite_text_generator text_generator(common::fixed_8x16_sprite_font);
 
     //Play example music
-    bn::music_items::dearcustomer.play(1);
+    //bn::music_items::dearcustomer.play(1);
 
     /////////////////////////////////
     ///////  Begin the game  ////////
@@ -137,87 +154,45 @@ int main()
     //scene loop
     while(true)
     {
+        ////////////   DAYTIME
+        //////////////////////
+        ////////////
+        //
         //frames = 20;                                                                            //These two lines of code can be used to
         //waiter(frames);                                                                         //wait 20 frames. The game runs at 60fps!
         spimg.set_visible(false);
         //01; textbox
-        bgpos = 1;                                                                                //Back panel settings
+        bgpos = 4;                                                                                //Back panel settings
         dialogue_layout = 1;                                                                      //Set layout. 1 = textbox, 2 = fullscreen
-        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);         //Code to trigger settings
+        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);               //Code to trigger settings
+        //because we're fading
+        external_window.set_visible(false);
         textbox.set_visible(false);
-        bgimg.set_item(bn::regular_bg_items::bg01);                                               //Set background to bg01
+        //
+        bgimg.set_item(bn::regular_bg_items::bg00);                                               //Set background to bg01
         spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
-        bgimg.set_position(-8, -90);                                                              //Set background position
-        spimg.set_position(2, 40);                                                               //Set sprite position
+        bgimg.set_position(-8, 0);                                                              //Set background position
+        spimg.set_position(0, 0);                                                                //Set sprite position
         if(true)                                                                                  //Text input begins
         {
           bn::string_view dialogue_text_lines[] = {
-              "Sepia-tan",
-              "Select/B: Toggle BG/text.",
-              "A: Go to next scene.",
+              "",
+              "",
+              "",
               "",
               "",
               "",
               "",
               };
-          fade::in_slow();                                                                        //This is where fade in/out is triggered. Before the text scene.
-          panner::left_to_right(bgimg);
-          fader::sp01_in(spimg, textbox);
+          fade::in_slow();   
           texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
+          menu::day(date, energy, money, relationship, spimg, bgimg, textbox, internal_window, external_window, text_generator);
         }
-        //01 End;
         fade::out_fast();
-        //02; full screen text
-        bgpos = 3;
-        dialogue_layout = 2;
-        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
-        bgimg.set_item(bn::regular_bg_items::bg02);
-        spimg.set_item(bn::regular_bg_items::sp02);
-        bgimg.set_position(0, 48);
-        spimg.set_position(0, 40);
-        if(true)
-        {
-          bn::string_view dialogue_text_lines[] = {
-              "A: Go to next scene.",
-              "B: Hide/Show text.",
-              "SELECT: Hide/Show BG.",
-              "",
-              "",
-              "",
-              "",
-              };
-          fade::in_fast();
-          panner::top_to_bottom(bgimg);
-          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
-          bn::core::update();
-        }
-        //
-        fade::out_med();
-        //
-        bgpos = 1;
-        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
-        bgimg.set_item(bn::regular_bg_items::bg01);
-        spimg.set_item(bn::regular_bg_items::sp01);
-        bgimg.set_position(-8, -90);
-        spimg.set_position(50, 40);
-        if(true)
-        {
-          bn::string_view dialogue_text_lines[] = {
-              "Here is some text.",
-              "Hold R to skip any and",
-              "all pauses.",
-              "",
-              "It's handy, huh?",
-              "",
-              "",
-              };
-          fade::in_med();
-          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
-          bn::core::update();
-        }
-        //
-        fade::out_slow();
+        //01 End;
+        date = date + 1;
+
 
     }
 }
