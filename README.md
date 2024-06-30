@@ -139,7 +139,7 @@ Only needs to be specified when triggering a pan.
 
 ### fader::sp01_in(spimg, textbox);
 
-![](Dev%20Assets/doc_sprite_transitionvideo.gif)
+![](Dev%20Assets/doc_sprite_transition_video.gif)
 
 Triggers the mentioned fader in `spriter.h`.
 
