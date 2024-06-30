@@ -148,8 +148,8 @@ You can make custom fades/transitions for `spimg` or `bgimg` in a sprite editor,
 An example 3-frame fade animation can be made by applying the provided dither patterns over any images you wish to make a fader for. An Aseprite document showing the overlays in use is also provided.
 
 ![](Dev%20Assets/doc_sprite_transition_video.gif)
+
 ![](Dev%20Assets/sprite_transition1.png)![](Dev%20Assets/sprite_transition2.png)![](Dev%20Assets/sprite_transition3.png)
-![](Dev%20Assets/doc_sprite_transition1.png)![](Dev%20Assets/doc_sprite_transition2.png)![](Dev%20Assets/doc_sprite_transition3.png)
 
 
 
