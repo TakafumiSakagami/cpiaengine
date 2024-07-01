@@ -102,7 +102,7 @@ int main()
     int day19scene = 0;
     int laptop = 0;
     //================================================
-    
+
     bn::rect_window internal_window = bn::rect_window::internal();
     bn::rect_window external_window = bn::rect_window::external();
     bn::window outside_window = bn::window::outside();
@@ -194,7 +194,7 @@ int main()
               "",
               "",
               };
-          fade::in_slow();   
+          fade::in_slow();
           texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
           menu::day(date, energy, money, relationship, menu_pos, spimg, bgimg, textbox, internal_window, external_window, text_generator);
@@ -202,13 +202,13 @@ int main()
         if (menu_pos == 0)
         {
         bn::core::update();
-        scene::talk1(date, energy, money, relationship, day19scene, laptop, bgpos, dialogue_layout, spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng); 
+        scene::talk1(date, energy, money, relationship, day19scene, laptop, bgpos, dialogue_layout, spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
         }
-        
-        
+
+
         fade::out_fast();
-        
-        
+
+
         //nd;
         date = date + 1;
 

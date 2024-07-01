@@ -3,7 +3,7 @@ A basic NVL engine for making Visual Novels, Sound Novels, etc... for the Gamebo
 Requires minimal coding knowledge!
 Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
 
-![](../demo_kanon.png)![](../demo_sepia2.png)![](../demo_sepia.png)
+![](../demo_kanon.png)![](../demo_sepia2.png)![](../demo_bys.png)
 
 ## Script Converter
 
