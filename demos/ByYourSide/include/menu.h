@@ -92,16 +92,17 @@ namespace menu
         external_window.set_show_sprites(true);
     return(0);}
  
-    int day(int date, int energy, int money, int relationship, bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
+    int day(int date, int energy, int money, int relationship, int menu_pos, bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
         bn::vector<bn::sprite_ptr, 32> menu_sprites;
         menu_sprites.clear();
         textbox.set_item(bn::regular_bg_items::bys_menu_day);
         bgimg.set_position(-8, 0);  
+        spimg.set_position(0, 0);                                                              
         //textbox.set_blending_top_enabled(false);
         //external_window.set_boundaries(-70, -110, 70, 110);
         internal_window.set_visible(true);
-        int menu_pos = 0;
+        menu_pos = 0;
         external_window.set_show_sprites(false);
         external_window.set_show_blending(false);
         textbox.set_blending_top_enabled(false);
@@ -133,7 +134,7 @@ namespace menu
                  {
                      
                      break;
-                     //scene::talk1(bgpos, dialogue_layout, spimg, bgimg, textbox, internal_window, external_window); 
+                     
                  }
                  if (menu_pos == 1)
                  {

@@ -28,6 +28,7 @@
 #include "texter.h"
 #include "spriter.h"
 #include "panner.h"
+#include "scenes.h"
 //#include "menu.cpp"
 
 ///////////////////////////////////////////
@@ -83,16 +84,25 @@ namespace
 //start:
 int main()
 {
+    bn::core::init();
     //game script begins at "while"
     //These are just default settings being established
-    bn::core::init();
+    //
     int bgpos = 1;
     int dialogue_layout = 1;
     int frames = 60;
+    int menu_pos = 0;
+    //
     int energy = 2;
     int relationship = 0;
     int money = 0;
     int date = 1;
+    bn::random talkrng;
+    //
+    int day19scene = 0;
+    int laptop = 0;
+    //================================================
+    
     bn::rect_window internal_window = bn::rect_window::internal();
     bn::rect_window external_window = bn::rect_window::external();
     bn::window outside_window = bn::window::outside();
@@ -187,10 +197,19 @@ int main()
           fade::in_slow();   
           texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
-          menu::day(date, energy, money, relationship, spimg, bgimg, textbox, internal_window, external_window, text_generator);
+          menu::day(date, energy, money, relationship, menu_pos, spimg, bgimg, textbox, internal_window, external_window, text_generator);
         }
+        if (menu_pos == 0)
+        {
+        bn::core::update();
+        scene::talk1(date, energy, money, relationship, day19scene, laptop, bgpos, dialogue_layout, spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng); 
+        }
+        
+        
         fade::out_fast();
-        //01 End;
+        
+        
+        //nd;
         date = date + 1;
 
 
