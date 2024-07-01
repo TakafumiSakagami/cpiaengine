@@ -1,4 +1,9 @@
 
+#include "bn_sound_actions.h"
+
+#include "bn_sound_item.h"
+#include <bn_sound_items.h>
+
 //Sprites
 #include <bn_regular_bg_items_sp01.h>
 #include <bn_regular_bg_items_sp02.h>
@@ -29,7 +34,7 @@ namespace scene
         {
             //RNG
             talkrng.update();
-            talkrng.update();
+            //talkrng.update();
             int d10roll = talkrng.get_int(1, 6);
             talkrng.update();
             //Set the scene
@@ -51,6 +56,8 @@ namespace scene
                   "",
                   };
               spimg.set_visible(true);
+              bn::sound::stop_all();
+              bn::sound_items::z00.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
         }
@@ -295,6 +302,9 @@ namespace scene
                   "",
                   "",
                   };
+                  
+              bn::sound::stop_all();
+              bn::sound_items::z51.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -365,6 +375,9 @@ namespace scene
                   "",
                   "",
                   };
+                  
+              bn::sound::stop_all();
+              bn::sound_items::z01.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -391,6 +404,9 @@ namespace scene
                   "",
                   "",
                   };
+                  
+              bn::sound::stop_all();
+              bn::sound_items::z50.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -515,6 +531,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z42.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -600,6 +618,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z51.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -647,6 +667,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z40.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -693,6 +715,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z43.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -728,6 +752,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z02.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -773,6 +799,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z03.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -809,6 +837,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z10.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -853,6 +883,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z50.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -1037,6 +1069,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z12.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -1237,6 +1271,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z42.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -1307,6 +1343,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z51.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -1374,6 +1412,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z43.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -1488,6 +1528,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z40.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -1582,6 +1624,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z50.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -1651,6 +1695,8 @@ namespace scene
                   "",
                   "",
                   };
+              bn::sound::stop_all();
+              bn::sound_items::z41.play();
               texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -1720,8 +1766,17 @@ namespace scene
             bn::string_view dialogue_text_lines[] = {
               "Her",
               "Oh, did you hear about",
-              "Gaulle? Another veto",
-              "apparently.|",
+              "Gaulle?|",
+              "",
+              "",
+              };
+            texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+            bn::core::update();
+            bn::string_view dialogue_text_lines[] = {
+              "Her",
+              "Another veto apparently.|",
+              "",
+              "",
               "",
               "",
               };
@@ -1735,13 +1790,22 @@ namespace scene
         bn::string_view dialogue_text_lines[] = {
             "Her",
             "Do you still have that red",
-            "dress? You looked sooo",
-            "good in it.|",
+            "dress?|",
+            "",
             "",
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
+        bn::string_view dialogue_text_lines[] = {
+            "Her",
+            "You looked soo good in it.|",
+            "",
+            "",
+            "",
+            };
+        texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+        bn::core::update();        
         break;
         }
 
@@ -1784,8 +1848,8 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "Her",
               "Ugh, who decided cooking",
-              "broadcasts should be a",
-              "thing?|",
+              "broadcasts should exist?|",
+              "",
               "",
               "",
               };
@@ -1962,9 +2026,9 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                     "You",
-                    "How do people even figure",
-                    "out how to make this",
-                    "stuff?|",
+                    "How do people figure out",
+                    "how to make this stuff?|",
+                    "",
                     "",
                     "",
                     };
@@ -1997,9 +2061,9 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                     "Her",
-                    "Well, just think. Not long",
-                    "ago we didn't have TVs at",
-                    "all`|",
+                    "Just think. Not long ago,",
+                    "we didn't have TVs at all`|",
+                    "",
                     "",
                     "",
                     };
@@ -2033,9 +2097,9 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                     "Her",
-                    "We didn't even know how to",
-                    "copy documents",
-                    "automatically.|",
+                    "We didn't know how to copy",
+                    "documents automatically.|",
+                    "",
                     "",
                     "",
                     };
@@ -2071,9 +2135,22 @@ namespace scene
                 bn::string_view dialogue_text_lines[] = {
                     "You",
                     "I imagine once you've",
-                    "figured out how to take a",
-                    "photo, making a TV isn't",
-                    "too crazy.|",
+                    "figured out photography`|",
+                    "",
+                    "",
+                    "",
+                    "",
+                    };
+                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                bn::core::update();
+                }
+          if(true)
+                {
+                bn::string_view dialogue_text_lines[] = {
+                    "You",
+                    "Making a TV isn't too",
+                    "crazy.|",
+                    "",
                     "",
                     "",
                     };
@@ -2085,7 +2162,18 @@ namespace scene
                 bn::string_view dialogue_text_lines[] = {
                     "You",
                     "And then turning a TV",
-                    "into` Whatever this laptop",
+                    "into` well`|",
+                    "",
+                    "",
+                    };
+                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                bn::core::update();
+                }
+            if(true)
+                {
+                bn::string_view dialogue_text_lines[] = {
+                    "You",
+                    "Whatever this laptop",
                     "thing is`|",
                     "",
                     "",
@@ -2097,10 +2185,31 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                     "You",
-                    "Same with cars, right?",
+                    "Same with cars, right?|",
+                    "",
+                    "",
+                    "",
+                    };
+                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                bn::core::update();
+                }
+            if(true)
+                {
+                bn::string_view dialogue_text_lines[] = {
+                    "You",
                     "They're this big unmoving",
-                    "box, and there's a window",
-                    "that shows an unmoving",
+                    "box with a window`|",
+                    "",
+                    "",
+                    };
+                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                bn::core::update();
+                }
+            if(true)
+                {
+                bn::string_view dialogue_text_lines[] = {
+                    "You",
+                    "Behind it, an unmoving",
                     "person hovering inside.|",
                     "",
                     "",
@@ -2112,10 +2221,8 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                     "You",
-                    "And then four little",
-                    "circles at the bottom are",
-                    "the only elements that",
-                    "move.|",
+                    "Four little circles at the",
+                    "bottom are all that move.|",
                     "",
                     "",
                     };
@@ -2138,9 +2245,9 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                     "You",
-                    "But when you look at all",
-                    "the parts, it makes",
-                    "sense.|",
+                    "But when you look all the",
+                    "parts, it makes sense.|",
+                    "",
                     "",
                     "",
                     };
@@ -2163,9 +2270,19 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                     "You",
-                    "EH? But it's true! Next",
-                    "time you see a car, look",
-                    "at it like that.|",
+                    "EH? But it's true!|",
+                    "",
+                    "",
+                    };
+                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                bn::core::update();
+                }
+            if(true)
+                {
+                bn::string_view dialogue_text_lines[] = {
+                    "You",
+                    "Next time you see a car,",
+                    "look at it like that.|",
                     "",
                     "",
                     };
@@ -2188,10 +2305,8 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                     "Her",
-                    "This laptop proves that",
-                    "there's a lot more",
-                    "potential beyond modern",
-                    "technology.|",
+                    "This laptop proves there's",
+                    "a lot more potential`|",
                     "",
                     "",
                     };
@@ -2202,9 +2317,20 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                     "You",
-                    "So until we fulfill all of",
-                    "that potential you won't",
-                    "call anything amazing?|",
+                    "So until we fulfil all of",
+                    "that potential`|",
+                    "",
+                    "",
+                    };
+                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                bn::core::update();
+                }
+            if(true)
+                {
+                bn::string_view dialogue_text_lines[] = {
+                    "You",
+                    "You won't call anything",
+                    "amazing?|",
                     "",
                     "",
                     };
@@ -2228,8 +2354,8 @@ namespace scene
                 bn::string_view dialogue_text_lines[] = {
                     "You",
                     "But it comes off the back",
-                    "of our previous",
-                    "discoveries.|",
+                    "of our previous ones.|",
+                    "",
                     "",
                     "",
                     };
@@ -2253,7 +2379,7 @@ namespace scene
                 bn::string_view dialogue_text_lines[] = {
                     "Her",
                     "Oh! You can process files",
-                    "too.|",
+                    "too, with the laptop.|",
                     "",
                     "",
                     };
@@ -2272,6 +2398,18 @@ namespace scene
                 texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
+            if(true)
+                {
+                bn::string_view dialogue_text_lines[] = {
+                    "You",
+                    "This laptop thing is a",
+                    "growing mystery`|",
+                    "",
+                    "",
+                    };
+                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                bn::core::update();
+                }
             break;
             }
 
@@ -2282,8 +2420,20 @@ namespace scene
                 bn::string_view dialogue_text_lines[] = {
                   "Her",
                   "Oooh, this Mr. Weirdlove",
-                  "movie sounds interesting.",
+                  "movie sounds interesting.|",
+                  "",
+                  "",
+                  "",
+                  };
+                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                bn::core::update();
+                }
+            if(true)
+                {
+                bn::string_view dialogue_text_lines[] = {
+                  "Her",
                   "Can we go see it?|",
+                  "",
                   "",
                   "",
                   };
@@ -2408,9 +2558,9 @@ namespace scene
                 {
                 bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Uuu, I'll start a snuggle",
-                  "war if you keep pushing",
-                  "it.|",
+                  "I'll start a snuggle war",
+                  "if you keep pushing it.|",
+                  "",
                   "",
                   "",
                   };
