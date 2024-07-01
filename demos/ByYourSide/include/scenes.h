@@ -1763,6 +1763,8 @@ namespace scene
 
         if (d10roll == 1)
         {
+           if(true)
+            {
             bn::string_view dialogue_text_lines[] = {
               "Her",
               "Oh, did you hear about",
@@ -1772,6 +1774,9 @@ namespace scene
               };
             texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
             bn::core::update();
+            }
+           if(true)
+            {
             bn::string_view dialogue_text_lines[] = {
               "Her",
               "Another veto apparently.|",
@@ -1782,11 +1787,14 @@ namespace scene
               };
             texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
             bn::core::update();
+            }
             break;
         }
 
         if (d10roll == 2)
         {
+           if(true)
+            {
         bn::string_view dialogue_text_lines[] = {
             "Her",
             "Do you still have that red",
@@ -1797,6 +1805,9 @@ namespace scene
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
+            }
+           if(true)
+            {
         bn::string_view dialogue_text_lines[] = {
             "Her",
             "You looked soo good in it.|",
@@ -1805,7 +1816,8 @@ namespace scene
             "",
             };
         texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
-        bn::core::update();        
+        bn::core::update();   
+            }        
         break;
         }
 
