@@ -19,7 +19,7 @@ The output file will automatically insert a linebreak whenever the text surpasse
 
 The value of when linebreaks will be inserted can be changed by editing `convert_txt_to_dialogue.py` in a text editor, as can the name of the input file (`input.txt` by default) and the output file (`output.txt` by default).
 
-Though this won't insert intricate things such as image choices, fades, sound effects, etc... it will drastically speed up the process of converting written prose into useable code.
+Though this won't insert intricate things such as image choices, fades, sound effects, etc... it will drastically speed up the process of converting written prose into useable code, so I highly recommend you install Python and use this script!
 
 For example, a text file containing:
 

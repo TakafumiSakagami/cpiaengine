@@ -21,6 +21,8 @@ The textbox, rather than being the singular `bn::regular_bg_ptr textbox` that sw
 
 That's the outdated stuff out of the way! New things are:
 
+There is no namebox, and the textbox can hold an extra line of text.
+
 Added white fades to `transitions.h`.
 
 Added code to `main.cpp`'s loop for white fade handling.

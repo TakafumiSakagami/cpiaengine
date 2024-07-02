@@ -1,7 +1,7 @@
 # GBA NVL engine - SepiaNVL
 A basic NVL engine for making Visual Novels, Sound Novels, etc... for the Gameboy Advance.
 
-Made for an article in the free-to-read [C-pia! Magazine](https://c-pia.github.io/), a mag all about oldschool games and VNs. We're always looking for writers!
+Made for an article in the free-to-read [C-pia! Magazine](https://c-pia.github.io/), a mag' all about oldschool games and VNs. We're always looking for writers!
 
 ## About
 
@@ -63,7 +63,7 @@ More details on the converter script can be found somewhere in the `Dev Assets` 
 
 The Kanon demo was built using an early version of SepiaNVL, so it's a bit messy. It recreates the opening dialogue of Key's Kanon, as well as part of the intro movie.
 
-Focus points include: white fades instead of black fades, CGs, transitions, pans, music and voice playback, and a traditional presentation style.
+Focus points include: white fades instead of black fades, CGs, transitions, pans, music and voice playback, a namebox-less textbox, and a traditional presentation style.
 
 ### By Your Side
 
