@@ -12,7 +12,7 @@
 namespace
 {
 
-  void presets(int bgpos, int dialogue_layout, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
+  void presets(bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
   {
     if(bgpos == 1)
     {
@@ -49,7 +49,7 @@ namespace
 
 namespace texter
 {
-int dialogue(const bn::span<const bn::string_view>& text_lines, int bgpos, int dialogue_layout, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
+int dialogue(const bn::span<const bn::string_view>& text_lines, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
 {
   bn::vector<bn::sprite_ptr, 32> char_sprites;
   bn::vector<bn::sprite_ptr, 32> text_sprites;
@@ -102,8 +102,8 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int bgpos, int d
                     textbox.set_visible(true);
                     internal_window.set_show_sprites(true);
                     external_window.set_show_sprites(true);
-                    menu::pause(bgpos, dialogue_layout, textbox, internal_window, external_window);
-                    presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
+                    menu::pause(textbox, internal_window, external_window);
+                    presets(textbox, internal_window, external_window);
                 }
                 if(bn::keypad::select_pressed())
                 {
@@ -180,8 +180,8 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, int bgpos, int d
                    textbox.set_visible(true);
                    internal_window.set_show_sprites(true);
                    external_window.set_show_sprites(true);
-                   menu::pause(bgpos, dialogue_layout, textbox, internal_window, external_window);
-                   presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
+                   menu::pause(textbox, internal_window, external_window);
+                   presets(textbox, internal_window, external_window);
                }
                if(bn::keypad::select_pressed())
                {

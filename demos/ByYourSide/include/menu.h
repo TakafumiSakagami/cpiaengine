@@ -24,15 +24,16 @@ namespace
 {
     struct savedata
     {
+        //System
         int bgpos;
         int dialogue_layout;
         int menu_pos;
-        //
+        //Stats
         int energy;
         int relationship;
         int money;
         int date;
-        //
+        //Flags
         int day19scene;
         int laptop;
         //

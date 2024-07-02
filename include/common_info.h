@@ -23,7 +23,7 @@ class info
 {
 
 public:
-    info(const bn::span<const bn::string_view>& text_lines, int dialogue_layout, bn::sprite_text_generator& text_generator);
+    info(const bn::span<const bn::string_view>& text_lines, bn::sprite_text_generator& text_generator);
 
     info(const bn::string_view& title, const bn::span<const bn::string_view>& text_lines,
          bn::sprite_text_generator& text_generator);

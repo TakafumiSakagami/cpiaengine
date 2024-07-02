@@ -19,7 +19,9 @@ A map menu has been added, which allows you to travel to certain areas of the ci
 
 `menu::day` and `menu::night` have been added. The player can decide how to interact with the heroine for a certain time slot. The background changes to reflect the time of day, and stats such as the date, your energy, your money, and your relationship level are displayed.
 
-The Pause menu has been removed.
+The Pause menu is now accessed during the choice-making menus, and can be used to save and/or load the game.
+
+In `texter.h`'s `presets`, a fourth bgpos has been added. When bgpos == 4, the background image will be fully revealed for a full-screen image display.
 
 There are a larger number of sprites, in order to reference the heroine's outfit-changing mechanics in the original game.
 

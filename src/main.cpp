@@ -22,6 +22,13 @@
 #include "bn_music_items.h"
 #include "bn_sound_item.h"
 #include "common_info.h"
+
+//These are just default settings being established
+int bgpos = 1;
+int dialogue_layout = 1;
+int frames = 60;
+//You can also place flags here to make them global!
+
 #include "transitions.h"
 #include "texter.h"
 #include "spriter.h"
@@ -58,7 +65,7 @@
 namespace
 {
 
-    void waiter(int frames)
+    void waiter()
     {
       for(int i = 0; i < frames; ++i) {
           bn::core::update();
@@ -71,11 +78,7 @@ namespace
 int main()
 {
     //game script begins at "while"
-    //These are just default settings being established
     bn::core::init();
-    int bgpos = 1;
-    int dialogue_layout = 1;
-    int frames = 60;
     bn::rect_window internal_window = bn::rect_window::internal();
     bn::rect_window external_window = bn::rect_window::external();
     bn::window outside_window = bn::window::outside();
@@ -137,13 +140,13 @@ int main()
     //scene loop
     while(true)
     {
-        //frames = 20;                                                                            //These two lines of code can be used to
-        //waiter(frames);                                                                         //wait 20 frames. The game runs at 60fps!
+        frames = 20;                                                                              //These two lines of code can be used to
+        waiter();                                                                           //wait 20 frames. The game runs at 60fps!
         spimg.set_visible(false);
         //01; textbox
         bgpos = 1;                                                                                //Back panel settings
         dialogue_layout = 1;                                                                      //Set layout. 1 = textbox, 2 = fullscreen
-        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);               //Code to trigger settings
+        presets(textbox, internal_window, external_window);               //Code to trigger settings
         textbox.set_visible(false);
         bgimg.set_item(bn::regular_bg_items::bg01);                                               //Set background to bg01
         spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
@@ -163,7 +166,7 @@ int main()
           fade::in_slow();                                                                         //This is where fade in/out is triggered. Before the text scene.
           panner::left_to_right(bgimg);
           fader::sp01_in(spimg, textbox);
-          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
         //01 End;
@@ -171,7 +174,7 @@ int main()
         //02; full screen text
         bgpos = 3;
         dialogue_layout = 2;
-        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
+        presets(textbox, internal_window, external_window);
         bgimg.set_item(bn::regular_bg_items::bg02);
         spimg.set_item(bn::regular_bg_items::sp02);
         bgimg.set_position(0, 48);
@@ -189,14 +192,14 @@ int main()
               };
           fade::in_fast();
           panner::top_to_bottom(bgimg);
-          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
         //
         fade::out_med();
         //
         bgpos = 1;
-        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
+        presets(textbox, internal_window, external_window);
         bgimg.set_item(bn::regular_bg_items::bg01);
         spimg.set_item(bn::regular_bg_items::sp01);
         bgimg.set_position(-8, -90);
@@ -213,7 +216,7 @@ int main()
               "",
               };
           fade::in_med();
-          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
         }
         //

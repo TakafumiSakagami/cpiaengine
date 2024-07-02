@@ -1,3 +1,5 @@
+#include <bn_string.h>
+#include "bn_sram.h"
 
 #include <bn_regular_bg_items_pause_01.h>
 #include <bn_regular_bg_items_pause_02.h>
@@ -8,10 +10,22 @@
 #include <bn_regular_bg_items_textbox.h>
 #include <bn_regular_bg_items_kuro.h>
 
+namespace
+{
+    struct savedata
+    {
+        int bgpos;
+        int dialogue_layout;
+        int menu_pos;
+        //
+    };
+}
+
 namespace menu
 {
-    int pause(int bgpos, int dialogue_layout, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
+    int pause(bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
     {
+        savedata saveData;
         textbox.set_item(bn::regular_bg_items::pause_01);
         textbox.set_blending_top_enabled(false);
         external_window.set_boundaries(-70, -110, 70, 110);
@@ -74,6 +88,31 @@ namespace menu
               {
                   menu_pos = 1;
                   textbox.set_item(bn::regular_bg_items::pause_01);
+              }
+           if(bn::keypad::a_pressed())
+              {
+                 if (menu_pos == 2)
+                 {
+                     ////System
+                     //saveData.bgpos = bgpos;
+                     //saveData.dialogue_layout = dialogue_layout;
+                     //saveData.menu_pos = menu_pos;
+                     ////Save
+                     bn::sram::write(saveData);
+                     break;
+
+                 }
+                 if (menu_pos == 3)
+                 {
+                     ////Load
+                     bn::sram::read(saveData);
+                     ////System
+                     //bgpos = saveData.bgpos;
+                     //dialogue_layout = saveData.dialogue_layout;
+                     //menu_pos = saveData.menu_pos;
+                     ////
+                     break;
+                 }
               }
           bn::core::update();
          }

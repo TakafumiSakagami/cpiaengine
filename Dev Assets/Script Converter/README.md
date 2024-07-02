@@ -38,7 +38,7 @@ Would be automatically converted into:
           "",
           "",
           };
-      texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+      texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
       bn::core::update();
     }
     if(true)
@@ -49,7 +49,7 @@ Would be automatically converted into:
           "",
           "",
           };
-      texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+      texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
       bn::core::update();
     }
     if(true)
@@ -60,7 +60,7 @@ Would be automatically converted into:
           "",
           "",
           };
-      texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+      texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
       bn::core::update();
     }
     if(true)
@@ -71,7 +71,7 @@ Would be automatically converted into:
           "",
           "",
           };
-      texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+      texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
       bn::core::update();
     }
 

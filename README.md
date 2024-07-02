@@ -1,11 +1,17 @@
 # GBA NVL engine - SepiaNVL
 A basic NVL engine for making Visual Novels, Sound Novels, etc... for the Gameboy Advance.
-Requires minimal coding knowledge!
-Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
 
-It should be noted that this is written in C++, and... I don't understand a lick of that language. If you're proficient with C++, maybe don't look at this. It might be a disaster, I don't know; all I know is that it works.  
+Made for an article in the free-to-read [C-pia! Magazine](https://c-pia.github.io/), a mag all about oldschool games and VNs. We're always looking for writers!
+
+## About
+
+This is a template for the C++ engine Butano, designed to massively reduce the amount of programming knowledge required to make a VN for the GBA, allowing solo creators to focus more on writing and less on learning.
+
+Open source demos are also provided to showcase different features.
 
 ![](Dev%20Assets/demo_kanon.png)![](Dev%20Assets/demo_sepia2.png)![](Dev%20Assets/demo_bys.png)
+
+It should be noted that this is written in C++, and... I don't understand a lick of that language. If you're proficient with C++, maybe don't look at this. It might be a disaster, I don't know; all I know is that it works.  
 
 ## Getting started
 
@@ -25,15 +31,58 @@ That's the hardest part. I promise. Copy the `cpiaengine` folder somewhere, rena
 
 Butano comes with plenty of general example projects, but we've added some further demos to show off SepiaNVL specifically, tucked away in the `demos` folder. These examples should help you grow familiar with the overall structure of SepiaNVL projects, and provide code for additional features. Feel free to steal whatever you need from them, code-wise. Don't steal the art or music please...
 
-## Script Converter
+## The Essentials - Script Converter
 
-A python script for converting written prose into programmed dialogue code can be found in the `Dev Assets` folder, along with other conveniences. More details can be found there.
+A python script for converting written prose into programmed dialogue blocks can be found in the `Dev Assets` folder, along with other conveniences. 
 
+A dialogue block acts as the code for each individual screen of text, and any code that occurs during that screen of text will be written into the dialogue block. They have been designed to be as simple and understandable as possible.
 
-## main.cpp
+Here is an example:
 
-The main gameplay loop is at
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "Her",
+              "How do you mean?|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+
+This minimal dialogue block contains only the code required to display text. From there, you can add in visuals or audio, trigger animations, open up menus, or set flags with individual lines of code. Those will be listed below.
+
+More details on the converter script can be found somewhere in the `Dev Assets` folder.
+
+## The Demos
+
+### Kanon
+
+![](Dev%20Assets/demo_kanon.png)
+
+The Kanon demo was built using an early version of SepiaNVL, so it's a bit messy. It recreates the opening dialogue of Key's Kanon, as well as part of the intro movie.
+
+Focus points include: white fades instead of black fades, CGs, transitions, pans, music and voice playback, and a traditional presentation style.
+
+### By Your Side
+
+![](Dev%20Assets/demo_bys.png)
+
+The By Your Side demo is a recreation of the core gameplay loop of Kyacchi22's By Your Side. It's a menu-based dating sim with a non-linear progression.
+
+Focus points include: a branching script, image menus, choices, stats, flags, rng, save points, CGs, voice playback, and a traditional presentation style.
+
+If you want to organize your scenes using separate files rather than writing everything into `main.cpp`, look here!
+
+# The Template
+
+## main.cpp - Initial settings, flags, and dialogue blocks!
+
+The "gameplay" truly begins at
     `//scene loop`
+
+The following will explain the lines of code written into various dialogue blocks.
 
 ### bgpos = 1;
  

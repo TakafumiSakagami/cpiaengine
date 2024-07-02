@@ -29,7 +29,7 @@ def reformat_lines(input_file, output_file, max_chars=20):
 
             formatted_dialogue = '",\n      "'.join(chunks)
 
-            formatted_line = f'if(true)\n{{\n  bn::string_view dialogue_text_lines[] = {{\n      "{identifier}",\n      "{formatted_dialogue}",\n      "",\n      "",\n      }};\n  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);\n  bn::core::update();\n}}\n'
+            formatted_line = f'if(true)\n{{\n  bn::string_view dialogue_text_lines[] = {{\n      "{identifier}",\n      "{formatted_dialogue}",\n      "",\n      "",\n      }};\n  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);\n  bn::core::update();\n}}\n'
             formatted_lines.append(formatted_line)
 
     with open(output_file, 'w') as outfile:
