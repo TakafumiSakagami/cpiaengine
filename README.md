@@ -178,7 +178,7 @@ _med = 30 frames = 1/2 of a second.
 
 _slow = 60 frames = 1 second.
 
-`fade::in` has a 1-second pause before triggering. You can remove this, if you wish, in `transitions.h` by ommitting the first 4 lines of any given `in_` void and making `frames = 2;` into `int frames = 2;`. You can also make your own.
+`fade::in` has a 1-second pause before triggering. You can remove this, if you wish, in `transitions.h` by ommitting the first 4 lines of any given `in_` void, you can also make your own.
 
 Only needs to be specified when transitioning from black.
 
@@ -259,7 +259,7 @@ Near the top of the file, you can set up your system flags, default stats, and a
 
 ### \#include
 
-If you make any new .cpp or .h files, you'll probably need to include them after the global variables have been set. The By Your Side demo, for example, has `\#include "scenes.h"` to include dialogue blocks that are written in a file named `scenes.h`.
+If you make any new .cpp or .h files, you'll probably need to include them after the global variables have been set. The By Your Side demo, for example, has `#include "scenes.h"` to include dialogue blocks that are written in a file named `scenes.h`.
 
 Below that, images are defined here. Any backgrounds, sprites, fonts, textboxes, animations, etc... need to be here.
 
