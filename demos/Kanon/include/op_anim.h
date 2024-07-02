@@ -69,7 +69,7 @@ namespace video
     while(true)
     {
       //fade::out_fast_white();
-      bn::music_items::last_regrets.play(0.1, false);
+      bn::music_items::last_regrets.play(0.2, false);
       bgimg.set_item(bn::regular_bg_items::kan_moj);
       fade::in_slow_white();
       int frames = 180;

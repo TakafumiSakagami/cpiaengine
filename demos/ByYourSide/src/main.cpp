@@ -20,7 +20,7 @@
 #include "bn_music_actions.h"
 #include "bn_sound_actions.h"
 #include "bn_music_item.h"
-//#include "bn_music_items.h"
+#include "bn_music_items.h"
 #include "bn_sound_item.h"
 #include <bn_random.h>
 #include "common_info.h"
@@ -169,22 +169,23 @@ int main()
         //////////////////////
         ////////////
         //
-        //frames = 20;                                                                            //These two lines of code can be used to
-        //waiter(frames);                                                                         //wait 20 frames. The game runs at 60fps!
+        frames = 2;                                                                       //These two lines of code can be used to
+        waiter();                                                                         //wait 20 frames. The game runs at 60fps!
+        bn::music_items::eternum.play(1, true);
         spimg.set_visible(false);
         //01; textbox
-        bgpos = 4;                                                                                //Back panel settings
-        dialogue_layout = 1;                                                                      //Set layout. 1 = textbox, 2 = fullscreen
-        presets(textbox, internal_window, external_window);               //Code to trigger settings
+        bgpos = 4;                                                                        //Back panel settings
+        dialogue_layout = 1;                                                              //Set layout. 1 = textbox, 2 = fullscreen
+        presets(textbox, internal_window, external_window);                               //Code to trigger settings
         //because we're fading
         external_window.set_visible(false);
         textbox.set_visible(false);
         //
-        bgimg.set_item(bn::regular_bg_items::bg00);                                               //Set background to bg01
-        spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
-        bgimg.set_position(-8, 0);                                                              //Set background position
-        spimg.set_position(0, 0);                                                                //Set sprite position
-        if(true)                                                                                  //Text input begins
+        bgimg.set_item(bn::regular_bg_items::bg00);                                       //Set background to bg01
+        spimg.set_item(bn::regular_bg_items::sp01);                                       //Set sprite to sp01
+        bgimg.set_position(-8, 0);                                                        //Set background position
+        spimg.set_position(0, 0);                                                         //Set sprite position
+        if(true)                                                                          //Text input begins
         {
           bn::string_view dialogue_text_lines[] = {
               "",

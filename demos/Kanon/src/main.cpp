@@ -158,7 +158,7 @@ int main()
 
     //Play example music
     //bn::music_items::last_regrets.play(0.6, false);
-    bn::music_items::yume.play(0.1, true);
+    bn::music_items::yume.play(0.2, true);
 
     /////////////////////////////////
     ///////  Begin the game  ////////

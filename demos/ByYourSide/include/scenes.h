@@ -1763,6 +1763,8 @@ namespace scene
 
         if (d10roll == 1)
         {
+           d10roll = talkrng.get_int(2, 6);
+           talkrng.update();
            if(true)
             {
             bn::string_view dialogue_text_lines[] = {
@@ -1793,6 +1795,8 @@ namespace scene
 
         if (d10roll == 2)
         {
+           d10roll = talkrng.get_int(3, 6);
+           talkrng.update();
            if(true)
             {
         bn::string_view dialogue_text_lines[] = {
@@ -1823,6 +1827,8 @@ namespace scene
 
         if (d10roll == 3)
         {
+           d10roll = talkrng.get_int(3, 6);
+           talkrng.update();
             if(true)
             {
               bn::string_view dialogue_text_lines[] = {
@@ -1855,6 +1861,8 @@ namespace scene
 
         if (d10roll == 4)
         {
+           d10roll = talkrng.get_int(4, 6);
+           talkrng.update();
         if(true)
             {
           bn::string_view dialogue_text_lines[] = {
