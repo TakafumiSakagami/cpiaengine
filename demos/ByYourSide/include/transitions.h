@@ -26,7 +26,7 @@
 namespace fade
 {
 
-    void waiter(int frames)
+    void waiter()
     {
       for(int i = 0; i < frames; ++i) {
           bn::core::update();
@@ -36,304 +36,304 @@ namespace fade
 
     void in_fast()
       {
-      int frames = 58;
+      frames = 58;
       bn::bg_palettes::set_fade(bn::colors::black, 1);
       bn::sprite_palettes::set_fade(bn::colors::black, 1);
-      waiter(frames);
+      waiter();
       frames = 2;
       bn::bg_palettes::set_fade(bn::colors::black, 0.8);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.8);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.6);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.6);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.4);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.4);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.2);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.2);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.0);
-      waiter(frames);
+      waiter();
       }
 
 
     void out_fast()
       {
-      int frames = 2;
+      frames = 2;
       bn::bg_palettes::set_fade(bn::colors::black, 0.2);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.2);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.4);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.4);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.6);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.6);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.8);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.8);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 1.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 1.0);
-      waiter(frames);
+      waiter();
       }
 
 
     void in_med()
       {
-      int frames = 58;
+      frames = 58;
       bn::bg_palettes::set_fade(bn::colors::black, 1);
       bn::sprite_palettes::set_fade(bn::colors::black, 1);
-      waiter(frames);
+      waiter();
       frames = 3;
       bn::bg_palettes::set_fade(bn::colors::black, 0.9);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.9);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.8);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.8);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.7);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.7);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.6);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.6);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.5);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.5);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.4);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.4);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.3);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.3);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.2);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.2);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.1);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.1);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.0);
-      waiter(frames);
+      waiter();
       }
 
 
     void out_med()
       {
-      int frames = 3;
+      frames = 3;
       bn::bg_palettes::set_fade(bn::colors::black, 0.1);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.1);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.2);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.2);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.3);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.3);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.4);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.4);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.5);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.5);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.6);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.6);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.7);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.7);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.8);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.8);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.9);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.9);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 1.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 1.0);
-      waiter(frames);
+      waiter();
       }
 
 
     void in_slow()
       {
-      int frames = 58;
+      frames = 58;
       bn::bg_palettes::set_fade(bn::colors::black, 1);
       bn::sprite_palettes::set_fade(bn::colors::black, 1);
-      waiter(frames);
+      waiter();
       frames = 3;
       bn::bg_palettes::set_fade(bn::colors::black, 0.95);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.95);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.9);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.9);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.85);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.85);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.8);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.8);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.75);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.75);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.7);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.7);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.65);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.65);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.6);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.6);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.55);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.55);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.5);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.5);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.45);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.45);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.4);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.4);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.35);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.35);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.3);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.3);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.25);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.25);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.2);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.2);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.15);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.15);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.1);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.1);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.05);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.05);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.0);
-      waiter(frames);
+      waiter();
       }
 
 
     void out_slow()
       {
-      int frames = 3;
+      frames = 3;
       bn::bg_palettes::set_fade(bn::colors::black, 0.05);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.05);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.1);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.1);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.15);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.15);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.2);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.2);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.25);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.25);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.3);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.3);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.35);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.35);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.4);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.4);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.45);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.45);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.5);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.5);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.55);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.55);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.6);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.6);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.65);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.65);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.7);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.7);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.75);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.75);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.8);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.8);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.85);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.85);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.9);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.9);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 0.95);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.95);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::black, 1.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.1);
-      waiter(frames);
+      waiter();
       }
 
 
     void in_white_fast()
       {
-      int frames = 58;
+      frames = 58;
       bn::bg_palettes::set_fade(bn::colors::white, 1);
       bn::sprite_palettes::set_fade(bn::colors::white, 1);
-      waiter(frames);
+      waiter();
       frames = 2;
       bn::bg_palettes::set_fade(bn::colors::white, 0.8);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.8);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::white, 0.6);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.6);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::white, 0.4);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.4);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::white, 0.2);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.2);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::white, 0.0);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.0);
-      waiter(frames);
+      waiter();
       }
 
 
     void out_white_fast()
       {
-      int frames = 2;
+      frames = 2;
       bn::bg_palettes::set_fade(bn::colors::white, 0.2);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.2);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::white, 0.4);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.4);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::white, 0.6);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.6);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::white, 0.8);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.8);
-      waiter(frames);
+      waiter();
       bn::bg_palettes::set_fade(bn::colors::white, 1.0);
       bn::sprite_palettes::set_fade(bn::colors::white, 1.0);
-      waiter(frames);
+      waiter();
       }
 }

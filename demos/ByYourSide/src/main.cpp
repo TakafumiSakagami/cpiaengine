@@ -24,6 +24,24 @@
 #include "bn_sound_item.h"
 #include <bn_random.h>
 #include "common_info.h"
+
+//These are just default settings being established
+//System
+int bgpos = 1;
+int dialogue_layout = 1;
+int frames = 60;
+int menu_pos = 0;
+//Stats
+int energy = 2;
+int relationship = 0;
+int money = 0;
+int date = 1;
+bn::random talkrng;
+//Flags
+int day19scene = 0;
+int laptop = 0;
+//================================================
+
 #include "transitions.h"
 #include "texter.h"
 #include "spriter.h"
@@ -68,11 +86,10 @@
 
 //You can hide this Namescape if you just want to get to writing scenes
 
-
 namespace
 {
 
-    void waiter(int frames)
+    void waiter()
     {
       for(int i = 0; i < frames; ++i) {
           bn::core::update();
@@ -86,22 +103,6 @@ int main()
 {
     bn::core::init();
     //game script begins at "while"
-    //These are just default settings being established
-    //
-    int bgpos = 1;
-    int dialogue_layout = 1;
-    int frames = 60;
-    int menu_pos = 0;
-    //
-    int energy = 2;
-    int relationship = 0;
-    int money = 0;
-    int date = 1;
-    bn::random talkrng;
-    //
-    int day19scene = 0;
-    int laptop = 0;
-    //================================================
 
     bn::rect_window internal_window = bn::rect_window::internal();
     bn::rect_window external_window = bn::rect_window::external();
@@ -174,7 +175,7 @@ int main()
         //01; textbox
         bgpos = 4;                                                                                //Back panel settings
         dialogue_layout = 1;                                                                      //Set layout. 1 = textbox, 2 = fullscreen
-        presets(bgpos, dialogue_layout, textbox, internal_window, external_window);               //Code to trigger settings
+        presets(textbox, internal_window, external_window);               //Code to trigger settings
         //because we're fading
         external_window.set_visible(false);
         textbox.set_visible(false);
@@ -195,21 +196,21 @@ int main()
               "",
               };
           fade::in_slow();
-          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
-          menu::day(date, energy, money, relationship, menu_pos, spimg, bgimg, textbox, internal_window, external_window, text_generator);
+          menu::day(spimg, bgimg, textbox, internal_window, external_window, text_generator);
         }
         if (menu_pos == 0)
         {
         bn::core::update();
-        scene::talk1(date, energy, money, relationship, day19scene, laptop, bgpos, dialogue_layout, spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
+        scene::talk1(spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
         }
 
 
         fade::out_fast();
 
 
-        //nd;
+        //End;
         date = date + 1;
 
 

@@ -26,9 +26,9 @@ namespace scene
 ///////////////////////////////////////////////////////////
 /////                  Daytime Chat                   /////
 ///////////////                             ///////////////
-///////////////////////////////////////////////////////////    
+///////////////////////////////////////////////////////////
 
-    void talk1(int date, int energy, int money, int relationship, int day19scene, int laptop, int bgpos, int dialogue_layout, bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator, bn::random& talkrng)
+    void talk1(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator, bn::random& talkrng)
     {
         while(true)
         {
@@ -41,7 +41,7 @@ namespace scene
             spimg.set_visible(false);
             bgpos = 4;                                                                                //Back panel settings
             dialogue_layout = 1;                                                                      //Set layout. 1 = textbox, 2 = fullscreen
-            presets(bgpos, dialogue_layout, textbox, internal_window, external_window);               //Code to trigger settings
+            presets(textbox, internal_window, external_window);               //Code to trigger settings
             bgimg.set_item(bn::regular_bg_items::bg00);                                               //Set background to bg01
             spimg.set_item(bn::regular_bg_items::sp01);                                               //Set sprite to sp01
             bgimg.set_position(-8, 0);                                                                //Set background position
@@ -58,7 +58,7 @@ namespace scene
               spimg.set_visible(true);
               bn::sound::stop_all();
               bn::sound_items::z00.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
         }
 
@@ -73,7 +73,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -84,7 +84,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -95,7 +95,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -106,7 +106,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -118,7 +118,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -130,7 +130,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -141,7 +141,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -152,7 +152,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -165,7 +165,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -178,7 +178,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -191,7 +191,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -202,7 +202,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -214,7 +214,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -226,7 +226,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -239,7 +239,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -252,7 +252,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -267,7 +267,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -278,7 +278,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -291,7 +291,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -302,10 +302,10 @@ namespace scene
                   "",
                   "",
                   };
-                  
+
               bn::sound::stop_all();
               bn::sound_items::z51.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -318,7 +318,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -329,7 +329,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -340,7 +340,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -351,7 +351,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -364,7 +364,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -375,10 +375,10 @@ namespace scene
                   "",
                   "",
                   };
-                  
+
               bn::sound::stop_all();
               bn::sound_items::z01.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -392,7 +392,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -404,10 +404,10 @@ namespace scene
                   "",
                   "",
                   };
-                  
+
               bn::sound::stop_all();
               bn::sound_items::z50.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -418,7 +418,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -430,7 +430,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -442,7 +442,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -455,7 +455,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -468,7 +468,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -481,7 +481,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -494,7 +494,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -506,7 +506,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -518,7 +518,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -533,7 +533,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z42.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -545,7 +545,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -557,7 +557,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -570,7 +570,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -581,7 +581,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -594,7 +594,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -607,7 +607,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -620,7 +620,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z51.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -631,7 +631,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -643,7 +643,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -656,7 +656,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -669,7 +669,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z40.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -680,7 +680,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -691,7 +691,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -703,7 +703,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -717,7 +717,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z43.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -728,7 +728,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -741,7 +741,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -754,7 +754,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z02.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -766,7 +766,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -777,7 +777,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -788,7 +788,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -801,7 +801,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z03.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -813,7 +813,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -824,7 +824,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -839,7 +839,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z10.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -850,7 +850,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -861,7 +861,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -872,7 +872,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -885,7 +885,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z50.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -897,7 +897,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -910,7 +910,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -921,7 +921,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -934,7 +934,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -946,7 +946,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -957,7 +957,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -970,7 +970,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -981,7 +981,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -993,7 +993,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1006,7 +1006,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1018,7 +1018,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1031,7 +1031,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1045,7 +1045,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1057,7 +1057,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1071,7 +1071,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z12.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1083,7 +1083,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1096,7 +1096,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1109,7 +1109,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1120,7 +1120,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1131,7 +1131,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1143,7 +1143,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1154,7 +1154,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1165,7 +1165,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1176,7 +1176,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1187,7 +1187,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1198,7 +1198,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1211,7 +1211,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1224,7 +1224,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1236,7 +1236,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1249,7 +1249,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1260,7 +1260,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1273,7 +1273,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z42.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1284,7 +1284,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1295,7 +1295,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1308,7 +1308,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1320,7 +1320,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1332,7 +1332,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1345,7 +1345,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z51.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1356,7 +1356,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1367,7 +1367,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1378,7 +1378,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1389,7 +1389,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1401,7 +1401,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1414,7 +1414,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z43.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1427,7 +1427,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1438,7 +1438,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1450,7 +1450,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1462,7 +1462,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1473,7 +1473,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1484,7 +1484,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1495,7 +1495,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1506,7 +1506,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1517,7 +1517,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1530,7 +1530,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z40.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1542,7 +1542,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1554,7 +1554,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1565,7 +1565,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1577,7 +1577,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1589,7 +1589,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1600,7 +1600,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1613,7 +1613,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1626,7 +1626,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z50.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1638,7 +1638,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1650,7 +1650,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1661,7 +1661,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1672,7 +1672,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1683,7 +1683,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1697,7 +1697,7 @@ namespace scene
                   };
               bn::sound::stop_all();
               bn::sound_items::z41.play();
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1709,7 +1709,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1720,7 +1720,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1731,7 +1731,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1742,7 +1742,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1755,7 +1755,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             break;
@@ -1772,7 +1772,7 @@ namespace scene
               "",
               "",
               };
-            texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+            texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
             bn::core::update();
             }
            if(true)
@@ -1785,7 +1785,7 @@ namespace scene
               "",
               "",
               };
-            texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+            texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
             bn::core::update();
             }
             break;
@@ -1803,7 +1803,7 @@ namespace scene
             "",
             "",
             };
-        texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+        texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
             }
            if(true)
@@ -1815,9 +1815,9 @@ namespace scene
             "",
             "",
             };
-        texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
-        bn::core::update();   
-            }        
+        texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+        bn::core::update();
+            }
         break;
         }
 
@@ -1833,7 +1833,7 @@ namespace scene
                   "",
                   "",
                   };
-              texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
             if(true)
@@ -1847,7 +1847,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
             }
             break;
@@ -1865,7 +1865,7 @@ namespace scene
               "",
               "",
               };
-          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
             }
         if(true)
@@ -1878,12 +1878,12 @@ namespace scene
               "",
               "",
               };
-          texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           bn::core::update();
             }
             break;
         }
-   
+
         if (d10roll == 5 && laptop == 1)
             {
             if(true)
@@ -1894,7 +1894,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -1905,7 +1905,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -1916,7 +1916,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -1927,7 +1927,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -1938,7 +1938,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -1950,7 +1950,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -1962,7 +1962,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -1973,7 +1973,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -1985,7 +1985,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -1996,7 +1996,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2007,7 +2007,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2019,7 +2019,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2031,7 +2031,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2044,7 +2044,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2055,7 +2055,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2066,7 +2066,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2079,7 +2079,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2091,7 +2091,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2102,7 +2102,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2115,7 +2115,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2127,7 +2127,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2139,7 +2139,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2153,7 +2153,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
           if(true)
@@ -2166,7 +2166,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2178,7 +2178,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2190,7 +2190,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2202,7 +2202,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2214,7 +2214,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2226,7 +2226,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2238,7 +2238,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2250,7 +2250,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2263,7 +2263,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2275,7 +2275,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2286,7 +2286,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2298,7 +2298,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2310,7 +2310,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2322,7 +2322,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2334,7 +2334,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2346,7 +2346,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2358,7 +2358,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2371,7 +2371,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2383,7 +2383,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2395,7 +2395,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2407,7 +2407,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2419,7 +2419,7 @@ namespace scene
                     "",
                     "",
                     };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             break;
@@ -2437,7 +2437,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2449,7 +2449,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2461,7 +2461,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2473,7 +2473,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2484,7 +2484,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2495,7 +2495,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2507,7 +2507,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2519,7 +2519,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2530,7 +2530,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2541,7 +2541,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2552,7 +2552,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2563,7 +2563,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2576,7 +2576,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             if(true)
@@ -2587,7 +2587,7 @@ namespace scene
                   "",
                   "",
                   };
-                texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
             break;
