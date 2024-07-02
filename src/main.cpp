@@ -28,7 +28,7 @@ int bgpos = 1;
 int dialogue_layout = 1;
 int frames = 60;
 //You can also place flags here to make them global!
-
+//================================================
 #include "transitions.h"
 #include "texter.h"
 #include "spriter.h"

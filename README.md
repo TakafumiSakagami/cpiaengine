@@ -109,18 +109,22 @@ Only needs to be specified if changed/updated.
 
 ###  presets(bgpos, dialogue_layout, textbox, internal_window, external_window);
 
-This simply triggers the code in `void presets`, enabling the settings made by changing bgpos and dialogue_layout.
+This simply triggers the code in `void presets`, which enables the settings made by changing bgpos and dialogue_layout.
 
-Only needs to be specified if changed/updated.
+Only needs to be specified if the bgpos or dialogue_layout are changed.
 
 
 ###  bgimg.set_item(bn::regular_bg_items::bg01);
+
+For background images.
   
 Sets the background image to a `regular_bg_items` object. This is an image file, such as `bg01.bmp`.
 
 Only needs to be specified if changed/updated.
 
 ###  spimg.set_item(bn::regular_bg_items::sp01);
+
+For character sprites and CGs.
   
 Sets the character sprite to a `regular_bg_items` object. This is an image file, such as `sp01.bmp`.
 
@@ -158,7 +162,7 @@ A fully cleared textbox would look like...
               "",
           };
 
-Only needs to be specified if changed/updated.
+Only needs to be specified if changed/updated... but you should probably leave at least a blank one in every dialogue block, just to be safe.
 
 ### fade::in_fast();
 
@@ -182,40 +186,36 @@ Only needs to be specified when transitioning from black.
 
 Triggers the mentioned panner in `panner.h`.
 
-This moves `bgimg` without moving the window containing it, allowing you to pan over a cropped image in a manner reminiscient of Mahoyo or the Tsukihime remake.
+This moves `bgimg` without moving the window containing it, allowing you to pan over a cropped image in a manner reminiscient of Mahoyo or the Tsukihime remake. You can, of course, make your own pans by writing a new one into `panner.h`.
 
 Only needs to be specified when triggering a pan.
 
 ### fader::sp01_in(spimg, textbox);
 
-
-
-Triggers the mentioned fader in `spriter.h`.
+Triggers the mentioned fader in `spriter.h`, which is really just an animation sequence taking up the `spimg` slot (by default). It's very flexible, and basically allows you to animate anything you wish.
 
 You can make custom fades/transitions for `spimg` or `bgimg` in a sprite editor, then build them as preset animations within `spriter.h` to reuse whenever needed.
 
-An example 3-frame fade animation can be made by applying the provided dither patterns over any images you wish to make a fader for. An Aseprite document showing the overlays in use is also provided.
+An example 3-frame fade animation can be made by applying the provided dither patterns over any images you wish to make a fader for. An Aseprite document showing the overlays in use is also provided. Check `Dev_Assets`.
 
 ![](Dev%20Assets/doc_sprite_transition_video.gif)
 
 ![](Dev%20Assets/sprite_transition1.png)![](Dev%20Assets/sprite_transition2.png)![](Dev%20Assets/sprite_transition3.png)
 
-
-
-###  texter::dialogue(dialogue_text_lines, bgpos, dialogue_layout, bgimg, textbox, internal_window, external_window, text_generator);
+###  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
   
 Triggers the dialogue creator in `texter.h`.
 
 This code is used to display, update and clear the scene.
-It presents the text, the sprites, the backgrounds, and handles pausing and input-checking. From an A-press to progress text, to an R-hold to skip, it all gets handled here!
+It presents the text, the sprites, the backgrounds, and handles pausing and input-checking while dialogue is displayed. From an A-press to progress text, to an R-hold to skip, it all gets handled here!
 
 Most importantly, it stores the default positioning data of on-screen text, as well as the key config, both of which may need changing to suit your needs.
 
-Must be specified every time.
+Must be specified every time, otherwise the game will speed over to the next dialogue block.
 
 ###  bn::core::update();
   
-Progresses the frame by 1. Think of it as finalizing everything above.
+Progresses the frame by 1. Think of it as finalizing everything above it.
 
 Must be specified every time you wish the game to catch up to the code fed to it.
 
@@ -231,7 +231,7 @@ _med = 30 frames = 1/2 of a second.
 
 _slow = 60 frames = 1 second.
 
-Only needs to be specified when transitioning to black.
+Only needs to be specified when transitioning to black. For white or colored fades, check the Kanon demo; it requires a few extra lines of code.
 
 ### frames = 20;
 
@@ -239,15 +239,29 @@ Sets the amount of frames that `waiter` will wait for.
 
 In the above example, he'll wait for 20 frames, or 1/3 of a second.
 
-### waiter(frames); 
+### waiter(); 
 
-Gives the waiter a job. He will wait for the amount of frames specified in the `frames` flag.  
+Gives the waiter a job. He will wait for the amount of frames specified in the `frames` flag. I love him.
 
 ### Adding new functions
 
 As this Engine is functionally just a template for Butano, you can expand it freely, should you have the knowledge.
 
 In a similar way to how `texter::dialogue` or `fade::in_fast` is handled, you can add almost anything into this loop. A choice, a menu, input, character customization, gameplay segments, etc... Some examples of this can be found in the demo projects.
+
+## main.cpp
+
+Aside from the main loop, there is a lot of other code in here.
+
+### Global Variables
+
+Near the top of the file, you can set up your system flags, default stats, and anything the game would need to remember.
+
+### \#include
+
+If you make any new .cpp or .h files, you'll probably need to include them after the global variables have been set. The By Your Side demo, for example, has `\#include "scenes.h"` to include dialogue blocks that are written in a file named `scenes.h`.
+
+Below that, images are defined here. Any backgrounds, sprites, fonts, textboxes, animations, etc... need to be here.
 
 ## texter.h
 
@@ -269,6 +283,8 @@ While the player is holding fast forward, a `fast forward` animation will displa
 
 Fast forward cannot be enabled during the pause triggered by a sentence ending symbol.
 
+All of these functions can be changed or removed.
+
 The sentence ending symbol can be found on the line:
 
      if(last_char == '|') {
@@ -288,15 +304,27 @@ The fast forward icon (`fastforward.bmp` and `fast_forward`) is positioned and a
 
 ## menu.h
 
-Here we have `menu::pause`, which is... a pause menu. There's no actual functionality programmed into it, but I added it in for demonstration purposes.
+### struct savedata
 
-`menu::pause` is triggered by `texter::dialogue`, during the input checking portion signaled in-game by the click to continue icon.
+Remember those global variables we talked about? If any of them are written here, they can be stored into the `savedata` structure. The pause menu further down makes use of this to save and load variables. Butano's sram demo will be useful for understanding it.
+
+The By Your Side demo makes use of save points, but in the template project there's no real functionality to this.
+
+### namespace menu
+
+Here we have `menu::pause`, which is... a pause menu. There's no actual functionality programmed into it, but I added it in for demonstration purposes. The skeleton of saving and loading is here, at least.
+
+`menu::pause` is triggered by `texter::dialogue`, during the input checking portion signaled in-game by the click to continue icon. In some demos, the pause menu is triggered by other means, and in some, it is absent entirely.
 
 If the player presses start, a simple image-based menu will appear. The player's cursor is stored as a value named `menu_pos`, which updates whenever the player presses up or down.
 
 By default, `menu_pos` is set to 1. If the player pressed down twice, `menu_pos` would become 3.
 
-You could program it so that, if the player presses A while `menu_pos` is 3, the third option on the menu will be triggered. Examples of this in action can be found in the By Your Side demo's map menu and choice menu.
+If the player presses A while `menu_pos` is 3, the third option on the menu will be triggered.
+
+### Other menus?
+
+The By Your Side demo has further menus added into this namespace. They're all basically the same code, so comparing them will help you get a clear picture of how to make your own.
 
 ## panner.h
 
