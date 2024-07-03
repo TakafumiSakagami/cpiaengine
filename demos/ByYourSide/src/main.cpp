@@ -31,6 +31,8 @@ int bgpos = 1;
 int dialogue_layout = 1;
 int frames = 60;
 int menu_pos = 0;
+int loading = 0;
+int load_des = 0; //0 = Day 1 = Work 2 = Night
 //Stats
 int energy = 2;
 int relationship = 0;
@@ -165,27 +167,29 @@ int main()
     //scene loop
     while(true)
     {
+        //=========================
         ////////////   DAYTIME
         //////////////////////
         ////////////
-        //
-        frames = 2;                                                                       //These two lines of code can be used to
-        waiter();                                                                         //wait 20 frames. The game runs at 60fps!
+        //=========================
+        daytime:
+        frames = 20;                                                                      
+        waiter();     
+        load_des = 0;                                                                     
         bn::music_items::eternum.play(1, true);
         spimg.set_visible(false);
-        //01; textbox
-        bgpos = 4;                                                                        //Back panel settings
-        dialogue_layout = 1;                                                              //Set layout. 1 = textbox, 2 = fullscreen
-        presets(textbox, internal_window, external_window);                               //Code to trigger settings
+        bgpos = 4;
+        dialogue_layout = 1;
+        presets(textbox, internal_window, external_window);
         //because we're fading
         external_window.set_visible(false);
         textbox.set_visible(false);
         //
-        bgimg.set_item(bn::regular_bg_items::bg00);                                       //Set background to bg01
-        spimg.set_item(bn::regular_bg_items::sp01);                                       //Set sprite to sp01
-        bgimg.set_position(-8, 0);                                                        //Set background position
-        spimg.set_position(0, 0);                                                         //Set sprite position
-        if(true)                                                                          //Text input begins
+        bgimg.set_item(bn::regular_bg_items::bg00);
+        spimg.set_item(bn::regular_bg_items::sp01);
+        bgimg.set_position(-8, 0);
+        spimg.set_position(0, 0);
+        if(true)
         {
           bn::string_view dialogue_text_lines[] = {
               "",
@@ -201,17 +205,114 @@ int main()
           bn::core::update();
           menu::day(spimg, bgimg, textbox, internal_window, external_window, text_generator);
         }
+        //Load Point
+        if (loading == 1)
+        {
+            loading = 0;
+            switch (load_des)
+            {
+                case 0:
+                    fade::out_fast();
+                    goto daytime;
+                case 1:
+                    fade::out_fast();
+                    goto work;
+                case 2:
+                    fade::out_fast();
+                    goto night;
+                default:
+                    break;
+            }
+        }
+        //Choice 0: Talk
         if (menu_pos == 0)
         {
         bn::core::update();
         scene::talk1(spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
         }
-
-
-        fade::out_fast();
-
-
-        //End;
+        
+        //Choice 1: Garden
+        
+ 
+        fade::out_med();
+        //daytime end
+        //=========================
+        ////////////   WORK
+        //////////////////////
+        ////////////
+        //=========================
+        work:
+        load_des = 1;
+        
+        //=========================
+        ////////////   NIGHT
+        //////////////////////
+        ////////////
+        //=========================
+        night:
+        frames = 20;                                                                      
+        waiter();     
+        load_des = 2;                                                                     
+        bn::music_items::eternum_night.play(1, true);
+        spimg.set_visible(false);
+        bgpos = 4;
+        dialogue_layout = 1;
+        presets(textbox, internal_window, external_window);
+        //because we're fading
+        external_window.set_visible(false);
+        textbox.set_visible(false);
+        //
+        bgimg.set_item(bn::regular_bg_items::bg00_n);
+        spimg.set_item(bn::regular_bg_items::sp01);
+        bgimg.set_position(-8, 0);
+        spimg.set_position(0, 0);
+        if(true)
+        {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::in_slow();
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+          menu::night(spimg, bgimg, textbox, internal_window, external_window, text_generator);
+        }
+        //Load Point
+        if (loading == 1)
+        {
+            loading = 0;
+            switch (load_des)
+            {
+                case 0:
+                    fade::out_fast();
+                    goto daytime;
+                case 1:
+                    fade::out_fast();
+                    goto work;
+                case 2:
+                    fade::out_fast();
+                    goto night;
+                default:
+                    break;
+            }
+        }
+        //Choice 0: Talk
+        if (menu_pos == 0)
+        {
+        bn::core::update();
+        scene::talk1(spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
+        }
+        
+        //Choice 1: Sleep
+        
+ 
+        fade::out_med();
+        //Night end;
         date = date + 1;
 
 

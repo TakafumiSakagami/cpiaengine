@@ -28,6 +28,7 @@ namespace
         int bgpos;
         int dialogue_layout;
         int menu_pos;
+        int load_des;
         //Stats
         int energy;
         int relationship;
@@ -117,6 +118,7 @@ namespace menu
                      saveData.bgpos = bgpos;
                      saveData.dialogue_layout = dialogue_layout;
                      saveData.menu_pos = menu_pos;
+                     saveData.load_des = load_des;
                      //Stats
                      saveData.energy = energy;
                      saveData.relationship = relationship;
@@ -138,6 +140,8 @@ namespace menu
                      bgpos = saveData.bgpos;
                      dialogue_layout = saveData.dialogue_layout;
                      menu_pos = saveData.menu_pos;
+                     loading = 1;
+                     load_des = saveData.load_des;
                      //Stats
                      energy = saveData.energy;
                      relationship = saveData.relationship;
@@ -181,6 +185,10 @@ namespace menu
         bn::core::update();
          while(true)
          {
+           if (loading == 1)
+           {
+               break;
+           }               
            if(bn::keypad::down_pressed())
               {
                menu_pos = 0;
@@ -285,4 +293,89 @@ namespace menu
         internal_window.set_visible(true);
         external_window.set_show_sprites(true);
     return(0);}
+
+    int night(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
+    {
+        bn::vector<bn::sprite_ptr, 32> menu_sprites;
+        menu_sprites.clear();
+        textbox.set_item(bn::regular_bg_items::bys_menu_night);
+        bgimg.set_position(-8, 0);
+        spimg.set_position(0, 0);
+        //textbox.set_blending_top_enabled(false);
+        //external_window.set_boundaries(-70, -110, 70, 110);
+        internal_window.set_visible(true);
+        menu_pos = 0;
+        external_window.set_show_sprites(false);
+        external_window.set_show_blending(false);
+        textbox.set_blending_top_enabled(false);
+        external_window.set_visible(true);
+        textbox.set_visible(true);
+        text_generator.generate(76, 20, bn::to_string<4>(date).c_str(), menu_sprites);
+        text_generator.generate(97, 36, bn::to_string<2>(energy).c_str(), menu_sprites);
+        text_generator.generate(92, 52, bn::to_string<6>(money).c_str(), menu_sprites);
+        text_generator.generate(65, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
+        bn::core::update();
+        bn::core::update();
+        bn::core::update();
+         while(true)
+         {
+           if (loading == 1)
+           {
+               break;
+           }               
+           if(bn::keypad::down_pressed())
+              {
+               menu_pos = 0;
+               textbox.set_item(bn::regular_bg_items::bys_menu_night);
+              }
+           if(bn::keypad::up_pressed())
+              {
+               menu_pos = 1;
+               textbox.set_item(bn::regular_bg_items::bys_menu_night_sleep);
+              }
+           if(bn::keypad::a_pressed())
+              {
+                 if (menu_pos == 0)
+                 {
+                     break;
+                 }
+                 if (menu_pos == 1)
+                 {
+                     break;
+                 }
+              }
+            if(bn::keypad::start_pressed())
+            {
+                internal_window.set_visible(true);
+                bgimg.set_visible(true);
+                external_window.set_visible(true);
+                textbox.set_visible(true);
+                internal_window.set_show_sprites(true);
+                external_window.set_show_sprites(true);
+                menu::pause(textbox, internal_window, external_window);
+                bgimg.set_position(-8, 0);
+                spimg.set_position(0, 0);
+                //textbox.set_blending_top_enabled(false);
+                //external_window.set_boundaries(-70, -110, 70, 110);
+                internal_window.set_visible(true);
+                menu_pos = 0;
+                external_window.set_show_sprites(false);
+                external_window.set_show_blending(false);
+                textbox.set_blending_top_enabled(false);
+                external_window.set_visible(true);
+                textbox.set_visible(true);
+                menu_pos = 0;
+                textbox.set_item(bn::regular_bg_items::bys_menu_day);
+                menu_sprites.clear();
+                text_generator.generate(76, 20, bn::to_string<4>(date).c_str(), menu_sprites);
+                text_generator.generate(97, 36, bn::to_string<2>(energy).c_str(), menu_sprites);
+                text_generator.generate(92, 52, bn::to_string<6>(money).c_str(), menu_sprites);
+                text_generator.generate(65, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
+            }
+          bn::core::update();
+         }
+        internal_window.set_visible(true);
+        external_window.set_show_sprites(true);
+
+    return 0;}
 }
