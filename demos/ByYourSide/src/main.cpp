@@ -36,12 +36,22 @@ int load_des = 0; //0 = Day 1 = Work 2 = Night
 //Stats
 int energy = 2;
 int relationship = 0;
-int money = 0;
+int money = 50;
 int date = 1;
+int garden = 0;
 bn::random talkrng;
 //Flags
 int day19scene = 0;
+int hugscene = 0;
 int laptop = 0;
+int lamp = 0;
+int findseeds = 0;
+int seedsget = 0;
+int protagplant = 0;
+int tvflag = 0;
+int tvknowledge = 0;
+int workflag = 0;
+
 //================================================
 
 #include "transitions.h"
@@ -49,6 +59,7 @@ int laptop = 0;
 #include "spriter.h"
 #include "panner.h"
 #include "scenes.h"
+#include "scenes2.h"
 //#include "menu.cpp"
 
 ///////////////////////////////////////////
@@ -75,7 +86,9 @@ int laptop = 0;
 #include <bn_regular_bg_items_sp02.h>
 //Backgrounds
 #include <bn_regular_bg_items_bg00.h>
+#include <bn_regular_bg_items_bg00_lamp.h>
 #include <bn_regular_bg_items_bg00_n.h>
+#include <bn_regular_bg_items_bg00_n_lamp.h>
 #include <bn_regular_bg_items_bg01.h>
 #include <bn_regular_bg_items_bg01_a.h>
 #include <bn_regular_bg_items_bg01_b.h>
@@ -93,9 +106,12 @@ namespace
 
     void waiter()
     {
-      for(int i = 0; i < frames; ++i) {
-          bn::core::update();
-      }
+       if(! bn::keypad::r_held())
+         {  
+          for(int i = 0; i < frames; ++i) {
+              bn::core::update();
+          }
+         }
     }
 }
 
@@ -176,7 +192,7 @@ int main()
         frames = 20;                                                                      
         waiter();     
         load_des = 0;                                                                     
-        bn::music_items::eternum.play(1, true);
+        if(bn::music::playing_item() != bn::music_items::eternum){bn::music_items::eternum.play(1, true);}
         spimg.set_visible(false);
         bgpos = 4;
         dialogue_layout = 1;
@@ -185,7 +201,8 @@ int main()
         external_window.set_visible(false);
         textbox.set_visible(false);
         //
-        bgimg.set_item(bn::regular_bg_items::bg00);
+        if (lamp == 1){bgimg.set_item(bn::regular_bg_items::bg00_lamp);}
+        else{bgimg.set_item(bn::regular_bg_items::bg00);}
         spimg.set_item(bn::regular_bg_items::sp01);
         bgimg.set_position(-8, 0);
         spimg.set_position(0, 0);
@@ -230,12 +247,16 @@ int main()
         bn::core::update();
         scene::talk1(spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
         }
-        
         //Choice 1: Garden
+        if (menu_pos == 1)
+        {
+        bn::core::update();
+        scene::gardeninghub(spimg, bgimg, textbox, internal_window, external_window, text_generator);
+        }
         
- 
-        fade::out_med();
         //daytime end
+        if (energy < 1){fade::out_med();}
+        else{fade::out_fast(); goto daytime;}
         //=========================
         ////////////   WORK
         //////////////////////
@@ -243,6 +264,7 @@ int main()
         //=========================
         work:
         load_des = 1;
+        energy = 2;
         
         //=========================
         ////////////   NIGHT
@@ -253,7 +275,7 @@ int main()
         frames = 20;                                                                      
         waiter();     
         load_des = 2;                                                                     
-        bn::music_items::eternum_night.play(1, true);
+        if(bn::music::playing_item() != bn::music_items::eternum_night){bn::music_items::eternum_night.play(1, true);}
         spimg.set_visible(false);
         bgpos = 4;
         dialogue_layout = 1;
@@ -262,7 +284,8 @@ int main()
         external_window.set_visible(false);
         textbox.set_visible(false);
         //
-        bgimg.set_item(bn::regular_bg_items::bg00_n);
+        if (lamp == 1){bgimg.set_item(bn::regular_bg_items::bg00_n_lamp);}
+        else{bgimg.set_item(bn::regular_bg_items::bg00_n);}
         spimg.set_item(bn::regular_bg_items::sp01);
         bgimg.set_position(-8, 0);
         spimg.set_position(0, 0);
@@ -283,10 +306,10 @@ int main()
           menu::night(spimg, bgimg, textbox, internal_window, external_window, text_generator);
         }
         //Load Point
-        if (loading == 1)
+        if (loading == 1) //if the game is loading
         {
-            loading = 0;
-            switch (load_des)
+            loading = 0; //Finish loading, then...
+            switch (load_des) //If load_des is 0, go to the day screen! 1 = work, 2 = night.
             {
                 case 0:
                     fade::out_fast();
@@ -311,9 +334,11 @@ int main()
         //Choice 1: Sleep
         
  
-        fade::out_med();
         //Night end;
+        if (energy < 1){fade::out_med();}
+        else{fade::out_fast(); goto night;}
         date = date + 1;
+        energy = 2;
 
 
     }

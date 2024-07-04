@@ -70,8 +70,8 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, bn::regular_bg_p
   {
     int y_inc = 16;
     int lb = 16;
-    int start_x = -116;
-    int start_y = -lb * 3 + 81;
+    int start_x = -106;
+    int start_y = -lb * 3 + 84;
     int x = start_x;
     int y = start_y;
     if(bn::keypad::r_held()) {fast_forward.set_visible(true);} else{fast_forward.set_visible(false);}
@@ -80,9 +80,9 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, bn::regular_bg_p
             char c = line[i];
             text_generator.generate(x, y, bn::string_view(&c, 1), char_sprites);
             x += 8; // Adjust spacing
-            bn::core::update();
+             if(! bn::keypad::r_held()){bn::core::update();}
             if(bn::keypad::r_held()) {fast_forward.set_visible(true);} else{fast_forward.set_visible(false);}
-            bn::core::update();
+             bn::core::update();
             }
     if (!line.empty()) {
       char last_char = line[line.length() - 1];
@@ -98,11 +98,6 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, bn::regular_bg_p
             fast_forward.set_visible(false);
             while(! bn::keypad::a_pressed())
             {
-                if(bn::keypad::select_pressed())
-                {
-                    internal_window.set_visible(! internal_window.visible());
-                    bgimg.set_visible(! bgimg.visible());
-                }
                 if(bn::keypad::b_pressed())
                 {
                     external_window.set_visible(! external_window.visible());
@@ -148,7 +143,7 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, bn::regular_bg_p
              char c = line[i];
              text_generator.generate(x, y, bn::string_view(&c, 1), char_sprites);
              x += 8; // Adjust spacing
-             bn::core::update();
+             if(! bn::keypad::r_held()){bn::core::update();}
              if(bn::keypad::r_held()) {fast_forward.set_visible(true);} else{fast_forward.set_visible(false);}
              bn::core::update();
              }
@@ -165,11 +160,6 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, bn::regular_bg_p
          {
            while(! bn::keypad::a_pressed())
            {
-               if(bn::keypad::select_pressed())
-               {
-                   internal_window.set_visible(! internal_window.visible());
-                   bgimg.set_visible(! bgimg.visible());
-               }
                if(bn::keypad::b_pressed())
                {
                    external_window.set_visible(! external_window.visible());

@@ -9,6 +9,7 @@
 #include <bn_regular_bg_items_pause_05.h>
 
 #include <bn_regular_bg_items_textbox.h>
+#include <bn_regular_bg_items_textbox2.h>
 #include <bn_regular_bg_items_kuro.h>
 
 #include <bn_regular_bg_items_bg01_a.h>
@@ -34,9 +35,18 @@ namespace
         int relationship;
         int money;
         int date;
+        int garden;
         //Flags
         int day19scene;
+        int hugscene;
         int laptop;
+        int lamp;
+        int findseeds;
+        int seedsget;
+        int protagplant;
+        int tvflag;
+        int tvknowledge;
+        int workflag;
         //
     };
 }
@@ -74,12 +84,12 @@ namespace menu
              {
                  textbox.set_item(bn::regular_bg_items::pause_04);
              }
-             else if (menu_pos >= 4)
+             else if (menu_pos > 4)
              {
                  menu_pos = 5;
                  textbox.set_item(bn::regular_bg_items::pause_05);
              }
-             else if (menu_pos <= 2)
+             else if (menu_pos < 2)
              {
                  menu_pos = 1;
                  textbox.set_item(bn::regular_bg_items::pause_01);
@@ -100,12 +110,12 @@ namespace menu
               {
                   textbox.set_item(bn::regular_bg_items::pause_04);
               }
-              else if (menu_pos >= 4)
+              else if (menu_pos > 4)
               {
                   menu_pos = 5;
                   textbox.set_item(bn::regular_bg_items::pause_05);
               }
-              else if (menu_pos <= 2)
+              else if (menu_pos < 2)
               {
                   menu_pos = 1;
                   textbox.set_item(bn::regular_bg_items::pause_01);
@@ -124,9 +134,18 @@ namespace menu
                      saveData.relationship = relationship;
                      saveData.money = money;
                      saveData.date = date;
+                     saveData.garden = garden;
                      //Flags
                      saveData.day19scene = day19scene;
+                     saveData.hugscene = hugscene;
                      saveData.laptop = laptop;
+                     saveData.lamp = lamp;
+                     saveData.findseeds = findseeds;
+                     saveData.seedsget = seedsget;
+                     saveData.protagplant = protagplant;
+                     saveData.tvflag = tvflag;
+                     saveData.tvknowledge = tvknowledge;
+                     saveData.workflag = workflag;
                      //Save
                      bn::sram::write(saveData);
                      break;
@@ -147,10 +166,20 @@ namespace menu
                      relationship = saveData.relationship;
                      money = saveData.money;
                      date = saveData.date;
+                     garden = saveData.garden;
                      //Flags
                      day19scene = saveData.day19scene;
+                     hugscene = saveData.hugscene;
                      laptop = saveData.laptop;
+                     lamp = saveData.lamp;
+                     findseeds = saveData.findseeds;
+                     seedsget = saveData.seedsget;
+                     protagplant = saveData.protagplant;
+                     tvflag = saveData.tvflag;
+                     tvknowledge = saveData.tvknowledge;
+                     workflag = saveData.workflag;
                      //
+                     bn::music::stop();
                      break;
                  }
               }
@@ -365,7 +394,7 @@ namespace menu
                 external_window.set_visible(true);
                 textbox.set_visible(true);
                 menu_pos = 0;
-                textbox.set_item(bn::regular_bg_items::bys_menu_day);
+                textbox.set_item(bn::regular_bg_items::bys_menu_night);
                 menu_sprites.clear();
                 text_generator.generate(76, 20, bn::to_string<4>(date).c_str(), menu_sprites);
                 text_generator.generate(97, 36, bn::to_string<2>(energy).c_str(), menu_sprites);

@@ -14,29 +14,27 @@
 #include "bn_regular_bg_position_hbe_ptr.h"
 
 //Place sprites here
-// #include "bn_regular_bg_items_sp01.h"
-// #include "bn_regular_bg_items_sp01_fade_01.h"
-// #include "bn_regular_bg_items_sp01_fade_02.h"
-// #include "bn_regular_bg_items_sp01_fade_03.h"
+#include "bn_regular_bg_items_sp01.h"
+#include "bn_regular_bg_items_sp01_fade1.h"
+#include "bn_regular_bg_items_sp01_fade2.h"
+#include "bn_regular_bg_items_sp01_fade3.h"
 
 namespace fader
 {
-  // int sp01_in(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& textbox)
-  // {
-
-          // spimg.set_visible(true);
-          // textbox.set_visible(false);
-          // spimg.set_item(bn::regular_bg_items::sp01_fade_01);
-          // bn::core::update();bn::core::update();
-          // bn::core::update();bn::core::update();
-          // spimg.set_item(bn::regular_bg_items::sp01_fade_02);
-          // bn::core::update();bn::core::update();
-          // bn::core::update();bn::core::update();
-          // spimg.set_item(bn::regular_bg_items::sp01_fade_03);
-          // bn::core::update();bn::core::update();
-          // bn::core::update();bn::core::update();
-          // spimg.set_item(bn::regular_bg_items::sp01);
-          // textbox.set_visible(true);
-          // return(0);
-  // }
+  int sp01_in(bn::regular_bg_ptr& spimg)
+  {
+         if(! bn::keypad::r_held())
+         {
+          spimg.set_visible(true);
+          spimg.set_item(bn::regular_bg_items::sp01_fade1);
+          bn::core::update();
+          spimg.set_item(bn::regular_bg_items::sp01_fade2);
+          bn::core::update();
+          spimg.set_item(bn::regular_bg_items::sp01_fade3);
+          bn::core::update();
+          spimg.set_item(bn::regular_bg_items::sp01);
+          return(0);
+         }
+         else{spimg.set_item(bn::regular_bg_items::sp01); return(0);}
+  }
 }
