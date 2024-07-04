@@ -5,6 +5,8 @@ Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
 
 ## Kanon Demo
 
+https://github.com/TakafumiSakagami/cpiaengine/assets/12238323/7f335445-6b92-4eb3-99d1-fb1748ab0315
+
 This recreation of Kanon's introduction is used to demonstrate the textbox layout, custom sentence ending symbols, fading to/from white, CG implementation, voices and sound effects, music, and animation sequences. 
 
 ### Changes made to the template for this demo include:
