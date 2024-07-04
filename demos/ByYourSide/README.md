@@ -5,6 +5,8 @@ Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
 
 ## By Your Side Demo
 
+https://github.com/TakafumiSakagami/cpiaengine/assets/12238323/36dea76d-f1d9-4521-879b-c809f24ae5af
+
 This stripped-down recreation of By Your Side's life simulation routine is used to demonstrate choices, stats, flags, and graphic menus. It's a demonstration of non-linear storytelling.
 
 In By Your Side, the days pass in an endless loop. The decisions you make on a morning and on a night lead to different interactions which change the protagonist's stats. The decisions you make while working through the afternoon will increase your cash. Along the way, flags are raised based on new knowledge or items you uncover, unlocking new scenes.
