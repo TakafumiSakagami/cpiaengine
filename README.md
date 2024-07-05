@@ -3,6 +3,8 @@ A basic NVL engine for making Visual Novels, Sound Novels, etc... for the Gamebo
 
 Made for an article in the free-to-read [C-pia! Magazine](https://c-pia.github.io/), a mag' all about oldschool games and VNs. We're always looking for writers!
 
+![vol02](https://github.com/TakafumiSakagami/cpiaengine/assets/12238323/7c26fade-af75-4cf9-9643-f177cd00654f)![vol03](https://github.com/TakafumiSakagami/cpiaengine/assets/12238323/599df00b-6f1a-40f5-8922-bc0d7dccef10)![vol04](https://github.com/TakafumiSakagami/cpiaengine/assets/12238323/089ac878-0940-4766-89da-21c27321d34f)
+
 ## About
 
 This is a template for the C++ engine Butano, designed to massively reduce the amount of programming knowledge required to make a VN for the GBA, allowing solo creators to focus more on writing and less on learning.
