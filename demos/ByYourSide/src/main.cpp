@@ -33,6 +33,7 @@ int frames = 60;
 int menu_pos = 0;
 int loading = 0;
 int load_des = 0; //0 = Day 1 = Work 2 = Night
+int choice = 0;
 //Stats
 int energy = 2;
 int relationship = 0;
