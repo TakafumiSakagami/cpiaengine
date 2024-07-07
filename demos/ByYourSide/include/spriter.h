@@ -18,6 +18,10 @@
 #include "bn_regular_bg_items_sp01_fade1.h"
 #include "bn_regular_bg_items_sp01_fade2.h"
 #include "bn_regular_bg_items_sp01_fade3.h"
+#include "bn_regular_bg_items_e_05.h"
+#include "bn_regular_bg_items_e_05_fade1.h"
+#include "bn_regular_bg_items_e_05_fade2.h"
+#include "bn_regular_bg_items_e_05_fade3.h"
 
 namespace fader
 {
@@ -36,5 +40,24 @@ namespace fader
           return(0);
          }
          else{spimg.set_item(bn::regular_bg_items::sp01); return(0);}
+  }
+  int e_05_out(bn::regular_bg_ptr& spimg)
+  {
+         if(! bn::keypad::r_held())
+         {
+          spimg.set_visible(true);
+          textbox.set_visible(false);
+          spimg.set_item(bn::regular_bg_items::e_05_fade3);
+          bn::core::update();
+          spimg.set_item(bn::regular_bg_items::e_05_fade2);
+          bn::core::update();
+          spimg.set_item(bn::regular_bg_items::e_05_fade1);
+          bn::core::update();
+          spimg.set_item(bn::regular_bg_items::e_05);
+          textbox.set_visible(true);
+          spimg.set_visible(false);
+          return(0);
+         }
+         else{spimg.set_item(bn::regular_bg_items::e_05); spimg.set_visible(false); return(0);}
   }
 }

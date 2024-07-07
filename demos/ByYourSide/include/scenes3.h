@@ -5,8 +5,24 @@
 #include <bn_sound_items.h>
 
 //Sprites
-#include <bn_regular_bg_items_sp01.h>
-#include <bn_regular_bg_items_sp02.h>
+#include <bn_regular_bg_items_e_00.h>
+#include <bn_regular_bg_items_e_01.h>
+#include <bn_regular_bg_items_e_02.h>
+#include <bn_regular_bg_items_e_03.h>
+#include <bn_regular_bg_items_e_04.h>
+#include <bn_regular_bg_items_e_05.h>
+#include <bn_regular_bg_items_e_06.h>
+#include <bn_regular_bg_items_e_07.h>
+#include <bn_regular_bg_items_e_08.h>
+#include <bn_regular_bg_items_e_s_00.h>
+#include <bn_regular_bg_items_e_s_01.h>
+#include <bn_regular_bg_items_e_s_02.h>
+#include <bn_regular_bg_items_e_s_03.h>
+#include <bn_regular_bg_items_e_s_04.h>
+#include <bn_regular_bg_items_e_s_05.h>
+#include <bn_regular_bg_items_e_s_06.h>
+#include <bn_regular_bg_items_e_s_07.h>
+#include <bn_regular_bg_items_e_s_08.h>
 //Backgrounds
 #include <bn_regular_bg_items_bg00.h>
 #include <bn_regular_bg_items_bg00_lamp.h>
@@ -739,7 +755,9 @@ namespace scene
                   "",
                   "",
                   };
-              textbox.set_item(bn::regular_bg_items::textbox);
+              textbox.set_item(bn::regular_bg_items::textbox2);
+              spimg.set_item(bn::regular_bg_items::e_02);  
+              spimg.set_visible(true);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -763,6 +781,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_08);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -787,6 +806,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_03);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -810,6 +830,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_s_02);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -833,6 +854,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_s_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -840,8 +862,8 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Why did you say \|",
-                  "",
+                  "Why did you say \"same\"",
+                  "then?|",
                   "",
                   };
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
@@ -856,6 +878,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_s_06);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -878,6 +901,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_s_03);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -904,6 +928,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_01);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -928,6 +953,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_06);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -952,6 +978,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -976,6 +1003,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_00);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1002,6 +1030,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_01);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1026,6 +1055,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_s_07);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1050,6 +1080,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_01);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1095,6 +1126,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1119,6 +1151,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_06);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1165,6 +1198,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_04);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1200,6 +1234,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_s_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1248,6 +1283,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_s_04);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1301,12 +1337,25 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "Yup. Back then` Well,",
-                  "there used to be so many",
+                  "Yup. Back then` Well,|",
+                  "",
+                  "",
+                  "",
+                  };
+              spimg.set_item(bn::regular_bg_items::e_s_07);  
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Euon",
+                  "There used to be so many",
                   "of us.|",
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_s_04);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1326,10 +1375,21 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "Some days I would sit upon",
-                  "a tree branch, or fly out",
-                  "towards the sun, and I",
-                  "would hear them.|",
+                  "I could sit on a branch or",
+                  "fly towards the sun, and`|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Euon",
+                  "I could hear them.|",
+                  "",
+                  "",
                   "",
                   "",
                   };
@@ -1352,12 +1412,12 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "That's our magic. The",
-                  "ability to connect with",
-                  "life.|",
+                  "That's our magic. The power",
+                  "to connect with life.|",
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1382,6 +1442,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_04);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1390,8 +1451,19 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
                   "Us fairies hardly belong",
-                  "here. There's no space for",
-                  "us anymore.|",
+                  "here.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Euon",
+                  "There's no space for us",
+                  "anymore.|",
                   "",
                   "",
                   };
@@ -1403,8 +1475,19 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
                   "Like the birds, or the",
-                  "reptiles` The fish, the",
-                  "mammals. Even the bugs.|",
+                  "reptiles`|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Euon",
+                  "Like the fish, the mammals`",
+                  "Even the bugs.|",
                   "",
                   "",
                   };
@@ -1420,6 +1503,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1444,6 +1528,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_07);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1451,9 +1536,21 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "Sometimes I try. I fly out",
-                  "to nature and I sit upon a",
-                  "leaf.|",
+                  "Sometimes I try to believe.|",
+                  "",
+                  "",
+                  };
+              spimg.set_item(bn::regular_bg_items::e_s_04);  
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Euon",
+                  "I'll fly out to nature and",
+                  "I sit upon a leaf.|",
+                  "",
                   "",
                   "",
                   };
@@ -1469,6 +1566,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_04);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1510,9 +1608,21 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
                   "That's why we all move to",
-                  "the cities. To depend on",
-                  "the abundance of",
-                  "humanity.|",
+                  "the cities.|",
+                  "",
+                  "",
+                  };
+              spimg.set_item(bn::regular_bg_items::e_s_04);  
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Euon",
+                  "To depend on the abundance",
+                  "of Humanity.|",
+                  "",
                   "",
                   "",
                   };
@@ -1528,6 +1638,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_s_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1546,12 +1657,12 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "So even if the planet",
-                  "dies, I'll be glad to have",
-                  "met you.|",
+                  "So even if the planet dies,",
+                  "I'm glad to have met you.|",
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1571,7 +1682,7 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Even if the planet` Dies?|",
+                  "Even if the planet` dies?|",
                   "",
                   "",
                   };
@@ -1587,6 +1698,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_02);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1606,9 +1718,21 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
                   "And there are other",
-                  "planets to move to. It",
-                  "won't be an end for",
-                  "humans.|",
+                  "planets to move to.|",
+                  "",
+                  "",
+                  };
+              spimg.set_item(bn::regular_bg_items::e_06);  
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Euon",
+                  "It won't be an end",
+                  "for humans.|",
+                  "",
                   "",
                   "",
                   };
@@ -1634,6 +1758,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_04);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1657,18 +1782,20 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_item(bn::regular_bg_items::e_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
             if(true)
                 {
               bn::string_view dialogue_text_lines[] = {
-                  "",
                   "The fairy flies off into",
                   "the trees.|",
                   "",
                   "",
                   };
+              textbox.set_item(bn::regular_bg_items::textbox2);
+              fader::e_05_out(spimg); 
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1681,25 +1808,25 @@ namespace scene
                   "",
                   "",
                   };
+              textbox.set_item(bn::regular_bg_items::textbox);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
             if(true)
                 {
               bn::string_view dialogue_text_lines[] = {
-                  "",
                   "I turn my attention to the",
                   "street leading home.|",
                   "",
                   "",
                   };
+              textbox.set_item(bn::regular_bg_items::textbox2);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
             if(true)
                 {
               bn::string_view dialogue_text_lines[] = {
-                  "",
                   "The sight of a pink haired",
                   "girl tending to her",
                   "flowers comes to mind.|",
@@ -1717,21 +1844,22 @@ namespace scene
                   "",
                   "",
                   };
+              textbox.set_item(bn::regular_bg_items::textbox);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
             if(true)
                 {
               bn::string_view dialogue_text_lines[] = {
-                  "",
                   "How would she respond to",
-                  "this kind of",
-                  "conversation?|",
+                  "this kind of conversation?|",
+                  "",
                   "",
                   "",
                   };
+              textbox.set_item(bn::regular_bg_items::textbox2);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-              //$day32scene = True
+              day32scene = 1;
               bn::core::update();
                 }
             }

@@ -42,6 +42,7 @@ int garden = 0;
 bn::random talkrng;
 //Flags
 int day19scene = 0;
+int day32scene = 0;
 int hugscene = 0;
 int laptop = 0;
 int lamp = 0;

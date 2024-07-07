@@ -38,6 +38,7 @@ namespace
         int garden;
         //Flags
         int day19scene;
+        int day32scene;
         int hugscene;
         int laptop;
         int lamp;
@@ -137,6 +138,7 @@ namespace menu
                      saveData.garden = garden;
                      //Flags
                      saveData.day19scene = day19scene;
+                     saveData.day32scene = day32scene;
                      saveData.hugscene = hugscene;
                      saveData.laptop = laptop;
                      saveData.lamp = lamp;
@@ -169,6 +171,7 @@ namespace menu
                      garden = saveData.garden;
                      //Flags
                      day19scene = saveData.day19scene;
+                     day32scene = saveData.day32scene;
                      hugscene = saveData.hugscene;
                      laptop = saveData.laptop;
                      lamp = saveData.lamp;

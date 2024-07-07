@@ -19,6 +19,10 @@ The output file will automatically insert a linebreak whenever the text surpasse
 
 The value of when linebreaks will be inserted can be changed by editing `convert_txt_to_dialogue.py` in a text editor, as can the name of the input file (`input.txt` by default) and the output file (`output.txt` by default).
 
+`reformat_lines('input.txt', 'output.txt', max_chars=27)`
+
+Just adjust the file names, and tell the converter how many characters wide your textbox is!
+
 Though this won't insert intricate things such as image choices, fades, sound effects, etc... it will drastically speed up the process of converting written prose into useable code, so I highly recommend you install Python and use this script!
 
 For example, a text file containing:
