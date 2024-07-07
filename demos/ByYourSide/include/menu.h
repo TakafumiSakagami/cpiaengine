@@ -205,10 +205,10 @@ namespace menu
         textbox.set_blending_top_enabled(false);
         external_window.set_visible(true);
         textbox.set_visible(true);
-        text_generator.generate(76, 20, bn::to_string<4>(date).c_str(), menu_sprites);
-        text_generator.generate(97, 36, bn::to_string<2>(energy).c_str(), menu_sprites);
-        text_generator.generate(92, 52, bn::to_string<6>(money).c_str(), menu_sprites);
-        text_generator.generate(65, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
+        text_generator.generate(79, 22, bn::to_string<4>(date).c_str(), menu_sprites);
+        text_generator.generate(104, 37, bn::to_string<2>(energy).c_str(), menu_sprites);
+        text_generator.generate(66, 52, bn::to_string<6>(money).c_str(), menu_sprites);
+        text_generator.generate(67, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
         bn::core::update();
         bn::core::update();
         bn::core::update();
@@ -262,10 +262,10 @@ namespace menu
                 menu_pos = 0;
                 textbox.set_item(bn::regular_bg_items::bys_menu_day);
                 menu_sprites.clear();
-                text_generator.generate(76, 20, bn::to_string<4>(date).c_str(), menu_sprites);
-                text_generator.generate(97, 36, bn::to_string<2>(energy).c_str(), menu_sprites);
-                text_generator.generate(92, 52, bn::to_string<6>(money).c_str(), menu_sprites);
-                text_generator.generate(65, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
+                text_generator.generate(79, 22, bn::to_string<4>(date).c_str(), menu_sprites);
+                text_generator.generate(104, 37, bn::to_string<2>(energy).c_str(), menu_sprites);
+                text_generator.generate(66, 52, bn::to_string<6>(money).c_str(), menu_sprites);
+                text_generator.generate(67, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
             }
           bn::core::update();
          }
@@ -339,10 +339,10 @@ namespace menu
         textbox.set_blending_top_enabled(false);
         external_window.set_visible(true);
         textbox.set_visible(true);
-        text_generator.generate(76, 20, bn::to_string<4>(date).c_str(), menu_sprites);
-        text_generator.generate(97, 36, bn::to_string<2>(energy).c_str(), menu_sprites);
-        text_generator.generate(92, 52, bn::to_string<6>(money).c_str(), menu_sprites);
-        text_generator.generate(65, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
+        text_generator.generate(79, 22, bn::to_string<4>(date).c_str(), menu_sprites);
+        text_generator.generate(104, 37, bn::to_string<2>(energy).c_str(), menu_sprites);
+        text_generator.generate(66, 52, bn::to_string<6>(money).c_str(), menu_sprites);
+        text_generator.generate(67, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
         bn::core::update();
         bn::core::update();
         bn::core::update();
@@ -396,10 +396,10 @@ namespace menu
                 menu_pos = 0;
                 textbox.set_item(bn::regular_bg_items::bys_menu_night);
                 menu_sprites.clear();
-                text_generator.generate(76, 20, bn::to_string<4>(date).c_str(), menu_sprites);
-                text_generator.generate(97, 36, bn::to_string<2>(energy).c_str(), menu_sprites);
-                text_generator.generate(92, 52, bn::to_string<6>(money).c_str(), menu_sprites);
-                text_generator.generate(65, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
+                text_generator.generate(79, 22, bn::to_string<4>(date).c_str(), menu_sprites);
+                text_generator.generate(104, 37, bn::to_string<2>(energy).c_str(), menu_sprites);
+                text_generator.generate(66, 52, bn::to_string<6>(money).c_str(), menu_sprites);
+                text_generator.generate(67, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
             }
           bn::core::update();
          }

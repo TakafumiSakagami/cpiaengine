@@ -178,13 +178,14 @@ namespace scene
  
     void parkhub(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
+        
+    textbox.set_item(bn::regular_bg_items::textbox2);
     if(workflag = "Ducks")
         {
       if(true)
             {
           workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for",
               "some ducks.|",
               "",
@@ -196,11 +197,10 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
-              "The park certainly isn't",
-              "the best place to find",
-              "them, but they shouldn't",
+              "The park isn't the best spot",
+              "to look, but they shouldn't",
               "be rare.|",
+              "",
               "",
               "",
               };
@@ -214,9 +214,8 @@ namespace scene
         {
         if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for a",
               "river.|",
               "",
@@ -228,11 +227,8 @@ namespace scene
         if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "Here in the park there are",
-              "many little streams. That",
-              "water must come from",
-              "somewhere.|",
+              "many little streams.|",
               "",
               "",
               };
@@ -242,7 +238,18 @@ namespace scene
         if(true)
             {
           bn::string_view dialogue_text_lines[] = {
+              "That water must come from",
+              "somewhere.|",
               "",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+        if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
               "So` Maybe there's a river",
               "nearby?|",
               "",
@@ -250,7 +257,7 @@ namespace scene
             };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          //$money += 25
+          money += 25;
           bn::core::update();
             }
         }
@@ -258,9 +265,8 @@ namespace scene
         {
         if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for a",
               "shop.|",
               "",
@@ -272,7 +278,6 @@ namespace scene
         if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "For some reason I decided",
               "to go to the park`|",
               "",
@@ -287,6 +292,8 @@ namespace scene
               "But aside from a museum",
               "and a play area for kids,",
               "there's nothing here.|",
+              "",
+              "",
             };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome3.png}" with wiperight
@@ -297,9 +304,8 @@ namespace scene
         {
         if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for",
               "some flowers.|",
               "",
@@ -311,7 +317,6 @@ namespace scene
         if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "This park is the biggest",
               "area dedicated to nature",
               "for miles.|",
@@ -324,7 +329,6 @@ namespace scene
         if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I'm certain there are many",
               "beautiful flowers to",
               "choose from here.|",
@@ -333,7 +337,7 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
           bn::core::update();
             }
         if (findseeds == "1" & seedsget == "0")
@@ -341,7 +345,6 @@ namespace scene
                 if(true)
                 {
                   bn::string_view dialogue_text_lines[] = {
-                      "",
                       "Oh! While I'm here`|",
                       "",
                       "",
@@ -352,7 +355,6 @@ namespace scene
                 if(true)
                 {
                   bn::string_view dialogue_text_lines[] = {
-                      "",
                       "I should get those seeds",
                       "we talked about.|",
                       "",
@@ -364,15 +366,14 @@ namespace scene
                 if(true)
                 {
                   bn::string_view dialogue_text_lines[] = {
-                      "",
                       "Aha, found some seeds!",
                       "Hope they're good.|",
                       "",
                       "",
                       };
                   texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-                  //$findseeds = 0
-                  //$seedsget = 1
+                  findseeds = 0;
+                  seedsget = 1;
                   bn::core::update();
                 }
             }
@@ -381,9 +382,8 @@ namespace scene
         {
       if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for",
               "some boats.|",
               "",
@@ -395,17 +395,16 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
+              "I remember hearing the",
+              "museum has an old one,",
+              "so I'll check that out.|",
               "",
-              "I remember hearing they",
-              "have an old boat in the",
-              "museum here, so I should",
-              "check it out.|",
               "",
               "",
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          //$money += 25
+          money += 25;
           bn::core::update();
             }
             
@@ -414,9 +413,8 @@ namespace scene
         {
       if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for a",
               "church.|",
               "",
@@ -428,7 +426,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "If I cut through the park,",
               "on the far side should be",
               "an old church.|",
@@ -441,7 +438,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "It's a bit out of the way,",
               "but it's the grandest",
               "church around.|",
@@ -450,7 +446,7 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
           bn::core::update();
             }
             
@@ -459,9 +455,8 @@ namespace scene
         {
       if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for a",
               "museum.|",
               "",
@@ -473,7 +468,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "The only museum in the",
               "city is right here, in",
               "this park.|",
@@ -486,7 +480,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "It's an interesting place,",
               "but I don't have all day.|",
               "",
@@ -498,7 +491,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I'll just take that",
               "photo.|",
               "",
@@ -506,7 +498,7 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
           bn::core::update();
             }
             
@@ -515,9 +507,8 @@ namespace scene
         {
       if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for",
               "some bees.|",
               "",
@@ -529,7 +520,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "It's a weird request, but",
               "I figure I can do this",
               "right.|",
@@ -542,7 +532,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "Where there are flowers",
               "there are bees.|",
               "",
@@ -550,7 +539,7 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
           bn::core::update();
             }
             
@@ -559,9 +548,8 @@ namespace scene
         {
       if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for a",
               "supermarket.|",
               "",
@@ -573,7 +561,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "For some reason I decided",
               "to go to the park`|",
               "",
@@ -585,7 +572,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "But aside from a museum",
               "and a play area for kids,",
               "there's nothing in here.|",
@@ -603,9 +589,8 @@ namespace scene
         {
       if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for",
               "some seagulls.|",
               "",
@@ -617,7 +602,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "When I heard the request",
               "was for an animal, I came",
               "here immediately`|",
@@ -630,7 +614,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "But there are no seagulls",
               "here. Maybe we're too far",
               "from the sea?|",
@@ -647,9 +630,8 @@ namespace scene
         {
       if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for",
               "a bridge.|",
               "",
@@ -661,7 +643,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "There are several small",
               "streams in this park.|",
               "",
@@ -673,7 +654,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "To bridge the tiny gap",
               "they made some tiny",
               "bridges.|",
@@ -686,14 +666,13 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "They're kinda cute~|",
               "",
               "",
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          //$money += 25
+          money += 25;
           bn::core::update();
             }
             
@@ -702,9 +681,8 @@ namespace scene
         {
       if(true)
             {
-          //$workflag = 0
+          workflag = 0;
           bn::string_view dialogue_text_lines[] = {
-              "",
               "I go on the search for",
               "a squirrel.|",
               "",
@@ -716,7 +694,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "When I heard the request",
               "was for an animal, I came",
               "here immediately.|",
@@ -729,7 +706,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "There are many trees here,",
               "and many playful squirrels",
               "running up and down them.|",
@@ -742,7 +718,6 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "",
               "It's the perfect",
               "location.|",
               "",
@@ -750,7 +725,7 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
           bn::core::update();
             }
         }
@@ -764,6 +739,7 @@ namespace scene
                   "",
                   "",
                   };
+              textbox.set_item(bn::regular_bg_items::textbox);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -909,10 +885,9 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Ahaha, maybe one day",
-                  "you'll have this",
-                  "communication thing",
-                  "figured out.|",
+                  "Haha, maybe one day you'll",
+                  "nail down communication.|",
+                  "",
                   "",
                   "",
                   };
@@ -923,9 +898,9 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "Hey, a fairy's strongest",
-                  "trait is their ability to",
-                  "communicate!|",
+                  "Hey, a fae's best trait is",
+                  "the ability to communicate!|",
+                  "",
                   "",
                   "",
                   };
@@ -1008,9 +983,9 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Didn't your parents ever",
-                  "teach you not to cry",
-                  "wolf?|",
+                  "Did your mum never teach",
+                  "you not to cry wolf?|",
+                  "",
                   "",
                   "",
                   };
@@ -1022,8 +997,8 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
                   "As if I'd remember what",
-                  "happened that many years",
-                  "ago!|",
+                  "happened so many years ago!|",
+                  "",
                   "",
                   "",
                   };
@@ -1162,9 +1137,9 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "The fact that I haven't",
-                  "aged a day since we met",
-                  "didn't clue you in?|",
+                  "I haven't aged a day since",
+                  "we met! You didn't notice?|",
+                  "",
                   "",
                   "",
                   };
@@ -1198,8 +1173,19 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "Hey, don't put it like",
-                  "that. I'm not an example",
-                  "of all humanity.|",
+                  "that!|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "I'm not an example of all",
+                  "humanity.|",
                   "",
                   "",
                   };
@@ -1221,9 +1207,9 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "`Is that a compliment to",
-                  "me or an insult to",
-                  "humanity?|",
+                  "`That a compliment to me",
+                  "or an insult to humanity?|",
+                  "",
                   "",
                   "",
                   };
@@ -1256,9 +1242,9 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "You know, when I was",
-                  "young, this world was very",
-                  "different.|",
+                  "You know, when I was young,",
+                  "Earth was very different.|",
+                  "",
                   "",
                   "",
                   };
@@ -1281,9 +1267,19 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
                   "You humans were not a new",
-                  "sight, but you were a far",
-                  "cry from conquerors of the",
-                  "planet.|",
+                  "sight, but`|", 
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Euon",
+                  "You were a far cry from",
+                  "conquerors of the planet.|",
                   "",
                   "",
                   };
@@ -1739,6 +1735,7 @@ namespace scene
               bn::core::update();
                 }
             }
+    
     } 
  
  
