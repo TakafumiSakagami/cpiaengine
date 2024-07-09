@@ -41,7 +41,7 @@ namespace fader
          }
          else{spimg.set_item(bn::regular_bg_items::sp01); return(0);}
   }
-  int e_05_out(bn::regular_bg_ptr& spimg)
+  int e_05_out(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& textbox)
   {
          if(! bn::keypad::r_held())
          {

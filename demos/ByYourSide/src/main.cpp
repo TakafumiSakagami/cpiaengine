@@ -41,6 +41,8 @@ int money = 50;
 int date = 1;
 int garden = 0;
 bn::random talkrng;
+bn::random workrng;
+int workroll = 1;
 //Flags
 int day19scene = 0;
 int day32scene = 0;
@@ -62,6 +64,7 @@ int workflag = 0;
 #include "panner.h"
 #include "scenes.h"
 #include "scenes2.h"
+#include "scenes3.h"
 //#include "menu.cpp"
 
 ///////////////////////////////////////////
@@ -267,6 +270,86 @@ int main()
         work:
         load_des = 1;
         energy = 2;
+        workrng.update();
+        workroll = workrng.get_int(1, 12);
+        workrng.update();
+        spimg.set_visible(false);
+        bgpos = 4;
+        dialogue_layout = 1;
+        presets(textbox, internal_window, external_window);
+        //because we're fading
+        external_window.set_visible(false);
+        textbox.set_visible(false);
+        //
+        bgimg.set_item(bn::regular_bg_items::bg01);
+        spimg.set_item(bn::regular_bg_items::sp01);
+        bgimg.set_position(-8, 0);
+        spimg.set_position(0, 0);
+        if(true)
+        {
+          fade::in_slow();
+          textbox.set_item(bn::regular_bg_items::textbox);
+          textbox.set_visible(true);
+          scene::working(spimg, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+          textbox.set_visible(false);
+          menu::map(spimg, bgimg, textbox, internal_window, external_window, text_generator);
+          textbox.set_item(bn::regular_bg_items::textbox);
+          textbox.set_visible(true);
+        }
+        //Load Point
+        if (loading == 1) //if the game is loading
+        {
+            loading = 0; //Finish loading, then...
+            switch (load_des) //If load_des is 0, go to the day screen! 1 = work, 2 = night.
+            {
+                case 0:
+                    fade::out_fast();
+                    goto daytime;
+                case 1:
+                    fade::out_fast();
+                    goto work;
+                case 2:
+                    fade::out_fast();
+                    goto night;
+                default:
+                    break;
+            }
+        }
+        //Choice 0: Park
+        if (menu_pos == 0)
+        {
+        bn::core::update();
+        scene::parkhub(spimg, bgimg, textbox, internal_window, external_window, text_generator);
+        }
+        
+        //Choice 1: River
+        else if (menu_pos == 1)
+        {
+        bn::core::update();
+        scene::riversidehub(spimg, bgimg, textbox, internal_window, external_window, text_generator);
+        }
+        
+        //Choice 2: Downtown
+        else if (menu_pos == 2)
+        {
+        bn::core::update();
+        scene::downtownhub(spimg, bgimg, textbox, internal_window, external_window, text_generator);
+        }
+        
+ 
+        //Work end;
+        fade::out_med();
         
         //=========================
         ////////////   NIGHT

@@ -277,27 +277,42 @@ namespace menu
 
     return 0;}
 
-    int map(bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
+    int map(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
+        bn::vector<bn::sprite_ptr, 32> menu_sprites;
+        menu_sprites.clear();
         textbox.set_item(bn::regular_bg_items::bg01_a);
+        bgimg.set_position(-8, 0);
+        spimg.set_position(0, 0);
+        //textbox.set_blending_top_enabled(false);
+        //external_window.set_boundaries(-70, -110, 70, 110);
+        internal_window.set_visible(true);
+        menu_pos = 0;
+        external_window.set_show_sprites(false);
+        external_window.set_show_blending(false);
         textbox.set_blending_top_enabled(false);
-        external_window.set_boundaries(-70, -110, 70, 110);
-        internal_window.set_visible(false);
-        int menu_pos = 1;
+        external_window.set_visible(true);
+        textbox.set_visible(true);
+        text_generator.generate(85, -67, bn::to_string<4>(date).c_str(), menu_sprites);
+        text_generator.generate(74, -50, bn::to_string<6>(money).c_str(), menu_sprites);
+        bn::core::update();
+        bn::core::update();
+        bn::core::update();
         //external_window.set_show_sprites(false);
-        bn::core::update();
-        bn::core::update();
-        bn::core::update();
          while(true)
          {
+           if (loading == 1)
+           {
+               break;
+           }       
            if(bn::keypad::left_pressed())
               {
-               menu_pos = 1;
+               menu_pos = 0;
               textbox.set_item(bn::regular_bg_items::bg01_a);
               }
            if(bn::keypad::up_pressed())
               {
-               menu_pos = 2;
+               menu_pos = 1;
               textbox.set_item(bn::regular_bg_items::bg01_b);
               }
            if(bn::keypad::right_pressed())
@@ -307,19 +322,48 @@ namespace menu
               }
            if(bn::keypad::a_pressed())
                 {
+               if(menu_pos == 0)
+                  {
+                     break;
+                   //Park
+                  }
                if(menu_pos == 1)
                   {
-                   //park
+                     break;
+                   //River
                   }
                if(menu_pos == 2)
                   {
-                   //River
-                  }
-               if(menu_pos == 3)
-                  {
+                     break;
                    //Downtown
                   }
                 }
+            if(bn::keypad::start_pressed())
+            {
+                internal_window.set_visible(true);
+                bgimg.set_visible(true);
+                external_window.set_visible(true);
+                textbox.set_visible(true);
+                internal_window.set_show_sprites(true);
+                external_window.set_show_sprites(true);
+                menu::pause(textbox, internal_window, external_window);
+                bgimg.set_position(-8, 0);
+                spimg.set_position(0, 0);
+                //textbox.set_blending_top_enabled(false);
+                //external_window.set_boundaries(-70, -110, 70, 110);
+                internal_window.set_visible(true);
+                menu_pos = 0;
+                external_window.set_show_sprites(false);
+                external_window.set_show_blending(false);
+                textbox.set_blending_top_enabled(false);
+                external_window.set_visible(true);
+                textbox.set_visible(true);
+                menu_pos = 0;
+                textbox.set_item(bn::regular_bg_items::bg01_a);
+                menu_sprites.clear();
+                text_generator.generate(85, -67, bn::to_string<4>(date).c_str(), menu_sprites);
+                text_generator.generate(74, -50, bn::to_string<6>(money).c_str(), menu_sprites);
+            }
           bn::core::update();
          }
         internal_window.set_visible(true);
@@ -410,4 +454,5 @@ namespace menu
         external_window.set_show_sprites(true);
 
     return 0;}
+    
 }

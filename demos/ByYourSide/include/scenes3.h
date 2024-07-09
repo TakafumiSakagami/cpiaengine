@@ -4,6 +4,7 @@
 #include "bn_sound_item.h"
 #include <bn_sound_items.h>
 
+#include <bn_regular_bg_items_fade_screen.h>
 //Sprites
 #include <bn_regular_bg_items_e_00.h>
 #include <bn_regular_bg_items_e_01.h>
@@ -48,7 +49,7 @@ namespace scene
   //Work - Eternum (Incessant)
     void working(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
-      if(workflag == "Ducks")
+      if(workroll == 1)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -59,7 +60,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "River")
+      else if(workroll == 2)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -70,7 +71,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Shop")
+      else if(workroll == 3)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -81,7 +82,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Flowers")
+      else if(workroll == 4)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -92,7 +93,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Boats")
+      else if(workroll == 5)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -103,7 +104,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Church")
+      else if(workroll == 6)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -114,7 +115,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Museum")
+      else if(workroll == 7)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -125,7 +126,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Bees")
+      else if(workroll == 8)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -137,7 +138,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Supermarket")
+      else if(workroll == 9)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -149,7 +150,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Seagulls")
+      else if(workroll == 10)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -161,7 +162,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Bridge")
+      else if(workroll == 11)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -173,7 +174,7 @@ namespace scene
         texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
         bn::core::update();
       }
-      else if(workflag == "Squirrel")
+      else if(workroll == 12)
       {
         bn::string_view dialogue_text_lines[] = {
             "Boss",
@@ -196,11 +197,11 @@ namespace scene
     {
         
     textbox.set_item(bn::regular_bg_items::textbox2);
-    if(workflag = "Ducks")
+    if(workroll == 1)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some ducks.|",
@@ -225,13 +226,29 @@ namespace scene
           money += 25;
           bn::core::update();
             }
-            break;
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "Earned $25!|",
+              "",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          fade::in_fast();
+          money += 25;
+          bn::core::update();
+            }
         }
-    if(workflag = "River")
+    else if(workroll == 2)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "river.|",
@@ -277,13 +294,28 @@ namespace scene
           money += 25;
           bn::core::update();
             }
-            break;
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "Earned $25!|",
+              "",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          fade::in_fast();
+          bn::core::update();
+            }
         }
-    if(workflag = "Shop")
+    else if(workroll == 3)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "shop.|",
@@ -317,13 +349,28 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "Job failed...|",
+              "",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          fade::in_fast();
+          bn::core::update();
+            }
         } 
-    if(workflag = "Flowers")
+    else if(workroll == 4)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some flowers.|",
@@ -359,7 +406,23 @@ namespace scene
           money += 50;
           bn::core::update();
             }
-        if (findseeds == "1" & seedsget == "0")
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          fade::in_fast();
+          bn::core::update();
+            }
+        if (findseeds == 1 && seedsget == 0)
             {
                 if(true)
                 {
@@ -395,15 +458,13 @@ namespace scene
                   seedsget = 1;
                   bn::core::update();
                 }
-            break;
             }
-        break;
         } 
-    if(workflag = "Boats")
+    else if(workroll == 5)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some boats.|",
@@ -430,11 +491,11 @@ namespace scene
             }
             
         }
-    if(workflag = "Church")
+    else if(workroll == 6)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "church.|",
@@ -472,11 +533,11 @@ namespace scene
             }
             
         }        
-    if(workflag = "Museum")
+    else if(workroll == 7)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "museum.|",
@@ -522,13 +583,31 @@ namespace scene
           money += 50;
           bn::core::update();
             }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
             
         }
-    if(workflag = "Bees")
+    else if(workroll == 8)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some bees.|",
@@ -565,11 +644,11 @@ namespace scene
             }
             
         }
-    if(workflag = "Supermarket")
+    else if(workroll == 9)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "supermarket.|",
@@ -606,11 +685,11 @@ namespace scene
 
 
     }
-    if(workflag = "Seagulls")
+    else if(workroll == 10)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some seagulls.|",
@@ -647,11 +726,11 @@ namespace scene
             }
             
         }
-    if(workflag = "Bridge")
+    else if(workroll == 11)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "a bridge.|",
@@ -696,13 +775,12 @@ namespace scene
           money += 25;
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Squirrel")
+    else if(workroll == 12)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "a squirrel.|",
@@ -749,9 +827,8 @@ namespace scene
           money += 50;
           bn::core::update();
             }
-            break;
         }
-    if (day >= "32" & day32scene == "0")
+    if (date >= 32 && day32scene == 0)
         {
             if(true)
                 {
@@ -1801,7 +1878,7 @@ namespace scene
                   "",
                   };
               textbox.set_item(bn::regular_bg_items::textbox2);
-              fader::e_05_out(spimg); 
+              fader::e_05_out(spimg, textbox); 
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
                 }
@@ -1868,7 +1945,6 @@ namespace scene
               day32scene = 1;
               bn::core::update();
                 }
-            break;
         }
     
     } 
@@ -1881,11 +1957,11 @@ namespace scene
  
      void riversidehub(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
-    if(workflag = "Ducks")
+    if(workroll == 1)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some ducks.|",
@@ -1911,13 +1987,12 @@ namespace scene
           //$money += 50
           bn::core::update();
             }
-            break;
         }        
-    if(workflag = "River")
+    else if(workroll == 2)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "river.|",
@@ -1942,13 +2017,12 @@ namespace scene
           //$money += 50
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Shop")
+    else if(workroll == 3)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "shop.|",
@@ -1987,7 +2061,7 @@ namespace scene
           //$money += 25
           bn::core::update();
             }
-        if (lamp == "0" & money >= "100")
+        if (lamp == 0 && money >= 100)
             {
                 if(true)
                 {
@@ -2051,15 +2125,13 @@ namespace scene
                   //$money -= 100
                   bn::core::update();
                 }
-            break;
             }  
-        break;       
         } 
-    if(workflag = "Flowers")
+    else if(workroll == 4)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some flowers.|",
@@ -2096,13 +2168,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         } 
-    if(workflag = "Boats")
+    else if(workroll == 5)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some boats.|",
@@ -2128,13 +2199,12 @@ namespace scene
           //$money += 50
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Church")
+    else if(workroll == 6)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "church.|",
@@ -2169,13 +2239,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         }        
-    if(workflag = "Museum")
+    else if(workroll == 7)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "museum.|",
@@ -2209,13 +2278,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Bees")
+    else if(workroll == 8)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some bees.|",
@@ -2250,13 +2318,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Supermarket")
+    else if(workroll == 9)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "supermarket.|",
@@ -2292,13 +2359,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Seagulls")
+    else if(workroll == 10)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some seagulls.|",
@@ -2335,13 +2401,12 @@ namespace scene
           //$money += 50
           bn::core::update();
             }   
-            break; 
         }
-    if(workflag = "Bridge")
+    else if(workroll == 11)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "a bridge.|",
@@ -2386,13 +2451,12 @@ namespace scene
           //$money += 50
           bn::core::update();
             }   
-            break; 
         }
-    if(workflag = "Squirrel")
+    else if(workroll == 12)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "a squirrel.|",
@@ -2425,10 +2489,9 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          //$money += 24
+          //$money += 25
           bn::core::update();
             }
-            break;
         }    
     }     
  
@@ -2440,11 +2503,11 @@ namespace scene
  
      void downtownhub(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
-    if(workflag = "Ducks")
+    if(workroll == 1)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some ducks.|",
@@ -2468,13 +2531,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         }        
-    if(workflag = "River")
+    else if(workroll == 2)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "river.|",
@@ -2498,13 +2560,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Shop")
+    else if(workroll == 3)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "shop.|",
@@ -2541,13 +2602,12 @@ namespace scene
           //$money += 50
           bn::core::update();
             }    
-            break; 
         } 
-    if(workflag = "Flowers")
+    else if(workroll == 4)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some flowers.|",
@@ -2594,13 +2654,12 @@ namespace scene
           //$money += 25
           bn::core::update();
             }
-            break;
         } 
-    if(workflag = "Boats")
+    else if(workroll == 5)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some boats.|",
@@ -2646,13 +2705,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }  
-            break;
         }
-    if(workflag = "Church")
+    else if(workroll == 6)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "church.|",
@@ -2700,13 +2758,12 @@ namespace scene
           //$money += 25
           bn::core::update();
             }
-            break;
         }        
-    if(workflag = "Museum")
+    else if(workroll == 7)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "museum.|",
@@ -2740,13 +2797,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Bees")
+    else if(workroll == 8)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some bees.|",
@@ -2781,13 +2837,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Supermarket")
+    else if(workroll == 9)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for a",
               "supermarket.|",
@@ -2822,13 +2877,12 @@ namespace scene
           //$money += 50
           bn::core::update();
             }
-            break;
     }
-    if(workflag = "Seagulls")
+    else if(workroll == 10)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "some seagulls.|",
@@ -2864,13 +2918,12 @@ namespace scene
           //$money += 25
           bn::core::update();
             } 
-            break;  
         }
-    if(workflag = "Bridge")
+    else if(workroll == 11)
         {
         if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "a bridge.|",
@@ -2914,13 +2967,12 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
-            break;
         }
-    if(workflag = "Squirrel")
+    else if(workroll == 12)
         {
       if(true)
             {
-          workflag = 0;
+          workroll = 0;
           bn::string_view dialogue_text_lines[] = {
               "I go on the search for",
               "a squirrel.|",
@@ -2955,9 +3007,8 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
                 }
-            break;
         }
-    if (tvknowledge == "1" & money >= "100")
+    if (tvknowledge == 1 && money >= 100)
         {
             tvknowledge = 0;
             laptop = 1;
@@ -3413,7 +3464,7 @@ namespace scene
               bn::core::update();
             }
 //CHOICE INSERT POINT
-            if(choice == "0")
+            if(choice == 0)
                 {
             ///Buy the laptop:
                 laptop = 1;
@@ -3607,7 +3658,7 @@ namespace scene
                   bn::core::update();
                 }
             }
-            break;
+           
         }
     } 
 }
