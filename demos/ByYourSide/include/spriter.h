@@ -14,6 +14,7 @@
 #include "bn_regular_bg_position_hbe_ptr.h"
 
 //Place sprites here
+#include "bn_regular_bg_items_blank.h"
 #include "bn_regular_bg_items_sp01.h"
 #include "bn_regular_bg_items_sp01_fade1.h"
 #include "bn_regular_bg_items_sp01_fade2.h"
@@ -48,16 +49,19 @@ namespace fader
           spimg.set_visible(true);
           textbox.set_visible(false);
           spimg.set_item(bn::regular_bg_items::e_05_fade3);
-          bn::core::update();
+          bn::core::update(); bn::core::update();
+          bn::core::update(); bn::core::update();
           spimg.set_item(bn::regular_bg_items::e_05_fade2);
-          bn::core::update();
+          bn::core::update(); bn::core::update();
+          bn::core::update(); bn::core::update();
           spimg.set_item(bn::regular_bg_items::e_05_fade1);
-          bn::core::update();
-          spimg.set_item(bn::regular_bg_items::e_05);
+          bn::core::update(); bn::core::update();
+          bn::core::update(); bn::core::update();
+          spimg.set_item(bn::regular_bg_items::blank);
           textbox.set_visible(true);
           spimg.set_visible(false);
           return(0);
          }
-         else{spimg.set_item(bn::regular_bg_items::e_05); spimg.set_visible(false); return(0);}
+         else{spimg.set_item(bn::regular_bg_items::blank); spimg.set_visible(false); return(0);}
   }
 }

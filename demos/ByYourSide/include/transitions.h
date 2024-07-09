@@ -34,6 +34,10 @@ namespace fade
               bn::core::update();
           }
          }
+       else
+         {
+              bn::core::update();
+         }
     }
 
 

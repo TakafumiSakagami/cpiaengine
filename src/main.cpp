@@ -67,10 +67,16 @@ namespace
 
     void waiter()
     {
-      for(int i = 0; i < frames; ++i) {
-          bn::core::update();
-      }
-      bn::core::update();
+       if(! bn::keypad::r_held())
+         {  
+          for(int i = 0; i < frames; ++i) {
+              bn::core::update();
+          }
+         }
+       else
+         {
+              bn::core::update();
+         }
     }
 }
 

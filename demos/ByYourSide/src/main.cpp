@@ -117,6 +117,10 @@ namespace
               bn::core::update();
           }
          }
+       else
+         {
+              bn::core::update();
+         }
     }
 }
 
