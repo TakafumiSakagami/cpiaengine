@@ -35,6 +35,7 @@ namespace scene
         while(true)
         {
             //Set the scene
+            workrng.update();
             spimg.set_visible(false);
             bgpos = 4;                                                                               
             dialogue_layout = 1;         
@@ -154,6 +155,9 @@ namespace scene
                 texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                 bn::core::update();
                 }
+                fade::out_fast();
+                bgimg.set_item(bn::regular_bg_items::bg06);
+                fade::in_fast();
               if(true)
                 {
                 bn::string_view dialogue_text_lines[] = {
@@ -949,6 +953,9 @@ namespace scene
                texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                bn::core::update();
                 }
+                fade::out_fast();
+                bgimg.set_item(bn::regular_bg_items::bg06);
+                fade::in_fast();
              if(true)
                 {
                bn::string_view dialogue_text_lines[] = {
@@ -966,7 +973,7 @@ namespace scene
             {
                 if (garden >= 10)
                 {
-                    energy -= 1;
+                    energy = 0;
                     garden += 2;
                     relationship += 2;
                     if(true)
@@ -982,6 +989,9 @@ namespace scene
                       texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                       bn::core::update();
                     }
+                fade::out_fast();
+                bgimg.set_item(bn::regular_bg_items::bg06);
+                fade::in_fast();
                     if(true)
                         {
                       bn::string_view dialogue_text_lines[] = {
@@ -998,7 +1008,7 @@ namespace scene
             }
                 else
                 {
-                    energy -= 1;
+                    energy = 0;
                     garden += 2;
                     relationship += 1;
                     if(true)
@@ -1012,6 +1022,9 @@ namespace scene
                       texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                       bn::core::update();
                         }
+                fade::out_fast();
+                bgimg.set_item(bn::regular_bg_items::bg06);
+                fade::in_fast();
                     if(true)
                         {
                       bn::string_view dialogue_text_lines[] = {

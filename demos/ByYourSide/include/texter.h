@@ -70,7 +70,7 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, bn::regular_bg_p
   {
     int y_inc = 16;
     int lb = 16;
-    int start_x = -106;
+    int start_x = -112;
     int start_y = -lb * 3 + 84;
     int x = start_x;
     int y = start_y;

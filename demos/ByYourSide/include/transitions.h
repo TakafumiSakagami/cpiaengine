@@ -59,6 +59,7 @@ namespace fade
       bn::bg_palettes::set_fade(bn::colors::black, 0.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.0);
       waiter();
+            bn::core::update();
       }
 
 
@@ -80,6 +81,7 @@ namespace fade
       bn::bg_palettes::set_fade(bn::colors::black, 1.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 1.0);
       waiter();
+            bn::core::update();
       }
 
 
@@ -120,6 +122,7 @@ namespace fade
       bn::bg_palettes::set_fade(bn::colors::black, 0.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.0);
       waiter();
+            bn::core::update();
       }
 
 
@@ -156,6 +159,7 @@ namespace fade
       bn::bg_palettes::set_fade(bn::colors::black, 1.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 1.0);
       waiter();
+            bn::core::update();
       }
 
 
@@ -226,6 +230,7 @@ namespace fade
       bn::bg_palettes::set_fade(bn::colors::black, 0.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.0);
       waiter();
+            bn::core::update();
       }
 
 
@@ -292,6 +297,7 @@ namespace fade
       bn::bg_palettes::set_fade(bn::colors::black, 1.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 0.1);
       waiter();
+            bn::core::update();
       }
 
 
@@ -317,6 +323,7 @@ namespace fade
       bn::bg_palettes::set_fade(bn::colors::white, 0.0);
       bn::sprite_palettes::set_fade(bn::colors::white, 0.0);
       waiter();
+            bn::core::update();
       }
 
 
@@ -338,5 +345,6 @@ namespace fade
       bn::bg_palettes::set_fade(bn::colors::white, 1.0);
       bn::sprite_palettes::set_fade(bn::colors::white, 1.0);
       waiter();
+            bn::core::update();
       }
 }

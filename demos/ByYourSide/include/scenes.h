@@ -36,6 +36,7 @@ namespace scene
         {
             //RNG
             talkrng.update();
+            workrng.update();
             //talkrng.update();
             int d10roll = talkrng.get_int(1, 6);
             talkrng.update();
@@ -77,8 +78,9 @@ namespace scene
             }
 
         //scenes
-        if (date >= 19 && day19scene == 0)
+        if (date >= 5 && day19scene == 0)
         {
+            day19scene = 1;
             if(true)
             {
               bn::string_view dialogue_text_lines[] = {
@@ -179,6 +181,7 @@ namespace scene
                   "",
                   "",
                   };
+              textbox.set_item(bn::regular_bg_items::textbox2);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
@@ -350,6 +353,7 @@ namespace scene
                   "",
                   "",
                   };
+              textbox.set_item(bn::regular_bg_items::textbox);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }

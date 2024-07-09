@@ -70,6 +70,7 @@ namespace
       for(int i = 0; i < frames; ++i) {
           bn::core::update();
       }
+      bn::core::update();
     }
 }
 

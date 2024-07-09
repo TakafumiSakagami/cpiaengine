@@ -194,6 +194,7 @@ int main()
         ////////////
         //=========================
         daytime:
+        workrng.update();
         frames = 20;                                                                      
         waiter();     
         load_des = 0;                                                                     
@@ -357,6 +358,7 @@ int main()
         ////////////
         //=========================
         night:
+        workrng.update();
         frames = 20;                                                                      
         waiter();     
         load_des = 2;                                                                     

@@ -243,7 +243,9 @@ In the above example, he'll wait for 20 frames, or 1/3 of a second.
 
 ### waiter(); 
 
-Gives the waiter a job. He will wait for the amount of frames specified in the `frames` flag. I love him.
+Gives the waiter a job. He will wait for the amount of frames specified in the `frames` flag. 
+
+The waiter will also update vram usage, preventing crashes in resource-heavy scenes. I love him.
 
 ### Adding new functions
 

@@ -197,6 +197,7 @@ namespace scene
     {
         
     textbox.set_item(bn::regular_bg_items::textbox2);
+    bgimg.set_item(bn::regular_bg_items::bg04);
     if(workroll == 1)
         {
       if(true)
@@ -229,18 +230,19 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "Earned $25!|",
               "",
+              "Earned $25!|",
               "",
               "",
               "",
               "",
               };
           fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          fade::in_fast();
-          money += 25;
           bn::core::update();
             }
         }
@@ -297,17 +299,19 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "Earned $25!|",
               "",
+              "Earned $25!|",
               "",
               "",
               "",
               "",
               };
           fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          fade::in_fast();
           bn::core::update();
             }
         }
@@ -352,17 +356,19 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "Job failed...|",
               "",
+              "Job failed`|",
               "",
               "",
               "",
               "",
               };
           fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          fade::in_fast();
           bn::core::update();
             }
         } 
@@ -409,55 +415,20 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "Earned $50!|",
               "",
+              "Earned $50!|",
               "",
               "",
               "",
               "",
               };
           fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          fade::in_fast();
           bn::core::update();
-            }
-        if (findseeds == 1 && seedsget == 0)
-            {
-                if(true)
-                {
-                  bn::string_view dialogue_text_lines[] = {
-                      "Oh! While I'm here`|",
-                      "",
-                      "",
-                      };
-                  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-                  bn::core::update();
-                }
-                if(true)
-                {
-                  bn::string_view dialogue_text_lines[] = {
-                      "I should get those seeds",
-                      "we talked about.|",
-                      "",
-                      "",
-                      };
-                  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-                  bn::core::update();
-                }
-                if(true)
-                {
-                  bn::string_view dialogue_text_lines[] = {
-                      "Aha, found some seeds!",
-                      "Hope they're good.|",
-                      "",
-                      "",
-                      };
-                  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-                  findseeds = 0;
-                  seedsget = 1;
-                  bn::core::update();
-                }
             }
         } 
     else if(workroll == 5)
@@ -487,6 +458,24 @@ namespace scene
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
           money += 25;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $25!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
             
@@ -529,6 +518,24 @@ namespace scene
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
           money += 50;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
             
@@ -586,8 +593,8 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "Earned $50!|",
               "",
+              "Earned $50!|",
               "",
               "",
               "",
@@ -642,6 +649,24 @@ namespace scene
           money += 50;
           bn::core::update();
             }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
             
         }
     else if(workroll == 9)
@@ -680,6 +705,24 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
 
@@ -722,6 +765,24 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
             
@@ -773,6 +834,24 @@ namespace scene
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
           money += 25;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $25!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -827,9 +906,72 @@ namespace scene
           money += 50;
           bn::core::update();
             }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         }
-    if (date >= 32 && day32scene == 0)
+    if (findseeds == 1 && seedsget == 0)
         {
+            fade::out_fast();
+            bgimg.set_item(bn::regular_bg_items::bg04);
+            fade::in_fast();
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Oh! While I'm here`|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "I should get those seeds",
+                  "we talked about.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Aha, found some seeds!",
+                  "Hope they're good.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              findseeds = 0;
+              seedsget = 1;
+              bn::core::update();
+            }
+        }
+    if (date >= 10 && day32scene == 0)
+        {
+            fade::out_fast();
+            bgimg.set_item(bn::regular_bg_items::bg04);
+            spimg.set_item(bn::regular_bg_items::e_02);  
+            spimg.set_position(0, 0);
+            fade::in_fast();
             if(true)
                 {
               bn::string_view dialogue_text_lines[] = {
@@ -839,7 +981,6 @@ namespace scene
                   "",
                   };
               textbox.set_item(bn::regular_bg_items::textbox2);
-              spimg.set_item(bn::regular_bg_items::e_02);  
               spimg.set_visible(true);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -913,6 +1054,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(50, 48);
               spimg.set_item(bn::regular_bg_items::e_s_02);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1011,6 +1153,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(0, 0);
               spimg.set_item(bn::regular_bg_items::e_01);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1138,6 +1281,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(10, 48);
               spimg.set_item(bn::regular_bg_items::e_s_07);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1163,6 +1307,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(0, 0);
               spimg.set_item(bn::regular_bg_items::e_01);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1317,6 +1462,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(30, 48);
               spimg.set_item(bn::regular_bg_items::e_s_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1500,6 +1646,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(0, 0);
               spimg.set_item(bn::regular_bg_items::e_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1623,6 +1770,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(0, 48);
               spimg.set_item(bn::regular_bg_items::e_s_04);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1649,6 +1797,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(0, 0);
               spimg.set_item(bn::regular_bg_items::e_04);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1695,6 +1844,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(12, 48);
               spimg.set_item(bn::regular_bg_items::e_s_04);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1745,6 +1895,7 @@ namespace scene
                   "",
                   "",
                   };
+              spimg.set_position(0, 0);
               spimg.set_item(bn::regular_bg_items::e_05);  
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
@@ -1957,6 +2108,7 @@ namespace scene
  
      void riversidehub(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
+    bgimg.set_item(bn::regular_bg_items::bg02);
     if(workroll == 1)
         {
       if(true)
@@ -1984,7 +2136,25 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }        
@@ -2014,7 +2184,25 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2058,11 +2246,32 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          //$money += 25
+          money += 25;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $25!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         if (lamp == 0 && money >= 100)
             {
+                fade::out_fast();
+                bgimg.set_item(bn::regular_bg_items::bg02);
+                fade::in_fast();
                 if(true)
                 {
                   bn::string_view dialogue_text_lines[] = {
@@ -2121,8 +2330,8 @@ namespace scene
                       "",
                       };
                   texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-                  //$lamp = True
-                  //$money -= 100
+                  lamp = 1;
+                  money -= 100;
                   bn::core::update();
                 }
             }  
@@ -2168,6 +2377,24 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         } 
     else if(workroll == 5)
         {
@@ -2196,7 +2423,25 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2239,6 +2484,24 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         }        
     else if(workroll == 7)
         {
@@ -2276,6 +2539,24 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2316,6 +2597,24 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2359,6 +2658,24 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         }
     else if(workroll == 10)
         {
@@ -2398,9 +2715,27 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
           bn::core::update();
-            }   
+            }  
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            } 
         }
     else if(workroll == 11)
         {
@@ -2448,9 +2783,27 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
           bn::core::update();
             }   
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         }
     else if(workroll == 12)
         {
@@ -2489,7 +2842,25 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          //$money += 25
+          money += 25;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $25!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }    
@@ -2503,6 +2874,7 @@ namespace scene
  
      void downtownhub(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
+    bgimg.set_item(bn::regular_bg_items::bg05);
     if(workroll == 1)
         {
       if(true)
@@ -2529,6 +2901,24 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }        
@@ -2558,6 +2948,24 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2599,9 +3007,27 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
           bn::core::update();
             }    
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         } 
     else if(workroll == 4)
         {
@@ -2651,7 +3077,25 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          //$money += 25
+          money += 25;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $25!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         } 
@@ -2705,6 +3149,24 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }  
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         }
     else if(workroll == 6)
         {
@@ -2755,7 +3217,25 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          //$money += 25
+          money += 25;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $25!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }        
@@ -2795,6 +3275,24 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome3.png}" with wiperight
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2837,6 +3335,24 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         }
     else if(workroll == 9)
         {
@@ -2874,7 +3390,25 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome2.png}" with wiperight
-          //$money += 50
+          money += 50;
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $50!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
     }
@@ -2915,9 +3449,27 @@ namespace scene
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
           //centered "{image=Work_Outcome1.png}" with wiperight
-          //$money += 25
+          money += 25;
           bn::core::update();
             } 
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Earned $25!|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         }
     else if(workroll == 11)
         {
@@ -2967,6 +3519,24 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         }
     else if(workroll == 12)
         {
@@ -3007,9 +3577,30 @@ namespace scene
           //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
                 }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "",
+              "Job failed`|",
+              "",
+              "",
+              "",
+              "",
+              };
+          fade::out_fast();
+          bgimg.set_item(bn::regular_bg_items::fade_screen);
+          bgimg.set_position(-8, 0);     
+          fade::in_fast();     
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          //centered "{image=Work_Outcome1.png}" with wiperight
+          bn::core::update();
+            }
         }
     if (tvknowledge == 1 && money >= 100)
         {
+            fade::out_fast();
+            bgimg.set_item(bn::regular_bg_items::bg05);
+            fade::in_fast();
             tvknowledge = 0;
             laptop = 1;
             if(true)
