@@ -127,6 +127,7 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, bn::regular_bg_p
         char_sprites.clear();
         x = start_x;
         y += y_inc; // Adjust vertical spacing
+        bn::core::update();
         }
    }
    if(dialogue_layout == 2)
@@ -189,6 +190,7 @@ int dialogue(const bn::span<const bn::string_view>& text_lines, bn::regular_bg_p
          char_sprites.clear();
          x = start_x;
          y += y_inc; // Adjust vertical spacing
+         bn::core::update();
          }
     }
 

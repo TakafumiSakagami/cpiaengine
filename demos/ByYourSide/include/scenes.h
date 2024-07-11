@@ -39,6 +39,7 @@ namespace scene
             workrng.update();
             //talkrng.update();
             int d10roll = talkrng.get_int(1, 6);
+            int d3roll = talkrng.get_int(1, 3);
             talkrng.update();
             //Set the scene
             energy = 0;
@@ -71,14 +72,385 @@ namespace scene
               fader::sp01_in(spimg);  
               spimg.set_visible(true);
               bn::sound::stop_all();
+              if (d3roll == 1)
+              {
               bn::sound_items::z00.play();
+              }
+              else if (d3roll == 2)
+              {
+              bn::sound_items::z01.play();
+              }
+              else
+              {
+              bn::sound_items::z02.play();
+              }
                 textbox.set_item(bn::regular_bg_items::textbox);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
             }
 
-        //scenes
-        if (date >= 5 && day19scene == 0)
+///////////////////////////////////////////////////////////
+/////               Learn about the TV                /////
+///////////////                             ///////////////
+///////////////////////////////////////////////////////////    
+
+        if (tvflag == 1)
+        {
+            tvflag = 2;
+            tvknowledge = 1;
+            energy -= 1;
+            relationship += 3;
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Hey, isn't this TV`",
+                  "Weird?|",
+                  "",
+                  "",
+                  };
+                textbox.set_item(bn::regular_bg_items::textbox);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "How do you mean?|",
+                  "",
+                  "",
+                  };
+              bn::sound::stop_all();
+              bn::sound_items::z01.play();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Well, look at it`|",
+                  "",
+                  "",
+                  };
+              bn::sound::stop_all();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "Mhm.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "You don't think it's",
+                  "strange?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "Not really. It's a normal",
+                  "TV.|",
+                  "",
+                  "",
+                  };
+              bn::sound::stop_all();
+              bn::sound_items::z51.play();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "That's not right, is it?",
+                  "TVs aren't that thin`|",
+                  "",
+                  "",
+                  };
+              bn::sound::stop_all();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "And they don't come with",
+                  "little stands like that.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "But it's a box with a",
+                  "screen.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Huh, there aren't even any",
+                  "dials. It really is",
+                  "strange.|",
+                  "",
+                  "",
+                  };
+                textbox.set_item(bn::regular_bg_items::textbox2);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Where'd you find it?|",
+                  "",
+                  "",
+                  };
+                textbox.set_item(bn::regular_bg_items::textbox);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "Huh? Where'd I find it?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "That's what I asked.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "Uuuuh`|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "I can't remember!|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "There's that terrible",
+                  "memory again.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "Ehehe~ It's a forever",
+                  "problem.|",
+                  "",
+                  "",
+                  };
+              bn::sound::stop_all();
+              bn::sound_items::z42.play();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "You should really try and",
+                  "fix that.|",
+                  "",
+                  "",
+                  };
+              bn::sound::stop_all();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Memory loss isn't a normal",
+                  "thing at your age.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "Uuuu, that's fine. I'm not",
+                  "normal anyway!|",
+                  "",
+                  "",
+                  };
+              bn::sound::stop_all();
+              bn::sound_items::z50.play();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Anyway, it's a colour",
+                  "television too.|",
+                  "",
+                  "",
+                  };
+              bn::sound::stop_all();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Not many places around here",
+                  "sell those kinds.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "Yeah?|",
+                  "",
+                  "",
+                  };
+              bn::sound::stop_all();
+              bn::sound_items::z00.play();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "We'd have to go into the",
+                  "city center for all the",
+                  "new fancy stuff.|",
+                  "",
+                  "",
+                  };
+                textbox.set_item(bn::regular_bg_items::textbox2);
+              bn::sound::stop_all();
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Maybe I'll ask around next",
+                  "time I head down town.|",
+                  "",
+                  "",
+                  };
+                textbox.set_item(bn::regular_bg_items::textbox);
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "Will you get me a present",
+                  "on the way?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "You",
+                  "Sure, just put the money",
+                  "for it in our account.|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            if(true)
+                {
+              bn::string_view dialogue_text_lines[] = {
+                  "Her",
+                  "Eeeh, stingy!|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+                }
+            break;
+    }
+
+        //Other scenes
+        else if (date >= 5 && day19scene == 0)
         {
             day19scene = 1;
             if(true)
@@ -1983,7 +2355,7 @@ namespace scene
             break;
         }
 
-        if (d10roll == 1)
+        else if (d10roll == 1)
         {
            d10roll = talkrng.get_int(2, 6);
            talkrng.update();
@@ -2016,7 +2388,7 @@ namespace scene
             break;
         }
 
-        if (d10roll == 2)
+        else if (d10roll == 2)
         {
            d10roll = talkrng.get_int(3, 6);
            talkrng.update();
@@ -2049,7 +2421,7 @@ namespace scene
         break;
         }
 
-        if (d10roll == 3)
+        else if (d10roll == 3)
         {
            d10roll = talkrng.get_int(3, 6);
            talkrng.update();
@@ -2084,7 +2456,7 @@ namespace scene
             break;
         }
 
-        if (d10roll == 4)
+        else if (d10roll == 4)
         {
            d10roll = talkrng.get_int(4, 6);
            talkrng.update();
@@ -2118,7 +2490,7 @@ namespace scene
             break;
         }
 
-        if (d10roll == 5 && laptop == 1)
+        else if (d10roll == 5 && laptop == 1)
             {
             if(true)
                 {

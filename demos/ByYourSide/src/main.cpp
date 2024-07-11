@@ -65,6 +65,7 @@ int workflag = 0;
 #include "scenes.h"
 #include "scenes2.h"
 #include "scenes3.h"
+#include "scenes4.h"
 //#include "menu.cpp"
 
 ///////////////////////////////////////////
@@ -103,6 +104,12 @@ int workflag = 0;
 #include <bn_regular_bg_items_bg04.h>
 #include <bn_regular_bg_items_bg05.h>
 #include <bn_regular_bg_items_bg06.h>
+//CGs
+#include <bn_regular_bg_items_cg001_a.h>
+#include <bn_regular_bg_items_cg001_b.h>
+#include <bn_regular_bg_items_cg006_a.h>
+#include <bn_regular_bg_items_cg006_b.h>
+
 
 //You can hide this Namescape if you just want to get to writing scenes
 
@@ -419,15 +426,35 @@ int main()
         if (menu_pos == 0)
         {
         bn::core::update();
-        scene::talk1(spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
+        scene::nighttalk1(spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
         }
         
         //Choice 1: Sleep
-        
+        else
+        {
+        bn::core::update();
+        scene::sleepy(spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
+        }
  
         //Night end;
         if (energy < 1){fade::out_med();}
         else{fade::out_fast(); goto night;}
+        
+        //End o Day scenes;
+        
+        if (date == 1)
+        {
+        spimg.set_visible(false);
+        bn::core::update();
+        textbox.set_item(bn::regular_bg_items::textbox);
+        bn::core::update();
+        spimg.set_item(bn::regular_bg_items::blank);
+        bn::core::update();
+        bgimg.set_item(bn::regular_bg_items::cg001_a);
+        bn::core::update();
+        scene::night1(bgimg, textbox, internal_window, external_window, text_generator);  
+        }
+        fade::out_med();
         date = date + 1;
         energy = 2;
 

@@ -13,3 +13,5 @@ cpiaengine.elf
 /Dev Assets/cpia
 demos/ByYourSide/ByYourSide.elf
 demos/ByYourSide/ByYourSide.gba
+*.ss2
+*.ss3

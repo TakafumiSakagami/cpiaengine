@@ -85,7 +85,7 @@ namespace fade
       bn::bg_palettes::set_fade(bn::colors::black, 1.0);
       bn::sprite_palettes::set_fade(bn::colors::black, 1.0);
       waiter();
-            bn::core::update();
+      bn::core::update();
       }
 
 

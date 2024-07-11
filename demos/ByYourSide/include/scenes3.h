@@ -195,9 +195,11 @@ namespace scene
  
     void parkhub(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
-        
+            
+    fade::out_fast();
     textbox.set_item(bn::regular_bg_items::textbox2);
     bgimg.set_item(bn::regular_bg_items::bg04);
+    fade::in_fast();
     if(workroll == 1)
         {
       if(true)
@@ -2108,7 +2110,10 @@ namespace scene
  
      void riversidehub(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
+    fade::out_fast();
+    textbox.set_item(bn::regular_bg_items::textbox2);
     bgimg.set_item(bn::regular_bg_items::bg02);
+    fade::in_fast();
     if(workroll == 1)
         {
       if(true)
@@ -2127,10 +2132,19 @@ namespace scene
       if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "It only makes sense to",
-              "look for them near the",
-              "river. That's where they",
-              "live.|",
+              "It only makes sense to look",
+              "for them near the river.|",
+              "",
+              "",
+              };
+          texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+          bn::core::update();
+            }
+      if(true)
+            {
+          bn::string_view dialogue_text_lines[] = {
+              "That's where they live,",
+              "after all.|",
               "",
               "",
               };
@@ -2224,10 +2238,10 @@ namespace scene
         if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "If I remember correctly,",
-              "there are some small",
-              "family businesses around",
-              "the riverside.|",
+              "I remember there were some",
+              "small family businesses",
+              "around the riverside.|",
+              "",
               "",
               "",
               };
@@ -2237,10 +2251,9 @@ namespace scene
         if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "It's not the best place",
-              "for shopping, but it's",
-              "useful for people who live",
-              "nearby.|",
+              "It's not the best place for",
+              "shopping, but it's useful",
+              "for people who live nearby.|",
               "",
               "",
               };
@@ -2368,8 +2381,7 @@ namespace scene
           bn::string_view dialogue_text_lines[] = {
               "But now that I'm here, I",
               "realize there aren't",
-              "actually any flowers",
-              "here.|",
+              "really any flowers here.|",
               "",
               "",
               };
@@ -2415,14 +2427,13 @@ namespace scene
             {
           bn::string_view dialogue_text_lines[] = {
               "They have plenty of boats",
-              "here. They're some sort of",
-              "tourist attraction I",
-              "think.|",
+              "here. They're a tourist",
+              "attraction, I think.|",
+              "",
               "",
               "",
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome2.png}" with wiperight
           money += 50;
           bn::core::update();
             }
@@ -2441,7 +2452,6 @@ namespace scene
           bgimg.set_position(-8, 0);     
           fade::in_fast();     
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2463,10 +2473,10 @@ namespace scene
         if(true)
             {
           bn::string_view dialogue_text_lines[] = {
-              "But here near the river,",
-              "the only buildings are",
-              "houses, hotels, and",
-              "shops.|",
+              "But near the river, the",
+              "only buildings are houses,",
+              "hotels, and shops.|",
+              "",
               "",
               "",
               };
@@ -2481,7 +2491,6 @@ namespace scene
               "",
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
       if(true)
@@ -2538,7 +2547,6 @@ namespace scene
               "",
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
       if(true)
@@ -2556,7 +2564,6 @@ namespace scene
           bgimg.set_position(-8, 0);     
           fade::in_fast();     
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2596,7 +2603,6 @@ namespace scene
               "",
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
       if(true)
@@ -2614,7 +2620,6 @@ namespace scene
           bgimg.set_position(-8, 0);     
           fade::in_fast();     
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2655,7 +2660,6 @@ namespace scene
               "",
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome3.png}" with wiperight
           bn::core::update();
             }
       if(true)
@@ -2673,7 +2677,6 @@ namespace scene
           bgimg.set_position(-8, 0);     
           fade::in_fast();     
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             }
         }
@@ -2714,7 +2717,6 @@ namespace scene
               "",
               };
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome2.png}" with wiperight
           money += 50;
           bn::core::update();
             }  
@@ -2733,7 +2735,6 @@ namespace scene
           bgimg.set_position(-8, 0);     
           fade::in_fast();     
           texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
-          //centered "{image=Work_Outcome1.png}" with wiperight
           bn::core::update();
             } 
         }
@@ -2874,7 +2875,10 @@ namespace scene
  
      void downtownhub(bn::regular_bg_ptr& spimg, bn::regular_bg_ptr& bgimg, bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window, bn::sprite_text_generator& text_generator)
     {
+    fade::out_fast();
+    textbox.set_item(bn::regular_bg_items::textbox2);
     bgimg.set_item(bn::regular_bg_items::bg05);
+    fade::in_fast();
     if(workroll == 1)
         {
       if(true)
@@ -3601,8 +3605,7 @@ namespace scene
             fade::out_fast();
             bgimg.set_item(bn::regular_bg_items::bg05);
             fade::in_fast();
-            tvknowledge = 0;
-            laptop = 1;
+            tvknowledge = 2;
             if(true)
             {
               bn::string_view dialogue_text_lines[] = {
@@ -3777,8 +3780,19 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Man",
                   "You bought one of those",
-                  "beauties? Rare model. Not",
-                  "cheap.|",
+                  "beauties?|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Rare model. Not cheap.|",
+                  "",
                   "",
                   "",
                   };
@@ -3826,10 +3840,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Man",
                   "Tell ya what. We got some",
-                  "great gifts here. Spot",
-                  "something she might like",
-                  "and I'll even wrap it for",
-                  "ya.|",
+                  "great gifts here.|",
                   "",
                   "",
                   };
@@ -3840,9 +3851,22 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Man",
-                  "Pricey stuff though.",
-                  "What's her favorite",
-                  "color?|",
+                  "Spot something she'll like",
+                  "n'll even wrap it for ya.|",
+                  "",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Pricey stuff though. What's",
+                  "her favourite colour?|",
+                  "",
                   "",
                   "",
                   };
@@ -3946,9 +3970,9 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Man",
-                  "Impressive huh? Just a",
-                  "hundo and you can have",
-                  "it.|",
+                  "Impressive huh? A hundred",
+                  "and you can 'ave it.|",
+                  "",
                   "",
                   "",
                   };
@@ -3970,9 +3994,8 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "Man",
-                  "You just press the power",
-                  "button. Then it works",
-                  "like` A typewriter.|",
+                  "Press the power, then it",
+                  "works like` a typewriter.|",
                   "",
                   "",
                   };
@@ -3983,9 +4006,9 @@ namespace scene
             {
               bn::string_view dialogue_text_lines[] = {
                   "You",
-                  "Ah, but who made it?",
-                  "Shouldn't they be on the",
-                  "news?|",
+                  "Who made it? Shouldn't",
+                  "they be on the news?|",
+                  "",
                   "",
                   "",
                   };
@@ -3997,8 +4020,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Man",
                   "Nah mate, you won't see",
-                  "this stuff in any",
-                  "newspapers.|",
+                  "this stuff in any paper.|",
                   "",
                   "",
                   };
@@ -4021,8 +4043,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Man",
                   "'cause it don't exist yet.",
-                  "Like that camera o'",
-                  "yours.|",
+                  "Like that camera o' yours.|",
                   "",
                   "",
                   };
@@ -4045,9 +4066,19 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Man",
                   "You didn't even know?",
-                  "Haha, tell ya what. Buy",
-                  "the laptop and I'll tell",
-                  "ya.|",
+                  "Haha, tell ya what`|",
+                  "",
+                  "",
+                  };
+              texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+              bn::core::update();
+            }
+            if(true)
+            {
+              bn::string_view dialogue_text_lines[] = {
+                  "Man",
+                  "Buy the laptop and I'll",
+                  "tell ya.|",
                   "",
                   "",
                   };
@@ -4055,7 +4086,8 @@ namespace scene
               bn::core::update();
             }
 //CHOICE INSERT POINT
-            if(choice == 0)
+            menu::yesno(textbox, internal_window, external_window);
+            if(choice == 1)
                 {
             ///Buy the laptop:
                 laptop = 1;
@@ -4068,6 +4100,7 @@ namespace scene
                       "",
                       "",
                       };
+                  textbox.set_item(bn::regular_bg_items::textbox);
                   texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                   bn::core::update();
                     }
@@ -4099,8 +4132,7 @@ namespace scene
                   bn::string_view dialogue_text_lines[] = {
                       "Man",
                       "This stuff is all grabbed,",
-                      "y'see. Plucked from a",
-                      "place beyond.|",
+                      "y'see. Plucked from beyond.|",
                       "",
                       "",
                       };
@@ -4124,9 +4156,19 @@ namespace scene
                     {
                   bn::string_view dialogue_text_lines[] = {
                       "Man",
-                      "Sometimes, for the lucky",
-                      "folk, the future appears",
-                      "to 'em. Sends 'em stuff.|",
+                      "Sometimes, for lucky folk,",
+                      "the future appears to 'em.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "Man",
+                      "Sends 'em stuff.|",
                       "",
                       "",
                       };
@@ -4185,9 +4227,19 @@ namespace scene
                   bn::string_view dialogue_text_lines[] = {
                       "You",
                       "Well, this laptop thing",
-                      "better be worth the money,",
+                      "better be worth the money`|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                    }
+                if(true)
+                    {
+                  bn::string_view dialogue_text_lines[] = {
+                      "You",
                       "'cause the explanation",
-                      "wasn't.|",
+                      "sure wasn't.|",
                       "",
                       "",
                       };
@@ -4214,8 +4266,7 @@ namespace scene
                   bn::string_view dialogue_text_lines[] = {
                       "You",
                       "I don't really want to",
-                      "spend that kind of money.",
-                      "Sorry.|",
+                      "spend that kind of money.|",
                       "",
                       "",
                       };
@@ -4227,9 +4278,19 @@ namespace scene
                 {
                   bn::string_view dialogue_text_lines[] = {
                       "Man",
-                      "Nah, makes sense. Not much",
-                      "use for a laptop in this",
-                      "day and age.|",
+                      "Nah, makes sense.|",
+                      "",
+                      "",
+                      };
+                  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+                  bn::core::update();
+                }
+                if(true)
+                {
+                  bn::string_view dialogue_text_lines[] = {
+                      "Man",
+                      "Not much use for a laptop",
+                      "in this day and age.|",
                       "",
                       "",
                       };
@@ -4244,7 +4305,7 @@ namespace scene
                       "",
                       "",
                       };
-              textbox.set_item(bn::regular_bg_items::textbox);
+              textbox.set_item(bn::regular_bg_items::textbox2);
                   texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
                   bn::core::update();
                 }

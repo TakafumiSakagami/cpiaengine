@@ -7491,3 +7491,3040 @@ if(true)
   texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
   bn::core::update();
 }
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Daaaarling! I'm tiiiired!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Aww, then go to sleep.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "But I want snuggles!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "O- Oh. Then I'll come to",
+      "bed with you.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Daaaarling!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "It's fine. We can snuggle",
+      "here.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Your back will ache if we",
+      "don't go to bed.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "We snuggle now. It's",
+      "fine.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "But we might get a cold if",
+      "we fall asleep here.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Mmmm~ Is fine.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Ah` She's definitely",
+      "falling asleep.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "My daaaahhhlliiin~ Ehehe~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "She's already dreaming!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Lah-ZZZZzzzzzzzz|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Pffft, I wish I could fall",
+      "asleep that easily.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Lah` You`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "`Yeah. I love you too.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Come on sleeping beauty.",
+      "Let's go to bed.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Darling~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Hey Darling, before we",
+      "sleep`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Yeah?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "I was thinking` Maybe we",
+      "should save some money.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eh? We're already putting",
+      "some aside for the house.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Yeah, I know, but`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "But?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "We always talk about what",
+      "kind of trips we could go",
+      "on together`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Maybe it'd be nice to save",
+      "for that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Hmm` I see.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Honestly, I don't really",
+      "want to live here.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Ah, I don't mean the",
+      "apartment. I like that~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "But`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "The city?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Ehehe, how did you guess?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I wonder`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "But maybe` We could have a",
+      "look around.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Like` An actual look",
+      "around.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "How do you mean?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "We could go on a trip",
+      "across the country!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "And take lots of photos of",
+      "the places we like!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "And then maybe, in the",
+      "process, we'll find",
+      "somewhere to stay.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Somewhere nice and comfy,",
+      "where we can relax more.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Hmm` We might have to save",
+      "a lot of money for that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "That's okay though,",
+      "because!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Because`?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "We can also forge business",
+      "relationships!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Heh? Outside of the city?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Mhm.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "How would that even work",
+      "with the distance?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Well, we don't have to",
+      "rush, but in maybe 10",
+      "years or so there'll be",
+      "better methods of",
+      "communication.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "You think?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Maybe~ And then we can set",
+      "up contacts for work.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eeeh, this sounds pretty",
+      "fantastical.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Uuu, I'm being serious!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Just think! You could be a",
+      "wedding photographer, or a",
+      "village contest",
+      "photographer, or`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "A photographer. Like I",
+      "already am.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "But the income rate of",
+      "your current job won't",
+      "last, will it?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "No, you're right. I need",
+      "to think about my future`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "And all I can do is`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Photograph things!",
+      "Traveling and photography",
+      "go perfect together!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Maybe`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Hmm, then how about this`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "The next time you visit",
+      "your family, we can go",
+      "together and do a test",
+      "run.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eh? Visit my family?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I don't really know if`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Well, I don't know if I'll",
+      "be doing that this year.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "You'll go one day though,",
+      "right?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "I want to see it` Where",
+      "you grew up.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I'll think about it.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "And then maybe I'll find",
+      "some old family photo",
+      "albums`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "And then maybe`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Baby Darling photos!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I see. This is all an",
+      "excuse to get pictures of",
+      "me!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Nooo it's not!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Not entirely at least!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Ahaha, so you admit it!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "But` You don't let me take",
+      "pictures of you.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eh? I don't?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "It'd be nice to have a",
+      "picture of you.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "You see me every day",
+      "though.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Even so` Just one photo?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Haah, I guess I got so",
+      "used to avoiding people`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Fine. We'll do this trip",
+      "thing next time I visit my",
+      "parents.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Yay~ And you'll let me",
+      "take a photo of you?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Oh. No to that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Uuuu, why not?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I'll only say yes to one",
+      "thing at a time! I don't",
+      "want to make you greedy.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Eeeeh? What's wrong with",
+      "being greedy?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "It's one of the deadly",
+      "sins you know?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "That's fine! Death by",
+      "greed sounds nice~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "As far as methods of dying",
+      "go, that does sound nice`",
+      "But don't do that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Okay, time to die of",
+      "greed!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eh?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Hug me.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "That's your greedy death?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Mhm! I'll take all of your",
+      "hugs until they suffocate",
+      "me!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I'm not going to hug you",
+      "for that long!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Aww, you wouldn't?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Of course not! If you die,",
+      "I won't be able to get any",
+      "return hugs!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Oh, so that's how it is`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Ultimately greed fights",
+      "off greed.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Okay, let's not get into a",
+      "philosophical discussion",
+      "before bed. I don't want",
+      "to be stuck thinking to",
+      "myself all night.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Ehehe, I could always hug",
+      "you to sleep~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "After the suffocation",
+      "talk, I think I'm gonna",
+      "say no to that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Fine. We'll kiss instead.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I'd die even quicker!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "I'd die too, so it's",
+      "fine!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Pffft, how is that fine?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "We'll go be kissy spirits.",
+      "Kisspirits!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "As cute as that sounds, no",
+      "way. Not unless we both",
+      "get very old or terminally",
+      "ill.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "So there's a chance~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Yup. So survive long",
+      "enough to reach that",
+      "goal.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "I'll try my best!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "This is it. My new life",
+      "goal!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Well, that conversation",
+      "went down a weird path.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "It came to the natural",
+      "conclusion of all our",
+      "conversations` Hugs.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Speaking of, wanna go to",
+      "bed now?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Ehehe~ How could I say",
+      "no?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Uuu`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Watching TV?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Mhm`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Aaah, the news? I don't",
+      "know why you watch this.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Neither do I. It's all",
+      "protests and rioting and",
+      "anger nowadays.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "At least big protests are",
+      "for righteous reasons.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Anyone who thinks",
+      "righteousness exists in",
+      "anger is wrong.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "You think? I'm not sure",
+      "I'd generalize everyone",
+      "that heavily`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "There must be just causes",
+      "out there.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Of course. But negativity",
+      "breeds negativity. People",
+      "shouldn't respond like",
+      "that`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "It's a spiral that turns",
+      "people into monsters.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "At this point the word",
+      "'monster' is a synonym for",
+      "a human who thinks they're",
+      "doing something right.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "That's just how TV works.",
+      "They feed off of that",
+      "stuff.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "In reality the world isn't",
+      "like that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "I hope that's true`.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "How often does that kind",
+      "of stuff affect our daily",
+      "life?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "`Never.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Exactly. So it can't be as",
+      "big a problem as the news",
+      "makes it out to be.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Really?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Exaggeration and extremity",
+      "is marketable, but a",
+      "market requires a stable",
+      "society.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "They wouldn't be marketing",
+      "if the market was",
+      "failing.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "But some people will see",
+      "this and take it",
+      "seriously.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "They'll get angry, and",
+      "react`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "And then we'll get angry",
+      "at them?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "`Maybe.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Pffft, act with awareness",
+      "and it'll be fine.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "I wonder why we had to be",
+      "human?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Why did we end up like",
+      "this?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Hmm` So that we can",
+      "comfortably hug?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Daaaaarling! I'm having a",
+      "serious moment!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Sorry, I couldn't help",
+      "it.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Aaah, I've filled my",
+      "darling's head with",
+      "nothing but cuddles!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "It's all my fault!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I'm okay with that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "So am I.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Hahaha.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Ehehe~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "You're in a good mood",
+      "tonight. Did something",
+      "happen?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "It's a starry night",
+      "tonight.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Just that?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Just that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eeeh, that's enough to",
+      "make you happy?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Mhm. Stars are like",
+      "ascended cute girls~",
+      "Looking down at us.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "What kind of theory is",
+      "that?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "A cute one~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Hmm` What do you think",
+      "affects the dreams we have",
+      "at night?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Heh? Where'd this come",
+      "from?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Well` I haven't really had",
+      "a nice dream in a while.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "How about you? Any",
+      "beautiful dreams lately?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I don't know. I probably",
+      "had some, but I'll have",
+      "forgotten them.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Most of my dreams are",
+      "pretty normal. Like normal",
+      "days of life.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Oh but sometimes I dream",
+      "of you. That's always",
+      "nice.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Ah, I used to dream of you",
+      "before we moved in",
+      "together. Not much since`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Yeah, it's the same for",
+      "me.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Maybe we don't dream of",
+      "each other because we",
+      "spend so much time",
+      "together?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Truuueee. If I missed you",
+      "more, I might be able to",
+      "dream about you more!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "But wait! That defeats the",
+      "entire purpose!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "My 100 percent darling",
+      "life will be impossible!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "But if not dreaming about",
+      "you means I get to live",
+      "every day with you`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Then I guess I prefer",
+      "that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Ehehe, romantic~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Then I'll save up all my",
+      "dreamyness to visit you if",
+      "we ever part.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "That'd be nice. I'll do",
+      "the same.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Darling came from the",
+      "countryside, right?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Yeah, a little village to",
+      "the north.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Oooh, what was it like?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I guess` Like any other",
+      "village?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Which is?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "You've never been to a",
+      "village?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "I'm stuck with this city",
+      "life`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "You'd suit village life",
+      "better. You don't seem",
+      "like a city type.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Mhm, I've always wanted to",
+      "visit one.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "We could go on a trip",
+      "someday. I'll show you my",
+      "old home.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "That'd be fun~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Will you introduce me to",
+      "your family?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "If they're there.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Ehehe, good~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "We should get some new",
+      "pillows.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eh? We already have",
+      "plenty.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Not enough.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "We have` 12? 13 maybe?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Not enough!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "And the ones you buy have",
+      "those sequins on. How do",
+      "you even lay on those?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "You don't! They're",
+      "decorative!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eeeh, we don't have the",
+      "space for decorations.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Uuuuuu~!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Fiiine. I'll buy some",
+      "tomorrow.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Yay~ Thanks darling~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "And you go`. There!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "What are you doing?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Hmm? Oh darling, lookie!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Tada~ It's my cuddle",
+      "collection!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Aaah, stuffed toys. You",
+      "collect them? There's",
+      "quite a lot.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Only 29 so far. I'll get",
+      "more eventually~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Are they all from",
+      "something?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Nope.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Do they have names?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Yup~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Then` Who is this?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "That's Neddy the donkey!",
+      "He's actually a finger",
+      "puppet.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eeeh? Then` What about",
+      "this?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "That's Cactopi! Is a cute",
+      "lil cactus baby~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Pfft, look at its beady",
+      "eyes.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "They're cute!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Does it come with real",
+      "needles?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "That wouldn't be very",
+      "cuddly`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Ahaha, guess not.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "And this one is Hops~",
+      "They're a hoola-hooping",
+      "bunny!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "And this one is Flake.",
+      "They're a talking ice",
+      "cream!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "And this one is Batter.",
+      "It's a fishie~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "And this one is`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Look what I found in the",
+      "charity shop!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Tada~ It's a hardcover",
+      "copy of Jamie and the",
+      "Giant Plum!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Eeeh? Isn't that pretty",
+      "new? What's it doing in a",
+      "charity shop?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "No idea, but I managed to",
+      "grab it first!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Ah, that reminds me. Do",
+      "you want to go see that",
+      "jungle cartoon thing?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "The movie? Why did Jamie",
+      "remind you of that?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "It's the same animators",
+      "who did that Alice film,",
+      "right? And Alice is kinda",
+      "like Jamie.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "They're surreal.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Right. Never really",
+      "understood those kinds of",
+      "stories really.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "They're interesting~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I suppose` But they're",
+      "hard to relate to.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "You think?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "They're` Grounded.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Hmm, but I think I relate",
+      "more to Alice than to the",
+      "boy who lives with a",
+      "jungle cat and a bear`|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Aah, true. Alice is pretty",
+      "normal, she's just in a",
+      "weird place.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Mhm. You get to follow the",
+      "madness of the world she",
+      "ends up in!|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "But` I think I prefer",
+      "realistic stories.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "That sounds like you~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I wouldn't mind reading a",
+      "story where nothing",
+      "happened.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Nothing? Isn't that a bit",
+      "too normal?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "Maybe` It might just be a",
+      "phase.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "I think, for now, I prefer",
+      "normal.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "It's been a while since I",
+      "had that.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "Until we met?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "You",
+      "How'd you guess?|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "Her",
+      "I wonder. Ehehe~|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}
+if(true)
+{
+  bn::string_view dialogue_text_lines[] = {
+      "",
+      "We spoke about various",
+      "things.|",
+      "",
+      "",
+      };
+  texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
+  bn::core::update();
+}

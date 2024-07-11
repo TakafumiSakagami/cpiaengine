@@ -1,13 +1,14 @@
-Walkthrough:
+This is a quick path to unlock all the flag-based and stat-based scenes in the demo.
 
 Day 1
 Garden - Seeds quest
 Park - Get seeds
 Talk
+Night - TV quest
 ____________________
 Day 2
 Garden - Plant seeds
-Talk
+Talk - TV quest
 River
 Talk
 ____________________
@@ -16,14 +17,14 @@ Garden
 River - Lamp unlocked
 Talk
 ____________________
-Day 4
+Day 4 - At this point, Garden and Sleep work as quick timeslot skippers
 Talk
 River
 Talk
 ____________________
 Day 5
 Talk - Letter scene
-Park
+City - Buy Laptop
 Talk
 ____________________
 Day 6
@@ -42,13 +43,13 @@ Park
 Talk
 ____________________
 Day 9
-Talk
+Garden
 Park
-Talk
+Sleep
 ____________________
 Day 10
 Talk
 Park - Euon scene
 Talk
 
-
+All unlockable scenes found!

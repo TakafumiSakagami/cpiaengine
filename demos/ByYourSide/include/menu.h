@@ -8,6 +8,9 @@
 #include <bn_regular_bg_items_pause_04.h>
 #include <bn_regular_bg_items_pause_05.h>
 
+#include <bn_regular_bg_items_choice_yes.h>
+#include <bn_regular_bg_items_choice_no.h>
+
 #include <bn_regular_bg_items_textbox.h>
 #include <bn_regular_bg_items_textbox2.h>
 #include <bn_regular_bg_items_kuro.h>
@@ -317,7 +320,7 @@ namespace menu
               }
            if(bn::keypad::right_pressed())
               {
-               menu_pos = 3;
+               menu_pos = 2;
               textbox.set_item(bn::regular_bg_items::bg01_c);
               }
            if(bn::keypad::a_pressed())
@@ -448,6 +451,63 @@ namespace menu
                 text_generator.generate(66, 52, bn::to_string<6>(money).c_str(), menu_sprites);
                 text_generator.generate(67, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
             }
+          bn::core::update();
+         }
+        internal_window.set_visible(true);
+        external_window.set_show_sprites(true);
+
+    return 0;}
+ 
+    int yesno(bn::regular_bg_ptr& textbox, bn::rect_window& internal_window, bn::rect_window& external_window)
+    {
+        bn::vector<bn::sprite_ptr, 32> menu_sprites;
+        menu_sprites.clear();
+        textbox.set_item(bn::regular_bg_items::choice_yes);
+        //bgimg.set_position(-8, 0);
+        //spimg.set_position(0, 0);
+        //textbox.set_blending_top_enabled(false);
+        //external_window.set_boundaries(-70, -110, 70, 110);
+        internal_window.set_visible(true);
+        choice = 1;
+        external_window.set_show_sprites(false);
+        external_window.set_show_blending(false);
+        textbox.set_blending_top_enabled(false);
+        external_window.set_visible(true);
+        textbox.set_visible(true);
+        //text_generator.generate(79, 22, bn::to_string<4>(date).c_str(), menu_sprites);
+        //text_generator.generate(104, 37, bn::to_string<2>(energy).c_str(), menu_sprites);
+        //text_generator.generate(66, 52, bn::to_string<6>(money).c_str(), menu_sprites);
+        //text_generator.generate(67, 67, bn::to_string<6>(relationship).c_str(), menu_sprites);
+        bn::core::update();
+        bn::core::update();
+        bn::core::update();
+         while(true)
+         {
+           if (loading == 1)
+           {
+               break;
+           }               
+           if(bn::keypad::down_pressed())
+              {
+               choice = 0;
+               textbox.set_item(bn::regular_bg_items::choice_no);
+              }
+           if(bn::keypad::up_pressed())
+              {
+               choice = 1;
+               textbox.set_item(bn::regular_bg_items::choice_yes);
+              }
+           if(bn::keypad::a_pressed())
+              {
+                 if (choice == 0)
+                 {
+                     break;
+                 }
+                 if (choice == 1)
+                 {
+                     break;
+                 }
+              }
           bn::core::update();
          }
         internal_window.set_visible(true);
