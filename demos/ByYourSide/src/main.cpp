@@ -119,7 +119,7 @@ namespace
     void waiter()
     {
        if(! bn::keypad::r_held())
-         {  
+         {
           for(int i = 0; i < frames; ++i) {
               bn::core::update();
           }
@@ -206,9 +206,9 @@ int main()
         //=========================
         daytime:
         workrng.update();
-        frames = 20;                                                                      
-        waiter();     
-        load_des = 0;                                                                     
+        frames = 20;
+        waiter();
+        load_des = 0;
         if(bn::music::playing_item() != bn::music_items::eternum){bn::music_items::eternum.play(1, true);}
         spimg.set_visible(false);
         bgpos = 4;
@@ -270,7 +270,7 @@ int main()
         bn::core::update();
         scene::gardeninghub(spimg, bgimg, textbox, internal_window, external_window, text_generator);
         }
-        
+
         //daytime end
         if (energy < 1){fade::out_med();}
         else{fade::out_fast(); goto daytime;}
@@ -281,6 +281,7 @@ int main()
         //=========================
         work:
         load_des = 1;
+        if(bn::music::playing_item() != bn::music_items::eternum){bn::music_items::eternum.play(1, true);}
         energy = 2;
         workrng.update();
         workroll = workrng.get_int(1, 12);
@@ -344,25 +345,25 @@ int main()
         bn::core::update();
         scene::parkhub(spimg, bgimg, textbox, internal_window, external_window, text_generator);
         }
-        
+
         //Choice 1: River
         else if (menu_pos == 1)
         {
         bn::core::update();
         scene::riversidehub(spimg, bgimg, textbox, internal_window, external_window, text_generator);
         }
-        
+
         //Choice 2: Downtown
         else if (menu_pos == 2)
         {
         bn::core::update();
         scene::downtownhub(spimg, bgimg, textbox, internal_window, external_window, text_generator);
         }
-        
- 
+
+
         //Work end;
         fade::out_med();
-        
+
         //=========================
         ////////////   NIGHT
         //////////////////////
@@ -370,9 +371,9 @@ int main()
         //=========================
         night:
         workrng.update();
-        frames = 20;                                                                      
-        waiter();     
-        load_des = 2;                                                                     
+        frames = 20;
+        waiter();
+        load_des = 2;
         if(bn::music::playing_item() != bn::music_items::eternum_night){bn::music_items::eternum_night.play(1, true);}
         spimg.set_visible(false);
         bgpos = 4;
@@ -428,20 +429,20 @@ int main()
         bn::core::update();
         scene::nighttalk1(spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
         }
-        
+
         //Choice 1: Sleep
         else
         {
         bn::core::update();
         scene::sleepy(spimg, bgimg, textbox, internal_window, external_window, text_generator, talkrng);
         }
- 
+
         //Night end;
         if (energy < 1){fade::out_med();}
         else{fade::out_fast(); goto night;}
-        
+
         //End o Day scenes;
-        
+
         if (date == 1)
         {
         spimg.set_visible(false);
@@ -452,7 +453,7 @@ int main()
         bn::core::update();
         bgimg.set_item(bn::regular_bg_items::cg001_a);
         bn::core::update();
-        scene::night1(bgimg, textbox, internal_window, external_window, text_generator);  
+        scene::night1(bgimg, textbox, internal_window, external_window, text_generator);
         fade::out_med();
         }
         date = date + 1;
