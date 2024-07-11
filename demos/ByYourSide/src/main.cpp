@@ -453,8 +453,8 @@ int main()
         bgimg.set_item(bn::regular_bg_items::cg001_a);
         bn::core::update();
         scene::night1(bgimg, textbox, internal_window, external_window, text_generator);  
-        }
         fade::out_med();
+        }
         date = date + 1;
         energy = 2;
 

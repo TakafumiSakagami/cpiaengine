@@ -1880,7 +1880,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "You",
                   "You've already stolen my",
-                  "heart!",
+                  "heart!|",
                   "",
                   "",
                   };

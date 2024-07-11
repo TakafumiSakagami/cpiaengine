@@ -1100,7 +1100,7 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "Isn't that how humans",
+                  "Isn't that how Humans",
                   "converse?|",
                   "",
                   "",
@@ -1424,7 +1424,7 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "Siiigh, you humans`|",
+                  "Siiigh, you Humans`|",
                   "",
                   "",
                   };
@@ -1533,7 +1533,7 @@ namespace scene
                 {
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
-                  "You humans were not a new",
+                  "You Humans were not a new",
                   "sight, but`|", 
                   "",
                   "",
@@ -1670,7 +1670,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
                   "But now the world is",
-                  "human. Only that.|",
+                  "Human. Only that.|",
                   "",
                   "",
                   };
@@ -1967,7 +1967,7 @@ namespace scene
               bn::string_view dialogue_text_lines[] = {
                   "Euon",
                   "It won't be an end",
-                  "for humans.|",
+                  "for Humans.|",
                   "",
                   "",
                   "",
