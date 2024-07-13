@@ -982,7 +982,7 @@ namespace scene
                   "",
                   "",
                   };
-              textbox.set_item(bn::regular_bg_items::textbox2);
+              textbox.set_item(bn::regular_bg_items::textbox);
               spimg.set_visible(true);
               texter::dialogue(dialogue_text_lines, bgimg, textbox, internal_window, external_window, text_generator);
               bn::core::update();
