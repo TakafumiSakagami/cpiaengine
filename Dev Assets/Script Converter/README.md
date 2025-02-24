@@ -11,7 +11,9 @@ Made for an article in [C-pia! Magazine](https://c-pia.github.io/).
 
 `convert_txt_to_dialogue.py` is a python script that can take a plain text file containing your writtenprose and turn it into generic dialogue code blocks.
 
-In the process, it'll convert every ... into \` which, with the provided font, looks like … to save screen space.
+It is provided as a python script so that developers may modify the automation process to suit their needs, however, if there's demand for an .exe version, I'll add that.
+
+Upon running the script, it'll convert every ... into \` which, with the provided font, looks like … to save screen space.
 
 It will also add a | to the end of each line, which by default acts as the sentence ending symbol.
 
@@ -80,3 +82,14 @@ Would be automatically converted into:
     }
 
 The included `input.txt` and `output.txt` show how lines from the By Your Side demo's script were converted en masse.
+
+
+##Alternative Converter
+
+Making variations of this script is as simple as opening it up with a text editor. An example variation has been provided.
+
+`convert_txt_to_dialogue_w_labels.py` is a version of the tool that is compatible with the SHHis demo.
+
+The SHHis demo implements a "save & load anywhere" function that requires a different dialogue block layout.
+
+It also implements a backlog function, allowing readers to view a set number of previously-seen lines, which requires an additional line of code: `dialogueBuffer.add(dialogue_text_lines);`.
